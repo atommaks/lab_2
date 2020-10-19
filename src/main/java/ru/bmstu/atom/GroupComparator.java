@@ -1,5 +1,6 @@
 package ru.bmstu.atom;
 
+import org.apache.hadoop.io.WritableComparable;
 import org.apache.hadoop.io.WritableComparator;
 
 public class GroupComparator extends WritableComparator {
@@ -8,5 +9,5 @@ public class GroupComparator extends WritableComparator {
     }
 
     @Override
-    public int compare()
+    public int compare(WritableComparable)
 }
