@@ -7,7 +7,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 import java.io.IOException;
 
 public class FlightJoinMapper extends Mapper<LongWritable, Text, IDKey, Text> {
-    private static final int AIRPORT_CODE_COLUMN_NUMBER = 14;
+    private static final int AIRPORT_CODE_COLUMN_NUMBER = 10;
     private static final int DELAY_COLUMN_NUMBER = 18;
 
     @Override
