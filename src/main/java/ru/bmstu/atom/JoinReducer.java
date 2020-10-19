@@ -23,6 +23,7 @@ public class JoinReducer extends Reducer<IDKey, String, Text, Text> {
             }
             avg = avg * count + currentTime;
             count++;
+            avg /= (float) count;
         }
     }
 }
