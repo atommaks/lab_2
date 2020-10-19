@@ -1,4 +1,6 @@
 package ru.bmstu.atom;
 
-public class IDKey {
+import org.apache.hadoop.io.WritableComparable;
+
+public class IDKey implements WritableComparable<AirportInfo> {
 }
