@@ -1,4 +1,6 @@
 package ru.bmstu.atom;
 
-public class GroupComparator extends GroupCo {
+import org.apache.hadoop.io.WritableComparator;
+
+public class GroupComparator extends WritableComparator {
 }
