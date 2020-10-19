@@ -13,6 +13,7 @@ public class FlightJoinMapper extends MapReduceBase implements Mapper<Text, Tupl
     @Override
     public void map(Text key, TupleWritable value, OutputCollector<Text, Text> output, Reporter reporter) throws IOException {
         Text airportCode = (Text)value.get(10);
-        Text 
+        Text delay = (Text)value.get(17);
+        output.collect(airportCode, delay);
     }
 }
