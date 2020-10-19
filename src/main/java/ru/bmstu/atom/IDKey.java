@@ -18,7 +18,7 @@ public class IDKey implements WritableComparable<IDKey> {
     }
 
     public Integer getAirportId() {
-        return airport;
+        return airportId;
     }
 
     public Text getData() {
@@ -35,5 +35,10 @@ public class IDKey implements WritableComparable<IDKey> {
     public void readFields(DataInput in) throws IOException {
         airportId = in.readInt();
         data = new Text(in.readLine());
+    }
+
+    @Override
+    public int hashCode() {
+        
     }
 }
