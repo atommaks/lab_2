@@ -7,7 +7,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 
 import java.io.IOException;
 
-public class FlightJoinMapper extends Mapper<LongWritable, Text, IDKey, FloatWritable> {
+public class FlightJoinMapper extends Mapper<LongWritable, Text, IDKey, String> {
     private static final int AIRPORT_CODE_COLUMN_NUMBER = 10;
     private static final int DELAY_COLUMN_NUMBER = 18;
 
@@ -16,7 +16,7 @@ public class FlightJoinMapper extends Mapper<LongWritable, Text, IDKey, FloatWri
         if (!key.equals(new LongWritable(0))) {
             String[] columns = value.toString().split(",");
             Integer airportId = Integer.parseInt(columns[AIRPORT_CODE_COLUMN_NUMBER]);
-            FloatWritable delay = new FloatWritable(Float.parseFloat(columns[DELAY_COLUMN_NUMBER]));
+            String delay = columns[DELAY_COLUMN_NUMBER];
             context.write(new IDKey(airportId, true, value), delay);
         }
     }
