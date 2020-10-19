@@ -8,14 +8,14 @@ import java.io.IOException;
 
 public class IDKey implements WritableComparable<IDKey> {
     private Integer airportId;
-    private boolean isFlight;
+    private Boolean isFlight;
     private String data;
 
     public IDKey() {
         super();
     }
 
-    public IDKey(Integer airportId, boolean isFlight, String data) {
+    public IDKey(Integer airportId, Boolean isFlight, String data) {
         super();
         this.airportId = airportId;
         this.isFlight = isFlight;
@@ -47,7 +47,7 @@ public class IDKey implements WritableComparable<IDKey> {
     public int compareTo(IDKey obj) {
         int c = this.airportId.compareTo(obj.airportId);
         if (c == 0) {
-            
+            Boolean b = new Boolean(false);
         }
     }
 }
