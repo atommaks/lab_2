@@ -18,4 +18,14 @@ public class FlightJoinMapper extends Mapper<LongWritable, TupleWritable, IDKey,
         Text delay = (Text) value.get(DELAY_COLUMN_NUMBER);
         output.collect(airportCode, delay);
     }
+
+    @Override
+    protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+        String line = value.toString();
+        Pattern ptr = Pattern.compile(PATTERN);
+        Matcher matcher = ptr.matcher(line);
+        while (matcher.find()) {
+            context.write(new Text(matcher.group().toLowerCase()), new IntWritable(1));
+        }
+    }
 }
