@@ -20,7 +20,7 @@ public class AirportJoinMapper extends Mapper<LongWritable, Text, IDKey, Text> {
             }
             name = name.replaceAll("\"", "");
             if (!name.isEmpty()) {
-                context.write(new IDKey(airportCode, false, name), new Text(name));
+                context.write(new IDKey(airportCode, false), new Text(name));
             }
         }
     }
