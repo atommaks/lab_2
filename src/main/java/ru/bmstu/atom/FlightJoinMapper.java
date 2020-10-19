@@ -14,7 +14,7 @@ public class FlightJoinMapper extends Mapper<LongWritable, TupleWritable, LongWr
     private static final int DELAY_COLUMN_NUMBER = 17;
 
     public void map(LongWritable key, TupleWritable value, OutputCollector<LongWritable, FloatWritable> output, Reporter reporter) throws IOException {
-        LongWritable airportCode = (LongWritable) value.get(AIRPORT_CODE_COLUMN_NUMBER);
+         airportCode = (LongWritable) value.get(AIRPORT_CODE_COLUMN_NUMBER);
         FloatWritable delay = (FloatWritable) value.get(DELAY_COLUMN_NUMBER);
         output.collect(airportCode, delay);
     }
