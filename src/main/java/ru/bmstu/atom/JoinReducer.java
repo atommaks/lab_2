@@ -30,6 +30,7 @@ public class JoinReducer extends Reducer<IDKey, Text, Text, Text> {
         if (count > 0) {
             //System.out.println("2: " + airportName);
             res += ", min: " + min + ", max: " + max + ", avg: " + avg;
+            System.out.println(res);
             context.write(new Text(key.getAirportId().toString()), new Text(res));
         }
     }
