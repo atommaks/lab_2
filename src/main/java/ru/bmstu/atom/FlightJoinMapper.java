@@ -2,7 +2,6 @@ package ru.bmstu.atom;
 
 import org.apache.hadoop.io.FloatWritable;
 import org.apache.hadoop.io.LongWritable;
-import org.apache.hadoop.mapred.MapReduceBase;
 import org.apache.hadoop.mapred.OutputCollector;
 import org.apache.hadoop.mapred.Reporter;
 import org.apache.hadoop.mapred.join.TupleWritable;
@@ -10,7 +9,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 
 import java.io.IOException;
 
-public class FlightJoinMapper extends MapReduceBase implements Mapper<LongWritable, TupleWritable, LongWritable, FloatWritable> {
+public class FlightJoinMapper extends Mapper<LongWritable, TupleWritable, LongWritable, FloatWritable> {
     @Override
     public void map(LongWritable key, TupleWritable value, OutputCollector<LongWritable, FloatWritable> output, Reporter reporter) throws IOException {
         LongWritable airportCode = (LongWritable) value.get(10);
