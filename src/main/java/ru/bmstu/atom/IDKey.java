@@ -44,9 +44,4 @@ public class IDKey implements WritableComparable<IDKey> {
     public int compareTo(IDKey obj) {
         return 0;
     }
-
-    @Override
-    public String toString() {
-        return "";
-    }
 }
