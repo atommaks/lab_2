@@ -12,6 +12,10 @@ public class IDKey implements WritableComparable<IDKey> {
     private boolean isFlight;
     private String data;
 
+    public IDKey() {
+        super();
+    }
+
     public IDKey(Integer airportId, boolean isFlight, String data) {
         super();
         this.airportId = airportId;
