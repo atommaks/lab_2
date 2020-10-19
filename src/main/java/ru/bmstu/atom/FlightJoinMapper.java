@@ -12,6 +12,7 @@ import java.io.IOException;
 public class FlightJoinMapper extends MapReduceBase implements Mapper<Text, TupleWritable, Text, Text> {
     @Override
     public void map(Text key, TupleWritable value, OutputCollector<Text, Text> output, Reporter reporter) throws IOException {
+        Text airportCode = (Text)value.get(10);
         Text 
     }
 }
