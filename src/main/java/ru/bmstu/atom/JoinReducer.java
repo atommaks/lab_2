@@ -27,13 +27,18 @@ public class JoinReducer extends Reducer<IDKey, Text, Text, Text> {
             avg /= (float) count;
         }
         if (count > 0) {
-            String res = "Name: ";
-            for (String word : name.split(" ")) {
-                res += word;
-            }
-            res += ", min: " + min + ", max: " + max + ", avg: " + avg;
-            System.out.println(res);
-            context.write(new Text(key.getAirportId().toString()), new Text(res));
+            StringBuilder builder = new StringBuilder();
+            builder.append("Name: ");
+            builder.append(name);
+            builder.append(", min: ");
+            builder.append(min);
+            builder.append(", max: ");
+            builder.append(max);
+            builder.append(", avg: ");
+            builder.append(avg);
+            //String res = "Name: " + name + ", min: " + min + ", max: " + max + ", avg: " + avg;
+            System.out.println(builder.toString());
+            context.write(new Text(key.getAirportId().toString()), new Text(builder.toString()));
         }
     }
 }
