@@ -45,6 +45,6 @@ public class IDKey implements WritableComparable<IDKey> {
 
     @Override
     public int compareTo(IDKey obj) {
-        if 
+        int c = 
     }
 }
