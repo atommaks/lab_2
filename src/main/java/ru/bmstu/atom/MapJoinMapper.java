@@ -12,6 +12,6 @@ import java.io.IOException;
 public class MapJoinMapper extends MapReduceBase implements Mapper<Text, TupleWritable, Text, Text> {
     @Override
     public void map(Text key, TupleWritable value, OutputCollector<Text, Text> output, Reporter reporter) throws IOException {
-
+        
     }
 }
