@@ -12,7 +12,7 @@ public class AirportJoinMapper extends Mapper<LongWritable, Text, IDKey, Text> {
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         if (!key.equals(new LongWritable(0))) {
-            String[] columns = value.toString().replaceAll(" ", "").split(",");
+            String[] columns = value.toString().split(",");
             Integer airportCode = Integer.parseInt(columns[AIRPORT_CODE_COLUMN_NUMBER].replaceAll("\"", ""));
             String name = "";
             for (int i = 1; i < columns.length; i++) {
