@@ -10,6 +10,7 @@ public class JoinReducer extends Reducer<IDKey, String, Text, Text> {
     @Override
     protected void reduce(IDKey key, Iterable<String> values, Context context) throws IOException, InterruptedException {
         Iterator<String> iter = values.iterator();
+        String name = iter.next();
         
     }
 }
