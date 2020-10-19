@@ -25,6 +25,6 @@ public class JoinReducer extends Reducer<IDKey, String, Text, Text> {
             count++;
             avg /= (float) count;
         }
-        context.write(new Text(key));
+        context.write(new Text(key.getAirportId().toString()), );
     }
 }
