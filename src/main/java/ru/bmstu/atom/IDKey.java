@@ -42,7 +42,6 @@ public class IDKey implements WritableComparable<IDKey> {
         isFlight = in.readBoolean();
     }
 
-
     @Override
     public int compareTo(IDKey obj) {
         int c = this.airportId.compareTo(obj.airportId);
