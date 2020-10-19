@@ -14,7 +14,14 @@ public class JoinReducer extends Reducer<IDKey, String, Text, Text> {
         float min = Float.MAX_VALUE, max = Float.MIN_VALUE, avg = (float) 0.0;
         long count = 0;
         while (iter.hasNext()) {
-            
+            float currentTime = Float.parseFloat(iter.next());
+            if (currentTime < min) {
+                min = currentTime;
+            }
+            if (currentTime > max) {
+                max = currentTime;
+            }
+            avg += currentTime;
         }
     }
 }
