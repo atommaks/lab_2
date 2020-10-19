@@ -1,6 +1,5 @@
 package ru.bmstu.atom;
 
-import org.apache.hadoop.io.FloatWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapred.MapReduceBase;
@@ -13,9 +12,9 @@ import java.io.IOException;
 
 public class AirportJoinMapper extends MapReduceBase implements Mapper<LongWritable, TupleWritable, LongWritable, Text> {
     @Override
-    public void map(LongWritable key, TupleWritable value, OutputCollector<LongWritable, FloatWritable> output, Reporter reporter) throws IOException {
+    public void map(LongWritable key, TupleWritable value, OutputCollector<LongWritable, Text> output, Reporter reporter) throws IOException {
         LongWritable airportCode = (LongWritable) value.get(10);
-        FloatWritable delay = (FloatWritable) value.get(17);
-        output.collect(airportCode, delay);
+        Text airportName = (Text) value.get(17);
+        output.collect(airportCode, airportName);
     }
 }
