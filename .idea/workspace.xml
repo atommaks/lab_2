@@ -48,7 +48,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/atom/IDKey.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="760">
@@ -66,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/atom/IdPartitioner.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
-              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,11 +127,11 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/atom/AirportAverageDelayTime.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/atom/Partitioner.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/atom/AirportInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/atom/IdPartitioner.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/atom/DataJoinApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/atom/AirportJoinMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/atom/FlightJoinMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/atom/IDKey.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/atom/IdPartitioner.java" />
       </list>
     </option>
   </component>
@@ -371,16 +371,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/atom/IdPartitioner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/atom/GroupComparator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -400,6 +390,16 @@
             <element signature="e#495#496#0" expanded="true" />
             <element signature="e#437#438#0" expanded="true" />
             <element signature="e#464#465#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/atom/IdPartitioner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
