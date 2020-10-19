@@ -11,6 +11,10 @@ public class JoinReducer extends Reducer<IDKey, String, Text, Text> {
     protected void reduce(IDKey key, Iterable<String> values, Context context) throws IOException, InterruptedException {
         Iterator<String> iter = values.iterator();
         String name = iter.next();
-        float 
+        float min = Float.MAX_VALUE, max = Float.MIN_VALUE, avg = (float) 0.0;
+        long count = 0;
+        while (iter.hasNext()) {
+            
+        }
     }
 }
