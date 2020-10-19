@@ -22,6 +22,7 @@ public class JoinReducer extends Reducer<IDKey, String, Text, Text> {
                 max = currentTime;
             }
             avg += currentTime;
+            count++;
         }
     }
 }
