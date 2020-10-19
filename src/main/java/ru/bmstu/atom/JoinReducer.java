@@ -29,7 +29,7 @@ public class JoinReducer extends Reducer<IDKey, Text, Text, Text> {
         if (count > 0) {
             StringBuilder builder = new StringBuilder();
             builder.append("Name: ");
-            builder.append(name);
+            builder.append("\"" + name + "\"");
             builder.append(", min: ");
             builder.append(min);
             builder.append(", max: ");
