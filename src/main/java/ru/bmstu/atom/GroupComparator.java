@@ -1,4 +1,4 @@
 package ru.bmstu.atom;
 
-public class GroupComparator {
+public class GroupComparator extends GroupCo {
 }
