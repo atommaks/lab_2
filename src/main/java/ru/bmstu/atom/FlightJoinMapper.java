@@ -13,6 +13,11 @@ public class FlightJoinMapper extends Mapper<LongWritable, TupleWritable, IDKey,
     private static final int AIRPORT_CODE_COLUMN_NUMBER = 10;
     private static final int DELAY_COLUMN_NUMBER = 17;
 
+    @Override
+    protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+
+    }
+
     public void map(LongWritable key, TupleWritable value, OutputCollector<IDKey, Text> output, Reporter reporter) throws IOException {
         IDKey airportCode = (IDKey) value.get(AIRPORT_CODE_COLUMN_NUMBER);
         Text delay = (Text) value.get(DELAY_COLUMN_NUMBER);
