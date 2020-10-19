@@ -27,7 +27,7 @@ public class DataJoinApp {
         job.setPartitionerClass(IdPartitioner.class);
         job.setGroupingComparatorClass(TextPair.FirstComparator.class);
         job.setReducerClass(JoinReducer.class);
-        job.setMapOutputKeyClass(TextPair.class);
+        job.setMapOutputKeyClass(IDKey.class);
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
         job.setNumReduceTasks(TASK_NUM);
