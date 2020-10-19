@@ -9,7 +9,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 
 import java.io.IOException;
 
-public class AirportJoinMapper extends Mapper<LongWritable, TupleWritable, IDKey, Text> {
+public class AirportJoinMapper extends Mapper<LongWritable, Text, IDKey, FloatWritable> {
     private static final int AIRPORT_CODE_COLUMN_NUMBER = 0;
     private static final int AIRPORT_DESCRIPTION_COLUMN_NUMBER = 1;
 
