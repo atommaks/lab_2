@@ -9,25 +9,19 @@ import java.io.IOException;
 public class IDKey implements WritableComparable<IDKey> {
     private Integer airportId;
     private Boolean isFlight;
-    private String data;
 
     public IDKey() {
         super();
     }
 
-    public IDKey(Integer airportId, Boolean isFlight, String data) {
+    public IDKey(Integer airportId, Boolean isFlight) {
         super();
         this.airportId = airportId;
         this.isFlight = isFlight;
-        this.data = data;
     }
 
     public Integer getAirportId() {
         return airportId;
-    }
-
-    public String getData() {
-        return data;
     }
 
     @Override
