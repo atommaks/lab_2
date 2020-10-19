@@ -1,4 +1,6 @@
 package ru.bmstu.atom;
 
-public class JoinReducer {
+import org.apache.hadoop.mapred.Reducer;
+
+public class JoinReducer extends Reducer {
 }
