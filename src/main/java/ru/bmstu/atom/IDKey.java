@@ -48,42 +48,42 @@ public class IDKey implements WritableComparable<IDKey> {
         return result;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        IDKey other = (IDKey) obj;
-        if (data == null) {
-            if (other.data != null) {
-                return false;
-            }
-        } else if (!data.equals(other.data)) {
-            return false;
-        }
-        if (airportId == null) {
-            if (other.airportId != null) {
-                return false;
-            }
-        } else if (!airportId.equals(other.airportId)) {
-            return false;
-        }
-        return true;
-    }
+//    @Override
+//    public boolean equals(Object obj) {
+//        if (this == obj) {
+//            return true;
+//        }
+//        if (obj == null) {
+//            return false;
+//        }
+//        if (getClass() != obj.getClass()) {
+//            return false;
+//        }
+//        IDKey other = (IDKey) obj;
+//        if (data == null) {
+//            if (other.data != null) {
+//                return false;
+//            }
+//        } else if (!data.equals(other.data)) {
+//            return false;
+//        }
+//        if (airportId == null) {
+//            if (other.airportId != null) {
+//                return false;
+//            }
+//        } else if (!airportId.equals(other.airportId)) {
+//            return false;
+//        }
+//        return true;
+//    }
 
     @Override
     public int compareTo(IDKey obj) {
-
+        return 0;
     }
 
     @Override
     public String toString() {
-
+        return "";
     }
 }
