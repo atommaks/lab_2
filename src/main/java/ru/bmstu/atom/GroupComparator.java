@@ -7,5 +7,6 @@ public class GroupComparator extends WritableComparator {
         super(IDKey.class, true);
     }
 
-    
+    @Override
+    public int compare()
 }
