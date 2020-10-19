@@ -1,5 +1,7 @@
 package ru.bmstu.atom;
 
+import org.apache.hadoop.mapred.JobConf;
+
 public class DataJoinApp {
     public static void main(String[] args) {
         if (args.length != 3) {
@@ -7,6 +9,6 @@ public class DataJoinApp {
             System.exit(-1);
         }
 
-        
+        JobConf
     }
 }
