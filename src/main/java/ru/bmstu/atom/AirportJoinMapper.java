@@ -6,7 +6,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 
 import java.io.IOException;
 
-public class AirportJoinMapper extends Mapper<LongWritable, Text, IDKey, Text> {
+public class AirportJoinMapper extends Mapper<LongWritable, Text, IDKey, String> {
     private static final int AIRPORT_CODE_COLUMN_NUMBER = 0;
     private static final int AIRPORT_DESCRIPTION_COLUMN_NUMBER = 1;
 
@@ -15,7 +15,7 @@ public class AirportJoinMapper extends Mapper<LongWritable, Text, IDKey, Text> {
         if (!key.equals(new LongWritable(0))) {
             String[] columns = value.toString().split(",");
             Integer airportCode = Integer.parseInt(columns[AIRPORT_CODE_COLUMN_NUMBER]);
-            Text name = new Text(columns[AIRPORT_DESCRIPTION_COLUMN_NUMBER]);
+            String name = columns[AIRPORT_DESCRIPTION_COLUMN_NUMBER];
             context.write(new IDKey(airportCode, false, value), name);
         }
     }
