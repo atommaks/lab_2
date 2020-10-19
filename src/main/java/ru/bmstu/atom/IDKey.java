@@ -49,5 +49,6 @@ public class IDKey implements WritableComparable<IDKey> {
         if (c == 0) {
             return this.isFlight.compareTo(obj.isFlight);
         }
+        return c;
     }
 }
