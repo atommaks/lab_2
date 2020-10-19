@@ -9,6 +9,7 @@ public class DataJoinApp {
             System.exit(-1);
         }
 
-        JobConf
+        JobConf conf = new JobConf(JoinJob.class);
+        
     }
 }
