@@ -1,0 +1,7 @@
+ru/bmstu/atom/GroupComparator.class
+ru/bmstu/atom/FlightJoinMapper.class
+ru/bmstu/atom/IdPartitioner.class
+ru/bmstu/atom/JoinReducer.class
+ru/bmstu/atom/IDKey.class
+ru/bmstu/atom/AirportJoinMapper.class
+ru/bmstu/atom/DataJoinApp.class

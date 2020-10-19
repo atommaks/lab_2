@@ -1,0 +1,7 @@
+/home/atom/IdeaProjects/lab_2/src/main/java/ru/bmstu/atom/DataJoinApp.java
+/home/atom/IdeaProjects/lab_2/src/main/java/ru/bmstu/atom/JoinReducer.java
+/home/atom/IdeaProjects/lab_2/src/main/java/ru/bmstu/atom/GroupComparator.java
+/home/atom/IdeaProjects/lab_2/src/main/java/ru/bmstu/atom/AirportJoinMapper.java
+/home/atom/IdeaProjects/lab_2/src/main/java/ru/bmstu/atom/IdPartitioner.java
+/home/atom/IdeaProjects/lab_2/src/main/java/ru/bmstu/atom/IDKey.java
+/home/atom/IdeaProjects/lab_2/src/main/java/ru/bmstu/atom/FlightJoinMapper.java
