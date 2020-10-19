@@ -25,7 +25,7 @@ public class DataJoinApp {
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, AirportJoinMapper.class);
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
         job.setPartitionerClass(IdPartitioner.class);
-        job.setGroupingComparatorClass(TextPair.FirstComparator.class);
+        job.setGroupingComparatorClass(GroupComparator.class);
         job.setReducerClass(JoinReducer.class);
         job.setMapOutputKeyClass(IDKey.class);
         job.setOutputKeyClass(Text.class);
