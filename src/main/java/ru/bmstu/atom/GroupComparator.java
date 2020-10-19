@@ -10,6 +10,8 @@ public class GroupComparator extends WritableComparator {
 
     @Override
     public int compare(WritableComparable wc1, WritableComparable wc2) {
+        IDKey key1 = (IDKey)wc1;
+        IDKey key2 = (IDKey)wc2;
         
     }
 }
