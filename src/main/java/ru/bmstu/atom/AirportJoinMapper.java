@@ -13,8 +13,8 @@ import java.io.IOException;
 public class AirportJoinMapper extends MapReduceBase implements Mapper<LongWritable, TupleWritable, LongWritable, Text> {
     @Override
     public void map(LongWritable key, TupleWritable value, OutputCollector<LongWritable, Text> output, Reporter reporter) throws IOException {
-        LongWritable airportCode = (LongWritable) value.get(10);
-        Text airportName = (Text) value.get(17);
+        LongWritable airportCode = (LongWritable) value.get(0);
+        Text airportName = (Text) value.get(1);
         output.collect(airportCode, airportName);
     }
 }
