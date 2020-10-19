@@ -16,7 +16,10 @@ public class AirportJoinMapper extends Mapper<LongWritable, Text, IDKey, Text> {
         if (!key.equals(new LongWritable(0))) {
             String[] columns = value.toString().replaceAll(" ", "").split(",");
             Integer airportCode = Integer.parseInt(columns[AIRPORT_CODE_COLUMN_NUMBER].replaceAll("\"", ""));
-            String name = columns[AIRPORT_DESCRIPTION_COLUMN_NUMBER_ONE] + columns[AIRPORT_DESCRIPTION_COLUMN_NUMBER_TWO];
+            String name = "";
+            for (int i = 1; i < columns.length; i++) {
+                name += columns[i];
+            }
             name = name.replaceAll("\"", "");
             context.write(new IDKey(airportCode, false, name), new Text(name));
         }
