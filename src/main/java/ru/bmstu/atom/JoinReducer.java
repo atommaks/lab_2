@@ -15,12 +15,7 @@ public class JoinReducer extends Reducer<IDKey, Text, Text, Text> {
         long count = 0;
 //        System.out.println(airportName);
         while (iter.hasNext()) {
-            String cur = iter.next().toString();
-//            System.out.println("----------------------");
-//            System.out.println(cur);
-//            System.out.println("----------------------");
-            float currentTime = Float.parseFloat(cur);
-            //float currentTime = Float.parseFloat(iter.next().toString());
+            float currentTime = Float.parseFloat(iter.next().toString());
             if (currentTime < min) {
                 min = currentTime;
             }
