@@ -19,9 +19,7 @@ public class AirportJoinMapper extends Mapper<LongWritable, Text, IDKey, Text> {
                 builder.append(columns[i]);
             }
             String name = builder.toString().replaceAll("\"", "");
-            if (!name.isEmpty()) {
-                context.write(new IDKey(airportCode, false), new Text(name));
-            }
+            context.write(new IDKey(airportCode, false), new Text(name));
         }
     }
 }
