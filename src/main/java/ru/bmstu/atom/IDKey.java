@@ -24,6 +24,10 @@ public class IDKey implements WritableComparable<IDKey> {
         return airportId;
     }
 
+    public Boolean getFlight() {
+        return isFlight;
+    }
+
     @Override
     public void write(DataOutput out) throws IOException {
         out.writeInt(airportId);
@@ -40,7 +44,6 @@ public class IDKey implements WritableComparable<IDKey> {
     public int compareTo(IDKey obj) {
         int c = this.airportId.compareTo(obj.airportId);
         if (c == 0) {
-            //return obj.isFlight.compareTo(this.isFlight);
             return this.isFlight.compareTo(obj.isFlight);
         }
         return c;
