@@ -14,11 +14,11 @@ public class AirportJoinMapper extends Mapper<LongWritable, Text, IDKey, Text> {
         if (!key.equals(new LongWritable(0))) {
             String[] columns = value.toString().split(",");
             Integer airportCode = Integer.parseInt(columns[AIRPORT_CODE_COLUMN_NUMBER].replaceAll("\"", ""));
-            String name = "";
+            StringBuilder builder = new StringBuilder();
             for (int i = 1; i < columns.length; i++) {
-                name += columns[i];
+                builder.append(columns[i]);
             }
-            name = name.replaceAll("\"", "");
+            String name = builder.toString().replaceAll("\"", "");
             if (!name.isEmpty()) {
                 context.write(new IDKey(airportCode, false), new Text(name));
             }
