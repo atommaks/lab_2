@@ -1,4 +1,4 @@
-package ru.bmstu.atom;
+package ru.bmstu.lab2;
 
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
@@ -13,13 +13,17 @@ public class AirportJoinMapper extends Mapper<LongWritable, Text, IDKey, Text> {
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         if (!key.equals(new LongWritable(0))) {
             String[] columns = value.toString().split(",");
-            Integer airportCode = Integer.parseInt(columns[AIRPORT_CODE_COLUMN_NUMBER].replaceAll("\"", ""));
+            Integer airportCode = Integer.parseInt(removeQuotes(columns[AIRPORT_CODE_COLUMN_NUMBER]));
             StringBuilder builder = new StringBuilder();
             for (int i = 1; i < columns.length; i++) {
                 builder.append(columns[i]);
             }
-            String name = builder.toString().replaceAll("\"", "");
+            String name = removeQuotes(builder.toString());
             context.write(new IDKey(airportCode, false), new Text(name));
         }
+    }
+
+    private static String removeQuotes(String columns) {
+        return columns.replaceAll("\"", "");
     }
 }

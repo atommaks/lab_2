@@ -1,4 +1,4 @@
-package ru.bmstu.atom;
+package ru.bmstu.lab2;
 
 import org.apache.hadoop.io.WritableComparable;
 import org.apache.hadoop.io.WritableComparator;
