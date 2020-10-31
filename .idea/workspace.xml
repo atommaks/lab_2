@@ -87,23 +87,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab2/FlightJoinMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="30" selection-end-column="5" />
+            <state relative-caret-position="259">
+              <caret line="14" column="47" lean-forward="true" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1073#1074#0" expanded="true" />
-                <element signature="e#1137#1138#0" expanded="true" />
-                <element signature="e#1093#1094#0" expanded="true" />
-                <element signature="e#1140#1141#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab2/StringTools.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="114">
@@ -166,8 +162,8 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/atom/JoinReducer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab2/IDKey.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab2/AirportJoinMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab2/FlightJoinMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab2/StringTools.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab2/FlightJoinMapper.java" />
       </list>
     </option>
   </component>
@@ -460,20 +456,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab2/FlightJoinMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1073#1074#0" expanded="true" />
-            <element signature="e#1137#1138#0" expanded="true" />
-            <element signature="e#1093#1094#0" expanded="true" />
-            <element signature="e#1140#1141#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab2/StringTools.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -483,6 +465,16 @@
             <element signature="e#248#249#0" expanded="true" />
             <element signature="e#302#303#0" expanded="true" />
             <element signature="e#349#350#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab2/FlightJoinMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="14" column="47" lean-forward="true" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
