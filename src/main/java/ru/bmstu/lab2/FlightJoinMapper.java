@@ -13,7 +13,7 @@ public class FlightJoinMapper extends Mapper<LongWritable, Text, IDKey, Text> {
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         if (!key.equals(new LongWritable(0))) {
-            String[] columns = StringTools.getColumns(value.toString());
+            String[] columns = StringTools.splitWithCommas(value.toString());
             Integer airportId = Integer.parseInt(StringTools.removeQuotes(columns[AIRPORT_CODE_COLUMN_NUMBER]));
             String delay = columns[DELAY_COLUMN_NUMBER];
             if (!delay.isEmpty()) {
