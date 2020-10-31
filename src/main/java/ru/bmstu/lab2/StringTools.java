@@ -5,7 +5,7 @@ public class StringTools {
 
     public StringTools() {}
 
-    public static String[] splitWithCommas(String columns) {
+    public static String[] getColumns(String columns) {
         return columns.split(COMMA_DELIMITER);
     }
 
