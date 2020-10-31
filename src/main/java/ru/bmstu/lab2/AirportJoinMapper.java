@@ -8,6 +8,7 @@ import java.io.IOException;
 
 public class AirportJoinMapper extends Mapper<LongWritable, Text, IDKey, Text> {
     private static final int AIRPORT_CODE_COLUMN_NUMBER = 0;
+    private static final boolean FLAG = false;
 
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
@@ -19,7 +20,7 @@ public class AirportJoinMapper extends Mapper<LongWritable, Text, IDKey, Text> {
                 builder.append(columns[i]);
             }
             String name = StringTools.removeQuotes(builder.toString());
-            context.write(new IDKey(airportCode, false), new Text(name));
+            context.write(new IDKey(airportCode, FLAG), new Text(name));
         }
     }
 }
