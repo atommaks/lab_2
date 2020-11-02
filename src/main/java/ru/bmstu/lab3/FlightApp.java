@@ -17,7 +17,7 @@ public class FlightApp {
             System.exit(-1);
         }
 
-        PairFunction<String, LongWritable, Text> airportNamesKeyData = new PairFunction() <> {
+        PairFunction<String, LongWritable, Text> airportNamesKeyData = new PairFunction()<String, LongWritable, Text> {
             public Tuple2 call(String line){
                 String[] columns = StringTools.splitWithCommas(line);
                 LongWritable airportCode = new LongWritable(Integer.parseInt(StringTools.removeQuotes(columns[AIRPORT_CODE_COLUMN_NUMBER])));
