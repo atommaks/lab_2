@@ -40,4 +40,8 @@ public class FlightData implements Serializable {
     public int getFlightCount() {
         return flightCount;
     }
+
+    public float getRatio() {
+        return 100.f * (float)(abortedFlightCount + delayedFlightCount) / (float)flightCount;
+    }
 }
