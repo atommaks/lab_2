@@ -90,5 +90,6 @@ public class FlightApp {
         };
 
         JavaPairRDD<String, String> result = reducedFlightInfo.mapToPair(airportResultData);
+        result.saveAsTextFile(args[2]);
     }
 }
