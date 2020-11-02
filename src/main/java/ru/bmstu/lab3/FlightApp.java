@@ -14,7 +14,7 @@ public class FlightApp {
             System.exit(-1);
         }
 
-        PairFunction<LongWritable, Text> 
+        PairFunction<LongWritable, Text> airportNamesKeyData
 
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);
