@@ -3,6 +3,7 @@ package ru.bmstu.lab3;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.api.java.function.PairFunction;
@@ -51,10 +52,11 @@ public class FlightApp {
 
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);
-        JavaRDD<String> flightFileRDD = sc.textFile(args[0]);
-        JavaRDD<String> airportFileRDD = sc.textFile(args[1]);
-        JavaRDD<>flightInfoRDD = flightFileRDD.mapToPair(airportFlightsKeyData);
-        airportInfoRDD = airportFileRDD.mapToPair(airportNamesKeyData);
+        JavaRDD<String> flightInfoRDD = sc.textFile(args[0]);
+        JavaRDD<String> airportInfoRDD = sc.textFile(args[1]);
+        JavaPairRDD<Tuple2<LongWritable, LongWritable>, FlightData> flightInfoPairRDD = flightInfoRDD.mapToPair(airportFlightsKeyData);
+        JavaPairRDD<LongWritable, Text> airportInfoPairRDD = airportInfoRDD.mapToPair(airportNamesKeyData);
+        
 
     }
 }
