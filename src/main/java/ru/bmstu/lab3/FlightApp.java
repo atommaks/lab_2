@@ -13,6 +13,8 @@ import scala.Tuple2;
 
 import java.util.Map;
 
+import static ru.bmstu.lab3.AirportSparkFunctions.*;
+
 public class FlightApp {
     private static final int ORIGIN_AIRPORT_COLUMN_NUMBER = 11;
     private static final int DEST_AIRPORT_COLUMN_NUMBER = 14;
@@ -25,46 +27,6 @@ public class FlightApp {
             System.err.println("Usage: FlightApp <input file_flight_info> <input file_airport_info> <output path>");
             System.exit(-1);
         }
-
-//        PairFunction<String, LongWritable, Text> airportNamesKeyData = new PairFunction<String, LongWritable, Text>() {
-//            @Override
-//            public Tuple2<LongWritable, Text> call(String line) {
-//                String[] columns = StringTools.splitWithCommas(line);
-//                LongWritable airportCode = new LongWritable(Integer.parseInt(StringTools.removeQuotes(columns[AIRPORT_CODE_COLUMN_NUMBER])));
-//                Text airportName = new Text(StringTools.concatWords(columns, 1, columns.length));
-//                return new Tuple2<>(airportCode, airportName);
-//            }
-//        };
-
-//        PairFunction<String, Tuple2<LongWritable, LongWritable>, FlightData> airportFlightsKeyData = new PairFunction<String, Tuple2<LongWritable, LongWritable>, FlightData>() {
-//            @Override
-//            public Tuple2<Tuple2<LongWritable, LongWritable>, FlightData> call(String line) {
-//                String[] columns = StringTools.splitWithCommas(line);
-//                int originAirportCode = Integer.parseInt(StringTools.removeQuotes(columns[ORIGIN_AIRPORT_COLUMN_NUMBER]));
-//                int destAirportCode = Integer.parseInt(StringTools.removeQuotes(columns[DEST_AIRPORT_COLUMN_NUMBER]));
-//                String delay = columns[DELAY_COLUMN_NUMBER];
-//                if (!delay.isEmpty()) {
-//                    return new Tuple2<>(new Tuple2<>(new LongWritable(originAirportCode), new LongWritable(destAirportCode)),
-//                            new FlightData(Float.parseFloat(delay), NOT_ABORTED_FLIGHT_FLAG));
-//                }
-//
-//                return new Tuple2<>(new Tuple2<>(new LongWritable(originAirportCode), new LongWritable(destAirportCode)),
-//                        new FlightData(Float.parseFloat(delay), ABORTED_FLIGHT_FLAG));
-//            }
-//        };
-
-//        Function2<FlightData, FlightData, FlightData> airportFlightsUniqueKeyData = new Function2<FlightData, FlightData, FlightData>() {
-//            @Override
-//            public FlightData call(FlightData fd1, FlightData fd2){
-//                float d1 = fd1.getDelay(), d2 = fd2.getDelay();
-//                float newDelay = d1 > d2 ? d1 : d2;
-//                int afc1 = fd1.getAbortedFlightCount(), afc2 = fd2.getAbortedFlightCount();
-//                int dfc1 = fd1.getDelayedFlightCount(), dfc2 = fd2.getDelayedFlightCount();
-//                int fc1 = fd1.getFlightCount(), fc2 = fd2.getFlightCount();
-//
-//                return new FlightData(newDelay, afc1 + afc2, dfc1 + dfc2, fc1 + fc2);
-//            }
-//        };
 
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);

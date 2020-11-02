@@ -4,7 +4,10 @@ import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.spark.api.java.function.Function2;
 import org.apache.spark.api.java.function.PairFunction;
+import org.apache.spark.broadcast.Broadcast;
 import scala.Tuple2;
+
+import java.util.Map;
 
 public class AirportSparkFunctions {
     private static final int AIRPORT_CODE_COLUMN_NUMBER = 0;
@@ -53,4 +56,6 @@ public class AirportSparkFunctions {
             return new FlightData(newDelay, afc1 + afc2, dfc1 + dfc2, fc1 + fc2);
         }
     };
+
+    public static PairFunction<Tuple2<Tuple2<LongWritable, LongWritable>, FlightData>, String, String> getAirportResultData (Broadcast<Map<LongWritable, Text>> airportInfoBroadcasted)
 }
