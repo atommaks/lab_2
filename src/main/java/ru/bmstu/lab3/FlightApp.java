@@ -53,7 +53,7 @@ public class FlightApp {
 
         Function2<FlightData, FlightData, FlightData> airportFlightsUniqueKeyData = new Function2<FlightData, FlightData, FlightData>() {
             @Override
-            public FlightData call(FlightData flightData, FlightData flightData2){
+            public FlightData call(FlightData fd1, FlightData fd2){
                 return null;
             }
         };
