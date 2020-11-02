@@ -17,8 +17,8 @@ public class FlightApp {
 
         PairFunction<String, LongWritable, Text> airportNamesKeyData = new PairFunction() {
             @Override
-            public Tuple2 call(Object o) throws Exception {
-                return null;
+            public Tuple2 call(String line) throws Exception {
+                
             }
         };
 
