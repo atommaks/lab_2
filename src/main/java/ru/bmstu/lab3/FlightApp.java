@@ -81,7 +81,8 @@ public class FlightApp {
             public Tuple2<String, String> call(Tuple2<Tuple2<LongWritable, LongWritable>, FlightData> e) {
                 String originName = airportInfoBroadcasted.value().get(e._1._1).toString();
                 String destName = airportInfoBroadcasted.value().get(e._1._2).toString();
-                String key = originName + " - " + destName;
+                String key = originName + " -> " + destName;
+                String value = "Delay: " + e._2.getDelay() + " , Ratio: " + e._2.getRatio();
             }
         };
 
