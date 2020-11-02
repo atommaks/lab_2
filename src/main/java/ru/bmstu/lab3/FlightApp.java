@@ -11,7 +11,7 @@ public class FlightApp {
             System.exit(-1);
         }
 
-        
+        PairFunction<>
 
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);
