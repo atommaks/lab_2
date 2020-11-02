@@ -1,4 +1,8 @@
 package ru.bmstu.lab3;
 
-public class FlightData {
+import java.io.Serializable;
+
+public class FlightData implements Serializable {
+    private float delay;
+    private int 
 }
