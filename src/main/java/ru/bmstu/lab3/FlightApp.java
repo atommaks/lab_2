@@ -19,7 +19,7 @@ public class FlightApp {
 
         PairFunction<String, LongWritable, Text> airportNamesKeyData = new PairFunction<String, LongWritable, Text>() {
             @Override
-            public Tuple2<LongWritable, Text> call(String line){
+            public Tuple2<LongWritable, Text> call(String line) {
                 String[] columns = StringTools.splitWithCommas(line);
                 LongWritable airportCode = new LongWritable(Integer.parseInt(StringTools.removeQuotes(columns[AIRPORT_CODE_COLUMN_NUMBER])));
                 Text airportName = new Text(StringTools.concatWords(columns, 1, columns.length));
@@ -27,7 +27,12 @@ public class FlightApp {
             }
         };
 
-        PairFunction<String, >
+        PairFunction<String, Tuple2<LongWritable, LongWritable>, FlightData> airportFlightsKeyData = new PairFunction<String, Tuple2<LongWritable, LongWritable>, FlightData>() {
+            @Override
+            public Tuple2<Tuple2<LongWritable, LongWritable>, FlightData> call(String line) {
+                
+            }
+        };
 
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);
