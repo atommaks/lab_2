@@ -9,6 +9,7 @@ import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.api.java.function.Function2;
 import org.apache.spark.api.java.function.PairFunction;
 import org.apache.spark.broadcast.Broadcast;
+import scala.Predef;
 import scala.Tuple2;
 
 import java.util.Map;
@@ -82,7 +83,7 @@ public class FlightApp {
                 String originName = airportInfoBroadcasted.value().get(e._1._1).toString();
                 String destName = airportInfoBroadcasted.value().get(e._1._2).toString();
                 String key = originName + " -> " + destName;
-                String value = "Delay: " + e._2.getDelay() + " , Ratio: " + e._2.getRatio();
+                String value =  "Delay: " + e._2.getDelay() + " , Ratio: " + e._2.getRatio();
             }
         };
 
