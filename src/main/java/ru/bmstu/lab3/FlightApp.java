@@ -20,7 +20,8 @@ public class FlightApp {
         PairFunction<String, LongWritable, Text> airportNamesKeyData = new PairFunction() {
             @Override
             public Tuple2 call(String line) throws Exception {
-                
+                String[] columns = StringTools.splitWithCommas(line);
+                LongWritable
             }
         };
 
