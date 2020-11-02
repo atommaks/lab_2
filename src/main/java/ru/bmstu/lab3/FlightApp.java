@@ -54,7 +54,12 @@ public class FlightApp {
             }
         };
 
-        PairFunction<String, String, String>
+        PairFunction<Tuple2<LongWritable, LongWritable>, String, String> airportResultData = new PairFunction<Tuple2<LongWritable, LongWritable>, String, String>() {
+            @Override
+            public Tuple2<String, String> call(Tuple2<LongWritable, LongWritable> e){
+                return null;
+            }
+        };
 
         Function2<FlightData, FlightData, FlightData> airportFlightsUniqueKeyData = new Function2<FlightData, FlightData, FlightData>() {
             @Override
@@ -77,6 +82,6 @@ public class FlightApp {
         JavaPairRDD<LongWritable, Text> airportInfoPairRDD = airportInfoRDD.mapToPair(airportNamesKeyData);
         JavaPairRDD<Tuple2<LongWritable, LongWritable> ,FlightData> reducedFlightInfo = flightInfoPairRDD.reduceByKey(airportFlightsUniqueKeyData);
         Broadcast<Map<LongWritable, Text>> airportInfoBroadcasted = sc.broadcast(airportInfoPairRDD.collectAsMap());
-        JavaPairRDD<String, String> result = reducedFlightInfo.mapToPair();
+        JavaPairRDD<String, String> result = reducedFlightInfo.mapToPair(airportResultData);
     }
 }
