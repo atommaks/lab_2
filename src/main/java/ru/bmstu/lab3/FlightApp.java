@@ -13,6 +13,8 @@ public class FlightApp {
     private static final int ORIGIN_AIRPORT_COLUMN_NUMBER = 11;
     private static final int DEST_AIRPORT_COLUMN_NUMBER = 14;
     private static final int DELAY_COLUMN_NUMBER = 18;
+    private static final boolean ABORTED_FLIGHT_FLAG = true;
+    private static final boolean NOT_ABORTED_FLIGHT_FLAG = false;
 
     public static void main(String[] args) {
         if (args.length != 3) {
@@ -34,7 +36,12 @@ public class FlightApp {
             @Override
             public Tuple2<Tuple2<LongWritable, LongWritable>, FlightData> call(String line) {
                 String[] columns = StringTools.splitWithCommas(line);
-
+                Integer originAirportCode = Integer.parseInt(StringTools.removeQuotes(columns[ORIGIN_AIRPORT_COLUMN_NUMBER]));
+                Integer destAirportCode = Integer.parseInt(StringTools.removeQuotes(columns[DEST_AIRPORT_COLUMN_NUMBER]));
+                String delay = columns[DELAY_COLUMN_NUMBER];
+                if (!delay.isEmpty()) {
+                    
+                }
             }
         };
 
