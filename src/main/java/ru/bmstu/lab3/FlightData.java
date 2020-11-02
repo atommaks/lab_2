@@ -24,4 +24,20 @@ public class FlightData implements Serializable {
             }
         }
     }
+
+    public float getDelay() {
+        return delay;
+    }
+
+    public int getAbortedFlightCount() {
+        return abortedFlightCount;
+    }
+
+    public int getDelayedFlightCount() {
+        return delayedFlightCount;
+    }
+
+    public int getFlightCount() {
+        return flightCount;
+    }
 }
