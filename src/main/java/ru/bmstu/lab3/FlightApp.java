@@ -60,6 +60,7 @@ public class FlightApp {
                 int dfc1 = fd1.getDelayedFlightCount(), dfc2 = fd2.getDelayedFlightCount();
                 int fc1 = fd1.getFlightCount(), fc2 = fd2.getFlightCount();
 
+                return new FlightData(newDelay, afc1 + afc2, dfc1 + dfc2, fc1 + fc2);
             }
         };
 
