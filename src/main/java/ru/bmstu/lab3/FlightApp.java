@@ -85,7 +85,7 @@ public class FlightApp {
                 String key = originName + " -> " + destName;
                 String value = String.format("Delay: %f, Ratio: %.2f%%", e._2.getDelay(), e._2.getRatio());
 
-                return 
+                return new Tuple2<>(key, value);
             }
         };
 
