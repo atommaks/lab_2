@@ -53,7 +53,8 @@ public class FlightApp {
         JavaSparkContext sc = new JavaSparkContext(conf);
         JavaRDD<String> flightInfoRDD = sc.textFile(args[0]);
         JavaRDD<String> airportInfoRDD = sc.textFile(args[1]);
-        flightInfoRDD.mapToPair(airportFlightsKeyData);
+        flightInfoRDD = flightInfoRDD.mapToPair(airportFlightsKeyData);
         airportInfoRDD.mapToPair(airportNamesKeyData);
+
     }
 }
