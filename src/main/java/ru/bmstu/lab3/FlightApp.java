@@ -51,7 +51,7 @@ public class FlightApp {
             }
         };
 
-        Function2<>
+        Function
 
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);
