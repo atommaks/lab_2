@@ -41,8 +41,8 @@ public class FlightApp {
             @Override
             public Tuple2<Tuple2<LongWritable, LongWritable>, FlightData> call(String line) {
                 String[] columns = StringTools.splitWithCommas(line);
-                Integer originAirportCode = Integer.parseInt(StringTools.removeQuotes(columns[ORIGIN_AIRPORT_COLUMN_NUMBER]));
-                Integer destAirportCode = Integer.parseInt(StringTools.removeQuotes(columns[DEST_AIRPORT_COLUMN_NUMBER]));
+                int originAirportCode = Integer.parseInt(StringTools.removeQuotes(columns[ORIGIN_AIRPORT_COLUMN_NUMBER]));
+                int destAirportCode = Integer.parseInt(StringTools.removeQuotes(columns[DEST_AIRPORT_COLUMN_NUMBER]));
                 String delay = columns[DELAY_COLUMN_NUMBER];
                 if (!delay.isEmpty()) {
                     return new Tuple2<>(new Tuple2<>(new LongWritable(originAirportCode), new LongWritable(destAirportCode)),
