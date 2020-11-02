@@ -30,7 +30,8 @@ public class FlightApp {
         PairFunction<String, Tuple2<LongWritable, LongWritable>, FlightData> airportFlightsKeyData = new PairFunction<String, Tuple2<LongWritable, LongWritable>, FlightData>() {
             @Override
             public Tuple2<Tuple2<LongWritable, LongWritable>, FlightData> call(String line) {
-
+                String[] columns = StringTools.splitWithCommas(line);
+                
             }
         };
 
