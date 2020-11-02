@@ -51,7 +51,12 @@ public class FlightApp {
             }
         };
 
-        Function
+        Function2<FlightData, FlightData, FlightData> airportFlightsUniqueKeyData = new Function2<FlightData, FlightData, FlightData>() {
+            @Override
+            public FlightData call(FlightData flightData, FlightData flightData2){
+                return null;
+            }
+        };
 
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);
