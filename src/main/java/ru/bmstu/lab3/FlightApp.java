@@ -9,6 +9,8 @@ import org.apache.spark.api.java.function.PairFunction;
 import scala.Tuple2;
 
 public class FlightApp {
+    private static final int AIRPORT_CODE_COLUMN_NUMBER = 0;
+
     public static void main(String[] args) {
         if (args.length != 3) {
             System.err.println("Usage: FlightApp <input file_flight_info> <input file_airport_info> <output path>");
