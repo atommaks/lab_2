@@ -27,6 +27,8 @@ public class FlightApp {
             }
         };
 
+        PairFunction<String, >
+
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);
         JavaRDD<String> flightInfoRDD = sc.textFile(args[0]);
