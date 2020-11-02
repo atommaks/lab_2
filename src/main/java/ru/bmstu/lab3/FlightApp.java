@@ -50,7 +50,9 @@ public class FlightApp {
             }
         };
 
-        JavaPairRDD<Tuple2<LongWritable, LongWritable>, FlightData> 
+        JavaPairRDD<Tuple2<LongWritable, LongWritable>, FlightData> airportFlightsUniqueKeyData = new JavaPairRDD<Tuple2<LongWritable, LongWritable>, FlightData>(){
+            
+        };
 
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);
