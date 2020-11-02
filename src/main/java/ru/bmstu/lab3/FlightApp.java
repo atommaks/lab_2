@@ -83,7 +83,9 @@ public class FlightApp {
                 String originName = airportInfoBroadcasted.value().get(e._1._1).toString();
                 String destName = airportInfoBroadcasted.value().get(e._1._2).toString();
                 String key = originName + " -> " + destName;
-                String value = String.format("Delay: %f, Ratio: %.2f%%") "Delay: " + e._2.getDelay() + " , Ratio: " + e._2.getRatio();
+                String value = String.format("Delay: %f, Ratio: %.2f%%", e._2.getDelay(), e._2.getRatio());
+
+                return 
             }
         };
 
