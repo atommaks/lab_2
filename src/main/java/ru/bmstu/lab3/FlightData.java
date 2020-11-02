@@ -7,6 +7,7 @@ public class FlightData implements Serializable {
     private int abortedFlightCount, delayedFlightCount, flightCount;
 
     public FlightData(float delay, boolean aborted) {
+        flightCount = 1;
         
     }
 }
