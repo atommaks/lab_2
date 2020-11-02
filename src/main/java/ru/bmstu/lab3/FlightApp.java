@@ -23,7 +23,7 @@ public class FlightApp {
         JavaPairRDD<Tuple2<LongWritable, LongWritable>, FlightData> flightInfoPairRDD = flightInfoRDD.mapToPair(AirportSparkFunctions.airportFlightsKeyData);
         JavaPairRDD<LongWritable, Text> airportInfoPairRDD = airportInfoRDD.mapToPair(AirportSparkFunctions.airportNamesKeyData);
         JavaPairRDD<Tuple2<LongWritable, LongWritable> ,FlightData> reducedFlightInfo = flightInfoPairRDD.reduceByKey(AirportSparkFunctions.airportFlightsUniqueKeyData);
-        JavaPairRDD<String, String> result = reducedFlightInfo.mapToPair(AirportSparkFunctions.getAirportResultData(sc.broadcast(airportInfoPairRDD.collectAsMap()));
+        JavaPairRDD<String, String> result = reducedFlightInfo.mapToPair(AirportSparkFunctions.getAirportResultData(sc.broadcast(airportInfoPairRDD.collectAsMap())));
         result.saveAsTextFile(args[2]);
     }
 }
