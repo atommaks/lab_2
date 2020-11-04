@@ -30,11 +30,11 @@ public class AirportSparkFunctions {
         }
     };
 
-    public static PairFunction<String, Long, String> airportNamesKeyData =
-            new PairFunction<String, Long, String>() {
+    public static PairFunction<Tuple2<LongWritable, Text>, Long, String> airportNamesKeyData =
+            new PairFunction<Tuple2<LongWritable, Text>, Long, String>() {
         @Override
-        public Tuple2<Long, String> call(String line) {
-            String[] columns = StringTools.splitWithCommas(line);
+        public Tuple2<Long, String> call(Tuple2<LongWritable, Text> line) {
+            String[] columns = StringTools.splitWithCommas(line._2.toString());
             long airportCode = Long.parseLong(StringTools.removeQuotes(columns[AIRPORT_CODE_COLUMN_NUMBER]));
             String airportName = StringTools.concatWords(columns, 1, columns.length);
 
@@ -42,11 +42,11 @@ public class AirportSparkFunctions {
         }
     };
 
-    public static PairFunction<String, Tuple2<Long, Long>, FlightData> airportFlightsKeyData =
-            new PairFunction<String, Tuple2<Long, Long>, FlightData>() {
+    public static PairFunction<Tuple2<LongWritable, Text>, Tuple2<Long, Long>, FlightData> airportFlightsKeyData =
+            new PairFunction<Tuple2<LongWritable, Text>, Tuple2<Long, Long>, FlightData>() {
         @Override
-        public Tuple2<Tuple2<Long, Long>, FlightData> call(String line) {
-            String[] columns = StringTools.splitWithCommas(line);
+        public Tuple2<Tuple2<Long, Long>, FlightData> call(Tuple2<LongWritable, Text> line) {
+            String[] columns = StringTools.splitWithCommas(line._2.toString());
             long originAirportCode = Long.parseLong(StringTools.removeQuotes(columns[ORIGIN_AIRPORT_COLUMN_NUMBER]));
             long destAirportCode = Long.parseLong(StringTools.removeQuotes(columns[DEST_AIRPORT_COLUMN_NUMBER]));
             String delay = columns[DELAY_COLUMN_NUMBER];
