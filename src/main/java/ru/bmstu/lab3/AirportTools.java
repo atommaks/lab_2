@@ -10,7 +10,7 @@ import scala.Tuple2;
 
 import java.util.Map;
 
-public class AirportSparkFunctions {
+public class AirportTools {
     private static final int AIRPORT_CODE_COLUMN_NUMBER = 0;
     private static final int ORIGIN_AIRPORT_COLUMN_NUMBER = 11;
     private static final int DEST_AIRPORT_COLUMN_NUMBER = 14;
@@ -19,9 +19,9 @@ public class AirportSparkFunctions {
     private static final boolean ABORTED_FLIGHT_FLAG = true;
     private static final boolean NOT_ABORTED_FLIGHT_FLAG = false;
 
-    public AirportSparkFunctions () {}
+    public AirportTools() {}
 
-    public static Function<Tuple2<LongWritable, Text>, Boolean> filterFunction = new Function<Tuple2<LongWritable, Text>, Boolean>() {
+    public static Function<Tuple2<LongWritable, Text>, Boolean> removeFirstLine = new Function<Tuple2<LongWritable, Text>, Boolean>() {
         @Override
         public Boolean call(Tuple2<LongWritable, Text> e) {
             return e._1.get() != 0;
