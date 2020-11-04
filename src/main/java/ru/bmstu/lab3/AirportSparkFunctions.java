@@ -1,5 +1,6 @@
 package ru.bmstu.lab3;
 
+import org.apache.spark.api.java.function.Function;
 import org.apache.spark.api.java.function.Function2;
 import org.apache.spark.api.java.function.PairFunction;
 import org.apache.spark.broadcast.Broadcast;
@@ -14,24 +15,31 @@ public class AirportSparkFunctions {
     private static final int DELAY_COLUMN_NUMBER = 18;
     private static final boolean ABORTED_FLIGHT_FLAG = true;
     private static final boolean NOT_ABORTED_FLIGHT_FLAG = false;
-    private static int airportNamesFileCount = 0;
-    private static int airportFlightsFileCount = 0;
+    private static int airportNamesLinesFileCount = 0;
+    private static int airportFlightsLinesFileCount = 0;
 
     public AirportSparkFunctions () {}
+
+    public static Function<String, Boolean> airportNamesFilterFunction = new Function<String, Boolean>() {
+        @Override
+        public Boolean call(String s) {
+            if (airportNamesLinesFileCount == 0) {
+                airportNamesLinesFileCount++;
+                return false;
+            }
+            return true;
+        }
+    };
 
     public static PairFunction<String, Long, String> airportNamesKeyData =
             new PairFunction<String, Long, String>() {
         @Override
         public Tuple2<Long, String> call(String line) {
-            if (airportNamesFileCount != 0) {
-                String[] columns = StringTools.splitWithCommas(line);
-                long airportCode =
-                        (long)(Integer.parseInt(StringTools.removeQuotes(columns[AIRPORT_CODE_COLUMN_NUMBER])));
-                String airportName = StringTools.concatWords(columns, 1, columns.length);
-                return new Tuple2<>(airportCode, airportName);
-            }
-            airportNamesFileCount++;
-            return null;
+            String[] columns = StringTools.splitWithCommas(line);
+            long airportCode =
+                    (long)(Integer.parseInt(StringTools.removeQuotes(columns[AIRPORT_CODE_COLUMN_NUMBER])));
+            String airportName = StringTools.concatWords(columns, 1, columns.length);
+            return new Tuple2<>(airportCode, airportName);
         }
     };
 
