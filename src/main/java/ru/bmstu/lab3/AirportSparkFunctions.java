@@ -17,7 +17,6 @@ public class AirportSparkFunctions {
     private static final boolean NOT_ABORTED_FLIGHT_FLAG = false;
     private static int airportNamesLinesFileCount = 0;
     private static int airportFlightsLinesFileCount = 0;
-    private static
 
     public AirportSparkFunctions () {}
 
