@@ -20,8 +20,7 @@ public class FlightApp {
 
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);
-        JavaRDD<LongWritable, Text> flightInfoRDD = sc.hadoopFile(args[0], TextInputFormat.class, LongWritable.class, Text.class);
-        //JavaRDD<String> flightInfoRDD = sc.textFile(args[0]);
+        JavaRDD<String> flightInfoRDD = sc.textFile(args[0]);
         JavaRDD<String> airportInfoRDD = sc.textFile(args[1]);
         JavaPairRDD<Tuple2<LongWritable, LongWritable>, FlightData> flightInfoPairRDD =
                 flightInfoRDD.mapToPair(AirportSparkFunctions.airportFlightsKeyData);

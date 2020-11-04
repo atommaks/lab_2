@@ -16,6 +16,8 @@ public class AirportSparkFunctions {
     private static final int DELAY_COLUMN_NUMBER = 18;
     private static final boolean ABORTED_FLIGHT_FLAG = true;
     private static final boolean NOT_ABORTED_FLIGHT_FLAG = false;
+    private static int airportNamesFileCount = 0;
+    private static int airportFlightsFileCount = 0;
 
     public AirportSparkFunctions () {}
 
@@ -23,11 +25,15 @@ public class AirportSparkFunctions {
             new PairFunction<String, LongWritable, Text>() {
         @Override
         public Tuple2<LongWritable, Text> call(String line) {
-            String[] columns = StringTools.splitWithCommas(line);
-            LongWritable airportCode =
-                    new LongWritable(Integer.parseInt(StringTools.removeQuotes(columns[AIRPORT_CODE_COLUMN_NUMBER])));
-            Text airportName = new Text(StringTools.concatWords(columns, 1, columns.length));
-            return new Tuple2<>(airportCode, airportName);
+            if (airportNamesFileCount != 0) {
+                String[] columns = StringTools.splitWithCommas(line);
+                LongWritable airportCode =
+                        new LongWritable(Integer.parseInt(StringTools.removeQuotes(columns[AIRPORT_CODE_COLUMN_NUMBER])));
+                Text airportName = new Text(StringTools.concatWords(columns, 1, columns.length));
+                return new Tuple2<>(airportCode, airportName);
+            }
+            airportNamesFileCount++;
+            return null;
         }
     };
 
