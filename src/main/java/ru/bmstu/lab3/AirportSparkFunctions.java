@@ -31,6 +31,17 @@ public class AirportSparkFunctions {
         }
     };
 
+    public static Function<String, Boolean> airportFlightsFilterFunction = new Function<String, Boolean>() {
+        @Override
+        public Boolean call(String s) {
+            if (airportFlightsLinesFileCount == 0) {
+                airportFlightsLinesFileCount++;
+                return false;
+            }
+            return true;
+        }
+    };
+
     public static PairFunction<String, Long, String> airportNamesKeyData =
             new PairFunction<String, Long, String>() {
         @Override
