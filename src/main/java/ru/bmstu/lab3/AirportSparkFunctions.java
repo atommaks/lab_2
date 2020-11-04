@@ -41,17 +41,21 @@ public class AirportSparkFunctions {
             new PairFunction<String, Tuple2<LongWritable, LongWritable>, FlightData>() {
         @Override
         public Tuple2<Tuple2<LongWritable, LongWritable>, FlightData> call(String line) {
-            String[] columns = StringTools.splitWithCommas(line);
-            int originAirportCode = Integer.parseInt(StringTools.removeQuotes(columns[ORIGIN_AIRPORT_COLUMN_NUMBER]));
-            int destAirportCode = Integer.parseInt(StringTools.removeQuotes(columns[DEST_AIRPORT_COLUMN_NUMBER]));
-            String delay = columns[DELAY_COLUMN_NUMBER];
-            if (!delay.isEmpty()) {
-                return new Tuple2<>(new Tuple2<>(new LongWritable(originAirportCode), new LongWritable(destAirportCode)),
-                        new FlightData(Float.parseFloat(delay), NOT_ABORTED_FLIGHT_FLAG));
-            }
+            if (airportFlightsFileCount != 0) {
+                String[] columns = StringTools.splitWithCommas(line);
+                int originAirportCode = Integer.parseInt(StringTools.removeQuotes(columns[ORIGIN_AIRPORT_COLUMN_NUMBER]));
+                int destAirportCode = Integer.parseInt(StringTools.removeQuotes(columns[DEST_AIRPORT_COLUMN_NUMBER]));
+                String delay = columns[DELAY_COLUMN_NUMBER];
+                if (!delay.isEmpty()) {
+                    return new Tuple2<>(new Tuple2<>(new LongWritable(originAirportCode), new LongWritable(destAirportCode)),
+                            new FlightData(Float.parseFloat(delay), NOT_ABORTED_FLIGHT_FLAG));
+                }
 
-            return new Tuple2<>(new Tuple2<>(new LongWritable(originAirportCode), new LongWritable(destAirportCode)),
-                    new FlightData(Float.parseFloat(delay), ABORTED_FLIGHT_FLAG));
+                return new Tuple2<>(new Tuple2<>(new LongWritable(originAirportCode), new LongWritable(destAirportCode)),
+                        new FlightData(Float.parseFloat(delay), ABORTED_FLIGHT_FLAG));
+            }
+            airportFlightsFileCount++;
+            return null;
         }
     };
 
