@@ -26,7 +26,7 @@ public class FlightApp {
                 flightInfoRDD.mapToPair(AirportSparkFunctions.airportFlightsKeyData);
         JavaPairRDD<Long, String> airportInfoPairRDD =
                 airportInfoRDD.mapToPair(AirportSparkFunctions.airportNamesKeyData);
-        JavaPairRDD<Tuple2<Long, LongWritable> ,FlightData> reducedFlightInfo =
+        JavaPairRDD<Tuple2<Long, Long> ,FlightData> reducedFlightInfo =
                 flightInfoPairRDD.reduceByKey(AirportSparkFunctions.airportFlightsUniqueKeyData);
         JavaPairRDD<String, String> result =
                 reducedFlightInfo.mapToPair(AirportSparkFunctions.getAirportResultData(sc.broadcast(airportInfoPairRDD.collectAsMap())));
