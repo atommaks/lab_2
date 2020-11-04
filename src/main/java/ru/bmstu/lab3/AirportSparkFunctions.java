@@ -27,6 +27,7 @@ public class AirportSparkFunctions {
                 airportNamesLinesFileCount++;
                 return false;
             }
+
             return true;
         }
     };
@@ -38,6 +39,7 @@ public class AirportSparkFunctions {
                 airportFlightsLinesFileCount++;
                 return false;
             }
+            
             return true;
         }
     };
