@@ -25,8 +25,8 @@ public class AirportSparkFunctions {
 
     public static Function<Tuple2<LongWritable, Text>, Boolean> filterFunction = new Function<Tuple2<LongWritable, Text>, Boolean>() {
         @Override
-        public Boolean call(Tuple2<LongWritable, Text>) {
-
+        public Boolean call(Tuple2<LongWritable, Text> e) {
+            return e._1.get() != 0;
         }
     };
 
