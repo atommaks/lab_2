@@ -73,13 +73,13 @@ public class AirportSparkFunctions {
         }
     };
 
-    public static PairFunction<Tuple2<Tuple2<LongWritable, LongWritable>, FlightData>, String, String>
-        getAirportResultData (Broadcast<Map<LongWritable, Text>> airportInfoBroadcasted) {
-        return new PairFunction<Tuple2<Tuple2<LongWritable, LongWritable>, FlightData>, String, String>() {
+    public static PairFunction<Tuple2<Tuple2<Long, Long>, FlightData>, String, String>
+        getAirportResultData (Broadcast<Map<Long, String>> airportInfoBroadcasted) {
+        return new PairFunction<Tuple2<Tuple2<Long, Long>, FlightData>, String, String>() {
             @Override
-            public Tuple2<String, String> call(Tuple2<Tuple2<LongWritable, LongWritable>, FlightData> e) {
-                String originName = airportInfoBroadcasted.value().get(e._1._1).toString();
-                String destName = airportInfoBroadcasted.value().get(e._1._2).toString();
+            public Tuple2<String, String> call(Tuple2<Tuple2<Long, Long>, FlightData> e) {
+                String originName = airportInfoBroadcasted.value().get(e._1._1);
+                String destName = airportInfoBroadcasted.value().get(e._1._2);
                 String key = originName + " -> " + destName;
                 String value = String.format("Delay: %f, Ratio: %.2f%%", e._2.getDelay(), e._2.getRatio());
 
