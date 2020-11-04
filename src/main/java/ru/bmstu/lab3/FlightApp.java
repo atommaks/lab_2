@@ -19,9 +19,9 @@ public class FlightApp {
         JavaRDD<String> flightInfoRDD = sc.textFile(args[0]);
         JavaRDD<String> airportInfoRDD = sc.textFile(args[1]);
         JavaPairRDD<Tuple2<Long, Long>, FlightData> flightInfoPairRDD =
-                flightInfoRDD.mapToPair(AirportSparkFunctions.airportFlightsKeyData);
+                flightInfoRDD.filter().mapToPair(AirportSparkFunctions.airportFlightsKeyData);
         JavaPairRDD<Long, String> airportInfoPairRDD =
-                airportInfoRDD.mapToPair(AirportSparkFunctions.airportNamesKeyData);
+                airportInfoRDD.filter().mapToPair(AirportSparkFunctions.airportNamesKeyData);
         JavaPairRDD<Tuple2<Long, Long> ,FlightData> reducedFlightInfo =
                 flightInfoPairRDD.reduceByKey(AirportSparkFunctions.airportFlightsUniqueKeyData);
         JavaPairRDD<String, String> result =
