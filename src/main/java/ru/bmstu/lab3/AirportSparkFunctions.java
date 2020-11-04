@@ -95,6 +95,12 @@ public class AirportSparkFunctions {
             public Tuple2<String, String> call(Tuple2<Tuple2<Long, Long>, FlightData> e) {
                 String originName = airportInfoBroadcasted.value().get(e._1._1);
                 String destName = airportInfoBroadcasted.value().get(e._1._2);
+                if (originName == null) {
+                    System.out.println("LOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOL");
+                }
+                if (destName == null) {
+                    System.out.println("KEEEEEEEEEEEEEEEEEEEEEEEEEK");
+                }
                 String key = originName + " -> " + destName;
                 String value = String.format("Delay: %f, Ratio: %.2f%%", e._2.getDelay(), e._2.getRatio());
 
