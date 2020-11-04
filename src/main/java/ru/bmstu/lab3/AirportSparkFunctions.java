@@ -56,7 +56,7 @@ public class AirportSparkFunctions {
             }
 
             return new Tuple2<>(new Tuple2<>(originAirportCode, destAirportCode),
-                    new FlightData(, ABORTED_FLIGHT_FLAG));
+                    new FlightData(ZERO, ABORTED_FLIGHT_FLAG));
         }
     };
 
