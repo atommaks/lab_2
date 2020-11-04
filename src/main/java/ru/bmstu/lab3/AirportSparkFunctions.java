@@ -39,7 +39,7 @@ public class AirportSparkFunctions {
                 airportFlightsLinesFileCount++;
                 return false;
             }
-            
+
             return true;
         }
     };
