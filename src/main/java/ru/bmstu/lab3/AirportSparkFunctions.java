@@ -17,17 +17,22 @@ public class AirportSparkFunctions {
     private static final boolean ABORTED_FLIGHT_FLAG = true;
     private static final boolean NOT_ABORTED_FLIGHT_FLAG = false;
 
-    public static PairFunction<String, LongWritable, Text> airportNamesKeyData = new PairFunction<String, LongWritable, Text>() {
+    public AirportSparkFunctions () {}
+
+    public static PairFunction<String, LongWritable, Text> airportNamesKeyData =
+            new PairFunction<String, LongWritable, Text>() {
         @Override
         public Tuple2<LongWritable, Text> call(String line) {
             String[] columns = StringTools.splitWithCommas(line);
-            LongWritable airportCode = new LongWritable(Integer.parseInt(StringTools.removeQuotes(columns[AIRPORT_CODE_COLUMN_NUMBER])));
+            LongWritable airportCode =
+                    new LongWritable(Integer.parseInt(StringTools.removeQuotes(columns[AIRPORT_CODE_COLUMN_NUMBER])));
             Text airportName = new Text(StringTools.concatWords(columns, 1, columns.length));
             return new Tuple2<>(airportCode, airportName);
         }
     };
 
-    public static PairFunction<String, Tuple2<LongWritable, LongWritable>, FlightData> airportFlightsKeyData = new PairFunction<String, Tuple2<LongWritable, LongWritable>, FlightData>() {
+    public static PairFunction<String, Tuple2<LongWritable, LongWritable>, FlightData> airportFlightsKeyData =
+            new PairFunction<String, Tuple2<LongWritable, LongWritable>, FlightData>() {
         @Override
         public Tuple2<Tuple2<LongWritable, LongWritable>, FlightData> call(String line) {
             String[] columns = StringTools.splitWithCommas(line);
@@ -44,7 +49,8 @@ public class AirportSparkFunctions {
         }
     };
 
-    public static Function2<FlightData, FlightData, FlightData> airportFlightsUniqueKeyData = new Function2<FlightData, FlightData, FlightData>() {
+    public static Function2<FlightData, FlightData, FlightData> airportFlightsUniqueKeyData =
+            new Function2<FlightData, FlightData, FlightData>() {
         @Override
         public FlightData call(FlightData fd1, FlightData fd2){
             float d1 = fd1.getDelay(), d2 = fd2.getDelay();
@@ -57,7 +63,8 @@ public class AirportSparkFunctions {
         }
     };
 
-    public static PairFunction<Tuple2<Tuple2<LongWritable, LongWritable>, FlightData>, String, String> getAirportResultData (Broadcast<Map<LongWritable, Text>> airportInfoBroadcasted) {
+    public static PairFunction<Tuple2<Tuple2<LongWritable, LongWritable>, FlightData>, String, String>
+        getAirportResultData (Broadcast<Map<LongWritable, Text>> airportInfoBroadcasted) {
         return new PairFunction<Tuple2<Tuple2<LongWritable, LongWritable>, FlightData>, String, String>() {
             @Override
             public Tuple2<String, String> call(Tuple2<Tuple2<LongWritable, LongWritable>, FlightData> e) {

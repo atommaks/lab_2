@@ -20,10 +20,14 @@ public class FlightApp {
         JavaSparkContext sc = new JavaSparkContext(conf);
         JavaRDD<String> flightInfoRDD = sc.textFile(args[0]);
         JavaRDD<String> airportInfoRDD = sc.textFile(args[1]);
-        JavaPairRDD<Tuple2<LongWritable, LongWritable>, FlightData> flightInfoPairRDD = flightInfoRDD.mapToPair(AirportSparkFunctions.airportFlightsKeyData);
-        JavaPairRDD<LongWritable, Text> airportInfoPairRDD = airportInfoRDD.mapToPair(AirportSparkFunctions.airportNamesKeyData);
-        JavaPairRDD<Tuple2<LongWritable, LongWritable> ,FlightData> reducedFlightInfo = flightInfoPairRDD.reduceByKey(AirportSparkFunctions.airportFlightsUniqueKeyData);
-        JavaPairRDD<String, String> result = reducedFlightInfo.mapToPair(AirportSparkFunctions.getAirportResultData(sc.broadcast(airportInfoPairRDD.collectAsMap())));
+        JavaPairRDD<Tuple2<LongWritable, LongWritable>, FlightData> flightInfoPairRDD =
+                flightInfoRDD.mapToPair(AirportSparkFunctions.airportFlightsKeyData);
+        JavaPairRDD<LongWritable, Text> airportInfoPairRDD =
+                airportInfoRDD.mapToPair(AirportSparkFunctions.airportNamesKeyData);
+        JavaPairRDD<Tuple2<LongWritable, LongWritable> ,FlightData> reducedFlightInfo =
+                flightInfoPairRDD.reduceByKey(AirportSparkFunctions.airportFlightsUniqueKeyData);
+        JavaPairRDD<String, String> result =
+                reducedFlightInfo.mapToPair(AirportSparkFunctions.getAirportResultData(sc.broadcast(airportInfoPairRDD.collectAsMap())));
         result.saveAsTextFile(args[2]);
     }
 }
