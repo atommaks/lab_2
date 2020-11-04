@@ -25,7 +25,7 @@ public class AirportSparkFunctions {
         @Override
         public Boolean call(String s) {
             String fw = StringTools.splitWithCommas(s)[0].toLowerCase();
-            System.out.println(fw);
+            System.out.println(fw);  //-----------------------------------
             return !(fw.equals(AIRPORT_FLIGHT_FILE_FIRST_LINE) || fw.equals(AIRPORT_NAME_FILE_FIRST_LINE));
         }
     };
