@@ -50,7 +50,7 @@ public class AirportSparkFunctions {
             long airportCode =
                     (long)(Integer.parseInt(StringTools.removeQuotes(columns[AIRPORT_CODE_COLUMN_NUMBER])));
             String airportName = StringTools.concatWords(columns, 1, columns.length);
-            
+
             return new Tuple2<>(airportCode, airportName);
         }
     };
