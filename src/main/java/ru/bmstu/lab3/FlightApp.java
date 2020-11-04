@@ -22,10 +22,10 @@ public class FlightApp {
         JavaRDD<String> flightInfoRDD = sc.textFile(args[0]);
         JavaRDD<String> airportInfoRDD = sc.textFile(args[1]);
         JavaPairRDD<Tuple2<Long, Long>, FlightData> flightInfoPairRDD = flightInfoRDD
-                .filter(AirportSparkFunctions.airportFlightsFilterFunction)
+                .filter(AirportSparkFunctions.filterFunction)
                 .mapToPair(AirportSparkFunctions.airportFlightsKeyData);
         JavaPairRDD<Long, String> airportInfoPairRDD =  airportInfoRDD
-                .filter(AirportSparkFunctions.airportNamesFilterFunction)
+                .filter(AirportSparkFunctions.filterFunction)
                 .mapToPair(AirportSparkFunctions.airportNamesKeyData);
         JavaPairRDD<Tuple2<Long, Long> ,FlightData> reducedFlightInfo = flightInfoPairRDD
                 .reduceByKey(AirportSparkFunctions.airportFlightsUniqueKeyData);
