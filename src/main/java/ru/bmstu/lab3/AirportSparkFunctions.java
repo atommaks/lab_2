@@ -58,21 +58,17 @@ public class AirportSparkFunctions {
             new PairFunction<String, Tuple2<Long, Long>, FlightData>() {
         @Override
         public Tuple2<Tuple2<Long, Long>, FlightData> call(String line) {
-            if (airportFlightsFileCount != 0) {
-                String[] columns = StringTools.splitWithCommas(line);
-                long originAirportCode = Long.parseLong(StringTools.removeQuotes(columns[ORIGIN_AIRPORT_COLUMN_NUMBER]));
-                long destAirportCode = Long.parseLong(StringTools.removeQuotes(columns[DEST_AIRPORT_COLUMN_NUMBER]));
-                String delay = columns[DELAY_COLUMN_NUMBER];
-                if (!delay.isEmpty()) {
-                    return new Tuple2<>(new Tuple2<>(originAirportCode, destAirportCode),
-                            new FlightData(Float.parseFloat(delay), NOT_ABORTED_FLIGHT_FLAG));
-                }
-
+            String[] columns = StringTools.splitWithCommas(line);
+            long originAirportCode = Long.parseLong(StringTools.removeQuotes(columns[ORIGIN_AIRPORT_COLUMN_NUMBER]));
+            long destAirportCode = Long.parseLong(StringTools.removeQuotes(columns[DEST_AIRPORT_COLUMN_NUMBER]));
+            String delay = columns[DELAY_COLUMN_NUMBER];
+            if (!delay.isEmpty()) {
                 return new Tuple2<>(new Tuple2<>(originAirportCode, destAirportCode),
-                        new FlightData(Float.parseFloat(delay), ABORTED_FLIGHT_FLAG));
+                        new FlightData(Float.parseFloat(delay), NOT_ABORTED_FLIGHT_FLAG));
             }
-            airportFlightsFileCount++;
-            return null;
+
+            return new Tuple2<>(new Tuple2<>(originAirportCode, destAirportCode),
+                    new FlightData(Float.parseFloat(delay), ABORTED_FLIGHT_FLAG));
         }
     };
 
