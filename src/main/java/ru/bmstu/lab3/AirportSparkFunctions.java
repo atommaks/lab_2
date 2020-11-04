@@ -1,5 +1,7 @@
 package ru.bmstu.lab3;
 
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
 import org.apache.spark.api.java.function.Function;
 import org.apache.spark.api.java.function.Function2;
 import org.apache.spark.api.java.function.PairFunction;
@@ -21,12 +23,10 @@ public class AirportSparkFunctions {
 
     public AirportSparkFunctions () {}
 
-    public static Function<String, Boolean> filterFunction = new Function<String, Boolean>() {
+    public static Function<Tuple2<LongWritable, Text>, Boolean> filterFunction = new Function<Tuple2<LongWritable, Text>, Boolean>() {
         @Override
-        public Boolean call(String s) {
-            String fw = StringTools.splitWithCommas(s)[0].toLowerCase();
-            System.out.println(fw);  //-----------------------------------
-            return !(fw.equals(AIRPORT_FLIGHT_FILE_FIRST_LINE) || fw.equals(AIRPORT_NAME_FILE_FIRST_LINE));
+        public Boolean call(Tuple2<LongWritable, Text>) {
+
         }
     };
 
