@@ -21,69 +21,53 @@ public class AirportTools {
 
     public AirportTools() {}
 
-    public static Function<Tuple2<LongWritable, Text>, Boolean> removeFirstLine = new Function<Tuple2<LongWritable, Text>, Boolean>() {
-        @Override
-        public Boolean call(Tuple2<LongWritable, Text> e) {
-            return e._1.get() != 0;
-        }
-    };
+    public static Function<Tuple2<LongWritable, Text>, Boolean> removeFirstLine =
+            (Function<Tuple2<LongWritable, Text>, Boolean>) e -> e._1.get() != 0;
 
-    public static PairFunction<Tuple2<LongWritable, Text>, Long, String> airportNamesKeyData =
-            new PairFunction<Tuple2<LongWritable, Text>, Long, String>() {
-        @Override
-        public Tuple2<Long, String> call(Tuple2<LongWritable, Text> line) {
-            String[] columns = StringTools.splitWithCommas(line._2.toString());
-            long airportCode = Long.parseLong(StringTools.removeQuotes(columns[AIRPORT_CODE_COLUMN_NUMBER]));
-            String airportName = StringTools.concatWords(columns, 1, columns.length);
+    public static PairFunction<Tuple2<LongWritable, Text>, Long, String> parseAirportFile =
+            (PairFunction<Tuple2<LongWritable, Text>, Long, String>) line -> {
+                String[] columns = StringTools.splitWithCommas(line._2.toString());
+                long airportCode = Long.parseLong(StringTools.removeQuotes(columns[AIRPORT_CODE_COLUMN_NUMBER]));
+                String airportName = StringTools.concatWords(columns, 1, columns.length);
 
-            return new Tuple2<>(airportCode, airportName);
-        }
-    };
+                return new Tuple2<>(airportCode, airportName);
+            };
 
-    public static PairFunction<Tuple2<LongWritable, Text>, Tuple2<Long, Long>, FlightData> airportFlightsKeyData =
-            new PairFunction<Tuple2<LongWritable, Text>, Tuple2<Long, Long>, FlightData>() {
-        @Override
-        public Tuple2<Tuple2<Long, Long>, FlightData> call(Tuple2<LongWritable, Text> line) {
-            String[] columns = StringTools.splitWithCommas(line._2.toString());
-            long originAirportCode = Long.parseLong(StringTools.removeQuotes(columns[ORIGIN_AIRPORT_COLUMN_NUMBER]));
-            long destAirportCode = Long.parseLong(StringTools.removeQuotes(columns[DEST_AIRPORT_COLUMN_NUMBER]));
-            String delay = columns[DELAY_COLUMN_NUMBER];
-            if (!delay.isEmpty()) {
+    public static PairFunction<Tuple2<LongWritable, Text>, Tuple2<Long, Long>, FlightData> parseFlightsFile =
+            (PairFunction<Tuple2<LongWritable, Text>, Tuple2<Long, Long>, FlightData>) line -> {
+                String[] columns = StringTools.splitWithCommas(line._2.toString());
+                long originAirportCode = Long.parseLong(StringTools.removeQuotes(columns[ORIGIN_AIRPORT_COLUMN_NUMBER]));
+                long destAirportCode = Long.parseLong(StringTools.removeQuotes(columns[DEST_AIRPORT_COLUMN_NUMBER]));
+                String delay = columns[DELAY_COLUMN_NUMBER];
+                if (!delay.isEmpty()) {
+                    return new Tuple2<>(new Tuple2<>(originAirportCode, destAirportCode),
+                            new FlightData(Float.parseFloat(delay), NOT_ABORTED_FLIGHT_FLAG));
+                }
+
                 return new Tuple2<>(new Tuple2<>(originAirportCode, destAirportCode),
-                        new FlightData(Float.parseFloat(delay), NOT_ABORTED_FLIGHT_FLAG));
-            }
+                        new FlightData(ZERO, ABORTED_FLIGHT_FLAG));
+            };
 
-            return new Tuple2<>(new Tuple2<>(originAirportCode, destAirportCode),
-                    new FlightData(ZERO, ABORTED_FLIGHT_FLAG));
-        }
-    };
+    public static Function2<FlightData, FlightData, FlightData> groupByKey =
+            (Function2<FlightData, FlightData, FlightData>) (fd1, fd2) -> {
+                float d1 = fd1.getDelay(), d2 = fd2.getDelay();
+                float newDelay = d1 > d2 ? d1 : d2;
+                int afc1 = fd1.getAbortedFlightCount(), afc2 = fd2.getAbortedFlightCount();
+                int dfc1 = fd1.getDelayedFlightCount(), dfc2 = fd2.getDelayedFlightCount();
+                int fc1 = fd1.getFlightCount(), fc2 = fd2.getFlightCount();
 
-    public static Function2<FlightData, FlightData, FlightData> airportFlightsUniqueKeyData =
-            new Function2<FlightData, FlightData, FlightData>() {
-        @Override
-        public FlightData call(FlightData fd1, FlightData fd2){
-            float d1 = fd1.getDelay(), d2 = fd2.getDelay();
-            float newDelay = d1 > d2 ? d1 : d2;
-            int afc1 = fd1.getAbortedFlightCount(), afc2 = fd2.getAbortedFlightCount();
-            int dfc1 = fd1.getDelayedFlightCount(), dfc2 = fd2.getDelayedFlightCount();
-            int fc1 = fd1.getFlightCount(), fc2 = fd2.getFlightCount();
-
-            return new FlightData(newDelay, afc1 + afc2, dfc1 + dfc2, fc1 + fc2);
-        }
-    };
+                return new FlightData(newDelay, afc1 + afc2, dfc1 + dfc2, fc1 + fc2);
+            };
 
     public static PairFunction<Tuple2<Tuple2<Long, Long>, FlightData>, String, String>
-        getAirportResultData (Broadcast<Map<Long, String>> airportInfoBroadcasted) {
-        return new PairFunction<Tuple2<Tuple2<Long, Long>, FlightData>, String, String>() {
-            @Override
-            public Tuple2<String, String> call(Tuple2<Tuple2<Long, Long>, FlightData> e) {
-                String originName = airportInfoBroadcasted.value().get(e._1._1);
-                String destName = airportInfoBroadcasted.value().get(e._1._2);
-                String key = originName + " -> " + destName;
-                String value = String.format("Delay: %f, Ratio: %.2f%%", e._2.getDelay(), e._2.getRatio());
+    getFlightResultData(Broadcast<Map<Long, String>> airportInfoBroadcasted) {
+        return (PairFunction<Tuple2<Tuple2<Long, Long>, FlightData>, String, String>) e -> {
+            String originName = airportInfoBroadcasted.value().get(e._1._1);
+            String destName = airportInfoBroadcasted.value().get(e._1._2);
+            String key = originName + " -> " + destName;
+            String value = String.format("Delay: %f, Ratio: %.2f%%", e._2.getDelay(), e._2.getRatio());
 
-                return new Tuple2<>(key, value);
-            }
+            return new Tuple2<>(key, value);
         };
     }
 }

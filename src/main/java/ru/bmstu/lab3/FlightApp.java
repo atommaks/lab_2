@@ -10,7 +10,6 @@ import org.apache.spark.broadcast.Broadcast;
 
 import java.util.Map;
 
-
 public class FlightApp {
     public static void main(String[] args) {
         if (args.length != 3) {
@@ -24,13 +23,13 @@ public class FlightApp {
         JavaPairRDD<LongWritable, Text> airportInfoRDD = sc.hadoopFile(args[1], TextInputFormat.class, LongWritable.class, Text.class);
         JavaPairRDD<Long, String> airportInfoPairRDD =  airportInfoRDD
                 .filter(AirportTools.removeFirstLine)
-                .mapToPair(AirportTools.airportNamesKeyData);
+                .mapToPair(AirportTools.parseAirportFile);
         final Broadcast<Map<Long, String>> airportInfoBroadcasted = sc.broadcast(airportInfoPairRDD.collectAsMap());
         JavaPairRDD<String, String> result = flightInfoRDD
                 .filter(AirportTools.removeFirstLine)
-                .mapToPair(AirportTools.airportFlightsKeyData)
-                .reduceByKey(AirportTools.airportFlightsUniqueKeyData)
-                .mapToPair(AirportTools.getAirportResultData(airportInfoBroadcasted));
+                .mapToPair(AirportTools.parseFlightsFile)
+                .reduceByKey(AirportTools.groupByKey)
+                .mapToPair(AirportTools.getFlightResultData(airportInfoBroadcasted));
         result.saveAsTextFile(args[2]);
     }
 }
