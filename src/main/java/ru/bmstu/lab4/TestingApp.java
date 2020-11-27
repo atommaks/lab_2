@@ -8,8 +8,6 @@ import akka.http.javadsl.model.HttpResponse;
 import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 
-import static akka.http.javadsl.server.Directives.route;
-
 public class TestingApp {
     public static void main(String[] args) {
         ActorSystem system = ActorSystem.create("Testing");
@@ -18,11 +16,5 @@ public class TestingApp {
         HttpServer server = new HttpServer(system);
 
         final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow =
-    }
-
-    public void createRoute() {
-        route (
-                
-        )
     }
 }
