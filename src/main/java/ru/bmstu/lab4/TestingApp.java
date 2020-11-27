@@ -17,7 +17,7 @@ public class TestingApp {
         final Http http = Http.get(system);
         final ActorMaterializer materializer = ActorMaterializer.create(system);
         HttpServer server = new HttpServer(system);
-        ScriptEngine engine = new ScriptEngineManager().getEngineByExtension()
+        ScriptEngine engine = new ScriptEngineManager().getEngineByName("")
         //final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow =
     }
 }
