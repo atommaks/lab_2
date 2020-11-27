@@ -106,8 +106,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/Request.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+            <state relative-caret-position="228">
+              <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+              <folding>
+                <element signature="e#439#440#0" expanded="true" />
+                <element signature="e#471#472#0" expanded="true" />
+                <element signature="e#506#507#0" expanded="true" />
+                <element signature="e#537#538#0" expanded="true" />
+                <element signature="e#576#577#0" expanded="true" />
+                <element signature="e#611#612#0" expanded="true" />
+                <element signature="e#643#644#0" expanded="true" />
+                <element signature="e#671#672#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -614,8 +624,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/Request.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        <state relative-caret-position="228">
+          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <folding>
+            <element signature="e#439#440#0" expanded="true" />
+            <element signature="e#471#472#0" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#643#644#0" expanded="true" />
+            <element signature="e#671#672#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
