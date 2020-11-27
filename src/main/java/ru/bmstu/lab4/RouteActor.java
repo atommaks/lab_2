@@ -16,8 +16,8 @@ public class RouteActor extends AbstractActor {
                 path ( "execute", () ->
                         route (
                                 post(() ->
-                                        entity(Jackson.unmarshaller(JsonFile.class), body -> {
-
+                                        entity(Jackson.unmarshaller(JsonFile.class), file -> {
+                                            
                                         })
                                 )
                         )
