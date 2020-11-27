@@ -12,7 +12,10 @@ public class RouteActor extends AbstractActor {
 
     public void createRoute() {
         route (
-                
+                path ( "execute", () ->
+                        
+
+                )
         )
     }
 }
