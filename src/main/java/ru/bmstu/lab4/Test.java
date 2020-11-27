@@ -1,5 +1,5 @@
 package ru.bmstu.lab4;
 
 public class Test {
-    private String 
+    private String testName, ;
 }
