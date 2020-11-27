@@ -8,17 +8,13 @@ import akka.http.javadsl.model.HttpResponse;
 import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 
-import javax.script.ScriptEngine;
-import javax.script.ScriptEngineManager;
-
 public class TestingApp {
     public static void main(String[] args) {
         ActorSystem system = ActorSystem.create("Testing");
         final Http http = Http.get(system);
         final ActorMaterializer materializer = ActorMaterializer.create(system);
         HttpServer server = new HttpServer(system);
-        ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
-        engine.eval()
-        //final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow =
+
+        final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow =
     }
 }
