@@ -2,8 +2,8 @@ package ru.bmstu.lab4;
 
 import akka.actor.ActorSystem;
 
-public class Server {
-    public Server(ActorSystem system) {
+public class HttpServer {
+    public HttpServer(ActorSystem system) {
 
     }
 
