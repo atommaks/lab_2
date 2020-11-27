@@ -8,6 +8,6 @@ public class TestingApp {
     public static void main(String[] args) {
         ActorSystem system = ActorSystem.create("Testing");
         final Http http = Http.get(system);
-        final ActorMaterializer 
+        final ActorMaterializer materializer =  
     }
 }
