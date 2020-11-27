@@ -7,6 +7,6 @@ public class RunActor extends AbstractActor {
     @Override
     public Receive createReceive() {
         return ReceiveBuilder.create()
-                .match( RunMessage.class)
+                .match(RunMessage.class, )
     }
 }
