@@ -4,5 +4,7 @@ public class Request {
     private String packageId;
     private String jsScript;
     private String functionName;
-    private Test[] 
+    private Test[] tests;
+
+    
 }
