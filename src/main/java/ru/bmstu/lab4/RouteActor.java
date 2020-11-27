@@ -2,6 +2,7 @@ package ru.bmstu.lab4;
 
 import akka.actor.AbstractActor;
 
+import static akka.http.javadsl.server.Directives.path;
 import static akka.http.javadsl.server.Directives.route;
 
 public class RouteActor extends AbstractActor {
@@ -12,9 +13,9 @@ public class RouteActor extends AbstractActor {
 
     public void createRoute() {
         route (
-          "execute", () -> {
-              
-                }
+          path(
+                  
+          )
         );
     }
 }
