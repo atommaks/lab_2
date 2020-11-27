@@ -20,7 +20,7 @@
             <version>4.11</version>
             <scope>provided</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-actor_2.12</artifactId>
@@ -85,8 +85,7 @@
             <artifactId>akka-http-xml_2.12</artifactId>
             <version>${akka-http.version}</version>
         </dependency>
-
-
+        
 <!--        <dependency>-->
 <!--            <groupId>org.jetbrains</groupId>-->
 <!--            <artifactId>annotations</artifactId>-->
