@@ -9,6 +9,6 @@ public class TestingApp {
         ActorSystem system = ActorSystem.create("Testing");
         final Http http = Http.get(system);
         final ActorMaterializer materializer = ActorMaterializer.create(system);
-
+        Server server = new Server(system);
     }
 }
