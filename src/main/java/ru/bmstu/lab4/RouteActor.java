@@ -2,8 +2,7 @@ package ru.bmstu.lab4;
 
 import akka.actor.AbstractActor;
 
-import static akka.http.javadsl.server.Directives.path;
-import static akka.http.javadsl.server.Directives.route;
+import static akka.http.javadsl.server.Directives.*;
 
 public class RouteActor extends AbstractActor {
     @Override
@@ -14,7 +13,7 @@ public class RouteActor extends AbstractActor {
     public void createRoute() {
         route (
           path( "execute", () -> {
-              
+              post()
                   }
           )
         );
