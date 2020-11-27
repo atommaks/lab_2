@@ -9,6 +9,7 @@ import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 
 import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
 
 public class TestingApp {
     public static void main(String[] args) {
@@ -16,7 +17,7 @@ public class TestingApp {
         final Http http = Http.get(system);
         final ActorMaterializer materializer = ActorMaterializer.create(system);
         HttpServer server = new HttpServer(system);
-        ScriptEngine 
+        ScriptEngine engine = new ScriptEngineManager().getEngineByExtension()
         //final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow =
     }
 }
