@@ -6,6 +6,4 @@ public class HttpServer {
     public HttpServer(ActorSystem system) {
 
     }
-
-
 }
