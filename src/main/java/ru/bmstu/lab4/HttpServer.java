@@ -40,9 +40,6 @@ public class HttpServer {
                         route(
                                 parameter(PACKAGE_ID_PARAMETR, packageID -> {
 
-                                })
-                        )
-                )
-        );
+                                }))));
     }
 }
