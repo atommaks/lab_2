@@ -21,6 +21,7 @@ public class RouteActor extends AbstractActor {
     public Receive createReceive() {
         return ReceiveBuilder.create()
                 .match(RunMessage.class, msg -> balanceActor.tell(msg, self()))
+                .match(StoreMessage.class, msg -> )
                 .build();
     }
 }
