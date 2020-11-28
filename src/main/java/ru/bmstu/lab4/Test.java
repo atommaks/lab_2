@@ -1,10 +1,6 @@
 package ru.bmstu.lab4;
 
-import javax.script.ScriptEngine;
-import javax.script.ScriptEngineManager;
-
 public class Test {
-    private static final String ENGINE_NAME = "nashorn";
     private String testName;
     private String expectedResult;
     private Object[] params;
