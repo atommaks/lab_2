@@ -14,7 +14,7 @@ public class HttpServer {
 
     public HttpServer(ActorSystem system) {
         this.system = system;
-        route = this.system
+        route = this.system.actorOf()
     }
 
     public Route getRoute() {
