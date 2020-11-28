@@ -16,8 +16,8 @@ public class StoreMessage {
         return packageID;
     }
 
-    public static String getTestResultsFormat() {
-        return TEST_RESULTS_FORMAT;
+    public TestResults getResults() {
+        return results;
     }
 
     @Override
