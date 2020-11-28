@@ -29,7 +29,7 @@ public class TestingApp {
         System.out.printf(START_MSG_FORMAT, IP_ADDRESS, PORT);
         System.out.print(EXIT_INSTRUCTION_MSG);
         System.in.read();
-        binding.thenCompose()
+        binding.thenCompose(ServerBinding::unbind)
 
     }
 }
