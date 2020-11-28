@@ -11,6 +11,7 @@ import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 
 import java.util.concurrent.CompletionStage;
+import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
 public class TestingApp {
@@ -20,6 +21,9 @@ public class TestingApp {
     public final static Logger LOGGER = Logger.getLogger("MyLog");
 
     public static void main(String[] args) throws Exception{
+        FileHandler fh;
+        
+
         ActorSystem system = ActorSystem.create("Testing");
         final Http http = Http.get(system);
         final ActorMaterializer materializer = ActorMaterializer.create(system);
