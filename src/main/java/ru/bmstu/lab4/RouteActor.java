@@ -4,7 +4,9 @@ import akka.actor.AbstractActor;
 import akka.actor.ActorRef;
 import akka.actor.Props;
 import akka.japi.pf.ReceiveBuilder;
+import akka.pattern.Patterns;
 import akka.routing.BalancingPool;
+import scala.concurrent.Future;
 
 public class RouteActor extends AbstractActor {
     private final static int POOL_SIZE = 2;
@@ -25,7 +27,7 @@ public class RouteActor extends AbstractActor {
                 .match(RunMessage.class, msg -> balanceActor.tell(msg, self()))
                 .match(StoreMessage.class, msg -> storageActor.tell(msg, self()))
                 .match(ResultMessage.class, msg -> {
-                    Future<Object> future = 
+                    Future<Object> future = Patterns.ask()
 
                 })
                 .build();
