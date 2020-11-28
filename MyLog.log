@@ -13,3 +13,27 @@
   <message>Listening on localhost:1969
 </message>
 </record>
+<record>
+  <date>2020-11-28T18:26:20</date>
+  <millis>1606577180850</millis>
+  <sequence>1</sequence>
+  <logger>MyLog</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab4.TestResults</class>
+  <method>runTests</method>
+  <thread>19</thread>
+  <message>PackageID: 11, Function Name: divideFn, Test: test1 passed!
+</message>
+</record>
+<record>
+  <date>2020-11-28T18:26:20</date>
+  <millis>1606577180863</millis>
+  <sequence>2</sequence>
+  <logger>MyLog</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab4.TestResults</class>
+  <method>runTests</method>
+  <thread>19</thread>
+  <message>PackageID: 11, Function Name: divideFn, Test: test2 passed!
+</message>
+</record>
