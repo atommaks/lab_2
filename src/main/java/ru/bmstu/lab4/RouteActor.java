@@ -10,6 +10,17 @@ public class RouteActor extends AbstractActor {
     @Override
     public Receive createReceive() {
         return ReceiveBuilder.create()
-        return null;
+                .route (
+                        path ( "run", () ->
+                                route (
+                                        post(() ->
+                                                entity(Jackson.unmarshaller(JsonFile.class), file -> {
+
+                                                })
+                                        )
+                                )
+
+                        )
+                )
     }
 }
