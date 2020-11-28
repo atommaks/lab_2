@@ -2,7 +2,6 @@ package ru.bmstu.lab4;
 
 import akka.actor.AbstractActor;
 import akka.actor.ActorRef;
-import akka.actor.Props;
 import akka.japi.pf.ReceiveBuilder;
 
 public class RouteActor extends AbstractActor {
@@ -13,7 +12,7 @@ public class RouteActor extends AbstractActor {
 
     @Override
     public void preStart() {
-        balanceActor = getContext().actorOf(Props.create())
+        balanceActor = getContext().actorOf(new Balance)
     }
 
     @Override
