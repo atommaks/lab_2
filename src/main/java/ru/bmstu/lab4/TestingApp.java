@@ -13,6 +13,8 @@ import akka.stream.javadsl.Flow;
 import java.util.concurrent.CompletionStage;
 
 public class TestingApp {
+    private static final String IP_ADDRESS = "";
+
     public static void main(String[] args) {
         ActorSystem system = ActorSystem.create("Testing");
         final Http http = Http.get(system);
