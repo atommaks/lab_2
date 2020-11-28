@@ -8,7 +8,7 @@ import java.util.HashMap;
 public class StoreActor extends AbstractActor {
     private HashMap<String, TestResults> storage;
     private static final String STORE_ACTOR_STORE_FORMAT = "[StoreActor] PackageID: %s. Message: Store!\n";
-    private static final String STORE_ACTOR_GET_FORMAT = "";
+    private static final String STORE_ACTOR_GET_FORMAT = "[StoreActor] PackageID: %s. Message: GET!\n";
 
     public StoreActor() {
         storage = new HashMap<>();
