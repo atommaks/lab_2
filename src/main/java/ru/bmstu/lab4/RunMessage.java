@@ -13,8 +13,6 @@ public class RunMessage {
         this.tests = tests;
     }
 
-    public 
-
     public String getPackageId() {
         return packageId;
     }
@@ -29,5 +27,21 @@ public class RunMessage {
 
     public Test[] getTests() {
         return tests;
+    }
+
+    public void setTests(Test[] tests) {
+        this.tests = tests;
+    }
+
+    public void setJsScript(String jsScript) {
+        this.jsScript = jsScript;
+    }
+
+    public void setFunctionName(String functionName) {
+        this.functionName = functionName;
+    }
+
+    public void setPackageId(String packageId) {
+        this.packageId = packageId;
     }
 }
