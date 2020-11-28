@@ -49,7 +49,7 @@ public class HttpServer {
                                     StoreMessage result;
                                     try {
 
-                                    }
+                                    } catch ()
                                 })
                         )
                 )
