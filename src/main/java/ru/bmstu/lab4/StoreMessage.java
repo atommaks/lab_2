@@ -16,6 +16,10 @@ public class StoreMessage {
         return packageID;
     }
 
+    public static String getTestResultsFormat() {
+        return TEST_RESULTS_FORMAT;
+    }
+
     @Override
     public String toString() {
         return String.format(TEST_RESULTS_FORMAT, packageID, results.toString());
