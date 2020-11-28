@@ -12,6 +12,10 @@ public class StoreMessage {
         this.results = results;
     }
 
+    public String getPackageID() {
+        return packageID;
+    }
+
     @Override
     public String toString() {
         return String.format(TEST_RESULTS_FORMAT, packageID, results.toString());
