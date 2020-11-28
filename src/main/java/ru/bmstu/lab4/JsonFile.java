@@ -3,7 +3,7 @@ package ru.bmstu.lab4;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public static class JsonFile {
+public class JsonFile {
     private String packageID;
     private String jsScript;
     private String functionName;
