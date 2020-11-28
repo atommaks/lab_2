@@ -16,7 +16,7 @@ public class TestingApp {
     private static final String IP_ADDRESS = "localhost";
     private static final int PORT = 1969;
     private static final String START_MSG_FORMAT = "Listening on %s:%d";
-    private static final String EXIT_INSTRUCTION_MSG = "Press";
+    private static final String EXIT_INSTRUCTION_MSG = "Press ENTER to exit";
 
     public static void main(String[] args) {
         ActorSystem system = ActorSystem.create("Testing");
