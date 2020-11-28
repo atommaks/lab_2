@@ -64,6 +64,6 @@ public class HttpServer {
                                         }
                                     })))),
                  complete(StatusCodes.NOT_FOUND, WRONG_REQUEST_MSG)
-        )
+        );
     }
 }
