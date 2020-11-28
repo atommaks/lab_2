@@ -15,7 +15,7 @@ import java.util.concurrent.CompletionStage;
 public class TestingApp {
     private static final String IP_ADDRESS = "localhost";
     private static final int PORT = 1969;
-    private static final String START_MSG_FORMAT = "Listening ";
+    private static final String START_MSG_FORMAT = "Listening on ";
 
     public static void main(String[] args) {
         ActorSystem system = ActorSystem.create("Testing");
