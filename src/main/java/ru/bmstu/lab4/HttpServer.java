@@ -13,6 +13,7 @@ import static akka.http.javadsl.server.Directives.entity;
 public class HttpServer {
     private ActorSystem system;
     private ActorRef route;
+    private static final String PACKAGE_TEST_START_FORMAT = "Testing %d ;
 
     public HttpServer(ActorSystem system) {
         this.system = system;
