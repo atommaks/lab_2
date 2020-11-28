@@ -21,9 +21,9 @@ public class TestResults {
         String packageID = msg.getPackageId();
         String functionName = msg.getFunctionName();
         String jsScript = msg.getJsScript();
-        JsonFile.Test[] tests = msg.getTests();
+        Test[] tests = msg.getTests();
         try {
-            for (JsonFile.Test test : tests) {
+            for (Test test : tests) {
                 ScriptEngine engine = new ScriptEngineManager().getEngineByName(ENGINE_NAME);
                 engine.eval(jsScript);
                 Invocable invocable = (Invocable)engine;
