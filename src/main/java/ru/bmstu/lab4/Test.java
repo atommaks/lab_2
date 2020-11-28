@@ -1,6 +1,9 @@
 package ru.bmstu.lab4;
 
+import javax.script.ScriptEngine;
+
 public class Test {
+    private static final String ENGINE_NAME = "";
     private String testName;
     private String expectedResult;
     private Object[] params;
@@ -24,6 +27,6 @@ public class Test {
     }
 
     public void runTest() throws Exception {
-        
+        ScriptEngine engine =
     }
 }
