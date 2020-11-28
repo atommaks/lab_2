@@ -10,4 +10,9 @@ public class StoreMessage {
         this.functionName = functionName;
         this.results = results;
     }
+
+    @Override
+    public String toString() {
+
+    }
 }
