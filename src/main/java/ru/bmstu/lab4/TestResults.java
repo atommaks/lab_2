@@ -8,8 +8,8 @@ import java.util.HashMap;
 public class TestResults {
     private HashMap<String, Boolean> results;
     private static final String ENGINE_NAME = "nashorn";
-    private static final String SUCCES_TEST_FORMAT = "";
-    private static final String FAIL_TEST_FORMAT = "";
+    private static final String SUCCES_TEST_FORMAT = "PackageID: %s, Test: %s passed!";
+    private static final String FAIL_TEST_FORMAT = "PackageID: %s, Test: %s failed! Expected result: %s, result: %s";
 
     public TestResults() {
         results = new HashMap<>();
@@ -23,9 +23,9 @@ public class TestResults {
             String result = invocable.invokeFunction(functionName, test.getParams()).toString();
             boolean isRight = result.equals(test.getExpectedResult());
             if (isRight) {
-                System.out.printf(SUCCES_TEST_FORMAT,);
+                System.out.printf(SUCCES_TEST_FORMAT,packageID, test.getTestName());
             } else {
-                System.out.printf(FAIL_TEST_FORMAT,);
+                System.out.printf(FAIL_TEST_FORMAT, packageID, test.getTestName(), test.getExpectedResult(), result);
             }
             results.put(test.getTestName(), isRight);
 
