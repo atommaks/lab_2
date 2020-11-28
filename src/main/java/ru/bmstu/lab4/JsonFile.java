@@ -11,7 +11,7 @@ public class JsonFile {
 
     //@JsonCreator
     //public JsonFile(@JsonProperty("packageId") String packageId, @JsonProperty("jsScript") String jsScript, @JsonProperty("functionName") String functionName, @JsonProperty("tests") Test[] tests) {
-    public JsonFile(String packageId, String jsScript, String functionName, Test[] tests) {
+    public JsonFile(String packageId, String jsScript, String functionName, JsonFile.Test[] tests) {
         this.packageID = packageId;
         this.jsScript = jsScript;
         this.functionName = functionName;
@@ -31,7 +31,7 @@ public class JsonFile {
         return functionName;
     }
 
-    public Test[] getTests() {
+    public JsonFile.Test[] getTests() {
         return tests;
     }
 
@@ -47,7 +47,7 @@ public class JsonFile {
         this.jsScript = jsScript;
     }
 
-    public void setTests(Test[] tests) {
+    public void setTests(JsonFile.Test[] tests) {
         this.tests = tests;
     }
 }
