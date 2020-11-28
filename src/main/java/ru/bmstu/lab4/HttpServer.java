@@ -24,7 +24,11 @@ public class HttpServer {
                         route (
                                 post(() ->
                                         entity(Jackson.unmarshaller(JsonFile.class), file -> {
-                                            route.tell();
+                                            route.tell(new RunMessage(
+                                                    file.getPackageId(),
+                                                    file.getJsScript(),
+                                                    file.getFunctionName(),
+                                                    file.getTests()), );
                                         })
                                 )
                         )
