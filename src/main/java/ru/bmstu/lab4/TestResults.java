@@ -14,7 +14,8 @@ public class TestResults {
 
     public void runTests(Test[] tests) throws Exception {
         for (Test test : tests) {
-            ScriptEngine engine = ScriptEngineManager()
+            ScriptEngine engine = new ScriptEngineManager().getEngineByName(ENGINE_NAME);
+            
         }
     }
 
