@@ -32,11 +32,7 @@ public class HttpServer {
                                                     file.getFunctionName(),
                                                     file.getTests()), ActorRef.noSender());
                                             return complete(StatusCodes.OK, String.format(PACKAGE_TEST_START_FORMAT, file.getPackageId()));
-                                        })
-                                )
-                        )
-
-                )
+                                        }))))
         )
     }
 }
