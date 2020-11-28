@@ -8,7 +8,8 @@ public class RunActor extends AbstractActor {
     public Receive createReceive() {
         return ReceiveBuilder.create()
                 .match(RunMessage.class, m -> {
-
+                    TestResults results = new TestResults();
+                    results.runTests(m.getTests(), m.getJsScript(), );
                 })
                 .build();
     }
