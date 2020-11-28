@@ -30,14 +30,17 @@ public class TestResults {
                 String result = invocable.invokeFunction(functionName, test.getParams()).toString();
                 boolean isRight = result.equals(test.getExpectedResult());
                 if (isRight) {
-                    System.out.printf(SUCCES_TEST_FORMAT,packageID, functionName, test.getTestName());
+                    TestingApp.LOGGER.info(String.format(SUCCES_TEST_FORMAT,packageID, functionName, test.getTestName()));
+//                    System.out.printf(SUCCES_TEST_FORMAT,packageID, functionName, test.getTestName());
                 } else {
-                    System.out.printf(FAIL_TEST_FORMAT, packageID, functionName, test.getTestName(), test.getExpectedResult(), result);
+                    TestingApp.LOGGER.info(String.format(FAIL_TEST_FORMAT, packageID, functionName, test.getTestName(), test.getExpectedResult(), result));
+//                    System.out.printf(FAIL_TEST_FORMAT, packageID, functionName, test.getTestName(), test.getExpectedResult(), result);
                 }
                 results.put(test.getTestName(), isRight);
             }
         } catch (Exception e) {
-            System.out.printf(CODE_COMPILATION_ERROR_FORMAT, packageID, functionName, functionName, e.getMessage());
+            TestingApp.LOGGER.info(String.format(CODE_COMPILATION_ERROR_FORMAT, packageID, functionName, functionName, e.getMessage()));
+            //System.out.printf(CODE_COMPILATION_ERROR_FORMAT, packageID, functionName, functionName, e.getMessage());
         }
     }
 
