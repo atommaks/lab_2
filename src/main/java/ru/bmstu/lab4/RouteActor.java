@@ -2,6 +2,7 @@ package ru.bmstu.lab4;
 
 import akka.actor.AbstractActor;
 import akka.actor.ActorRef;
+import akka.actor.Props;
 import akka.japi.pf.ReceiveBuilder;
 import akka.routing.BalancingPool;
 
@@ -13,7 +14,7 @@ public class RouteActor extends AbstractActor {
 
     @Override
     public void preStart() {
-        balanceActor = getContext().actorOf(new BalancingPool(POOL_SIZE).props())
+        balanceActor = getContext().actorOf(new BalancingPool(POOL_SIZE).props(Props.create()))
     }
 
     @Override
