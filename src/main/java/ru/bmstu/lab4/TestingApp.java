@@ -15,6 +15,7 @@ public class TestingApp {
         final ActorMaterializer materializer = ActorMaterializer.create(system);
         HttpServer server = new HttpServer(system);
 
-        final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = server.getRoute().flow()
+        final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = server.getRoute().flow(system, materializer);
+        
     }
 }
