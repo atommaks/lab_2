@@ -32,7 +32,8 @@ public class TestingApp {
         HttpServer server = new HttpServer(system);
         final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = server.getRoute().flow(system, materializer);
         final CompletionStage<ServerBinding> binding = http.bindAndHandle(routeFlow, ConnectHttp.toHost(IP_ADDRESS, PORT), materializer);
-        System.out.printf(START_MSG_FORMAT, IP_ADDRESS, PORT);
+        //System.out.printf(START_MSG_FORMAT, IP_ADDRESS, PORT);
+        LOGGER.info(String.format(START_MSG_FORMAT, IP_ADDRESS, PORT));
         System.in.read();
         binding.thenCompose(ServerBinding::unbind).thenAccept(unbound -> system.terminate());
     }
