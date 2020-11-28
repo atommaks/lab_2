@@ -13,3 +13,63 @@
   <message>Listening on localhost:1969
 </message>
 </record>
+<record>
+  <date>2020-11-28T18:39:14</date>
+  <millis>1606577954109</millis>
+  <sequence>1</sequence>
+  <logger>MyLog</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab4.RunActor</class>
+  <method>lambda$createReceive$0</method>
+  <thread>18</thread>
+  <message>[RunActor] PackageID: 11. Message: Starting running tests!
+</message>
+</record>
+<record>
+  <date>2020-11-28T18:39:14</date>
+  <millis>1606577954473</millis>
+  <sequence>2</sequence>
+  <logger>MyLog</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab4.TestResults</class>
+  <method>runTests</method>
+  <thread>18</thread>
+  <message>PackageID: 11, Function Name: divideFn, Test: test1 passed!
+</message>
+</record>
+<record>
+  <date>2020-11-28T18:39:14</date>
+  <millis>1606577954488</millis>
+  <sequence>3</sequence>
+  <logger>MyLog</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab4.TestResults</class>
+  <method>runTests</method>
+  <thread>18</thread>
+  <message>PackageID: 11, Function Name: divideFn, Test: test2 passed!
+</message>
+</record>
+<record>
+  <date>2020-11-28T18:39:14</date>
+  <millis>1606577954489</millis>
+  <sequence>4</sequence>
+  <logger>MyLog</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab4.StoreActor</class>
+  <method>lambda$createReceive$0</method>
+  <thread>13</thread>
+  <message>[StoreActor] PackageID: 11. Message: Store!
+</message>
+</record>
+<record>
+  <date>2020-11-28T18:39:16</date>
+  <millis>1606577956176</millis>
+  <sequence>5</sequence>
+  <logger>MyLog</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab4.StoreActor</class>
+  <method>lambda$createReceive$1</method>
+  <thread>13</thread>
+  <message>[StoreActor] PackageID: 11. Message: GET!
+</message>
+</record>
