@@ -45,7 +45,7 @@ public class HttpServer {
                 path (RESULT_SEGMENT, () ->
                         route(
                                 parameter(PACKAGE_ID_PARAMETR, packageID -> {
-                                    Future<Object> future = Patterns.ask(route, new ResultMessage(packageID))
+                                    Future<Object> future = Patterns.ask(route, new ResultMessage(packageID), TIMEOUT);
                                 })
                         )
                 )
