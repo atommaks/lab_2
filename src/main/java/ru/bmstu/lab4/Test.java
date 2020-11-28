@@ -26,9 +26,4 @@ public class Test {
     public Object[] getParams() {
         return params;
     }
-
-    public void runTest() throws Exception {
-        ScriptEngine engine = new ScriptEngineManager().getEngineByName(ENGINE_NAME);
-        
-    }
 }
