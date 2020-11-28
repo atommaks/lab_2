@@ -22,4 +22,16 @@ public class Test {
     public Object[] getParams() {
         return params;
     }
+
+    public void setTestName(String testName) {
+        this.testName = testName;
+    }
+
+    public void setParams(Object[] params) {
+        this.params = params;
+    }
+
+    public void setExpectedResult(String expectedResult) {
+        this.expectedResult = expectedResult;
+    }
 }
