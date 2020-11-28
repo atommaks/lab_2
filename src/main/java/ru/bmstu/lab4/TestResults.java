@@ -19,6 +19,9 @@ public class TestResults {
             engine.eval(jsCode);
             Invocable invocable = (Invocable)engine;
             String result = invocable.invokeFunction(functionName, test.getParams()).toString();
+            boolean isRight = result.equals(test.getExpectedResult());
+            results.put(test.getTestName(), isRight);
+
         }
     }
 
