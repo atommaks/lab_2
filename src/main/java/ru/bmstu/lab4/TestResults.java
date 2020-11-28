@@ -16,7 +16,7 @@ public class TestResults {
         results = new HashMap<>();
     }
 
-    public void runTests(RunMessage msg) throws Exception {
+    private void runTests(RunMessage msg) throws Exception {
         String packageID = msg.getPackageId();
         String functionName = msg.getFunctionName();
         String jsScript = msg.getJsScript();
