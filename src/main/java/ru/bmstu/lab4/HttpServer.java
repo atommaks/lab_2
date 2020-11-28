@@ -7,6 +7,8 @@ import akka.http.javadsl.marshallers.jackson.Jackson;
 import akka.http.javadsl.model.StatusCodes;
 import akka.http.javadsl.server.Route;
 
+import java.util.concurrent.Future;
+
 import static akka.http.javadsl.server.Directives.*;
 import static akka.http.javadsl.server.Directives.entity;
 
@@ -39,7 +41,7 @@ public class HttpServer {
                 path (RESULT_SEGMENT, () ->
                         route(
                                 parameter(PACKAGE_ID_PARAMETR, packageID -> {
-                                    Future<Object> 
+                                    Future<Object>  
                                 })
                         )
                 )
