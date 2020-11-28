@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-11-28T18:26:10</date>
+  <millis>1606577170134</millis>
+  <sequence>0</sequence>
+  <logger>MyLog</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab4.TestingApp</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Listening on localhost:1969
+</message>
+</record>
