@@ -17,7 +17,7 @@ public class StoreActor extends AbstractActor {
     public Receive createReceive() {
         return ReceiveBuilder.create()
                 .match(StoreMessage.class, m -> {
-                    TestingApp.LOGGER.info();
+                    TestingApp.LOGGER.info(String.format(RUN_ACTOR_START_MSG_FORMAT, m.getPackageID()));
                     storage.put(m.getPackageID(), m.getResults());
                 })
                 .match(ResultMessage.class, m -> sender().tell(new StoreMessage(m.getPackageID(), storage.get(m.getPackageID())), self()))
