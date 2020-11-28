@@ -35,7 +35,7 @@ public class JsonFile {
         return functionName;
     }
 
-    public JsonFile.Test[] getTests() {
+    public Test[] getTests() {
         return tests;
     }
 
