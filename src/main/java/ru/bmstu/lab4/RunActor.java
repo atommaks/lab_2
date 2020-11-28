@@ -10,8 +10,7 @@ public class RunActor extends AbstractActor {
                 .match(RunMessage.class, m -> {
                     TestResults results = new TestResults();
                     results.runTests(m);
-                    sender().tell(new StoreMessage(m.getPackageId(), m.getFunctionName(), results), );
-
+                    sender().tell(new StoreMessage(m.getPackageId(), m.getFunctionName(), results), self());
                 })
                 .build();
     }
