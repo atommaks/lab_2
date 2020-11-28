@@ -13,7 +13,7 @@ public class TestResults {
         results = new HashMap<>();
     }
 
-    public void runTests(Test[] tests, String jsCode) throws Exception {
+    public void runTests(Test[] tests, String jsCode, String functionName) throws Exception {
         for (Test test : tests) {
             ScriptEngine engine = new ScriptEngineManager().getEngineByName(ENGINE_NAME);
             engine.eval(jsCode);
