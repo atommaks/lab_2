@@ -11,13 +11,13 @@ public class HttpServer {
 
     }
 
-    public void createRoute() {
+    public Route getRoute() {
         route (
                 path ( "run", () ->
                         route (
                                 post(() ->
                                         entity(Jackson.unmarshaller(JsonFile.class), file -> {
-                                            
+
                                         })
                                 )
                         )
