@@ -9,7 +9,8 @@ public class RunActor extends AbstractActor {
         return ReceiveBuilder.create()
                 .match(RunMessage.class, m -> {
                     TestResults results = new TestResults();
-                    results.runTests(m.getTests(), m.getJsScript(), );
+                    results.runTests(m.getTests(), m.getJsScript(), m.getFunctionName(), m.getPackageId());
+                    
                 })
                 .build();
     }
