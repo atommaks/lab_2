@@ -54,7 +54,9 @@ public class HttpServer {
                                     } catch (Exception e) {
                                         return complete(StatusCodes.INTERNAL_SERVER_ERROR, e.getMessage());
                                     }
-                                    
+                                    if (result != null && result.getResults() != null) {
+                                        
+                                    }
                                 })
                         )
                 )
