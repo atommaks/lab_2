@@ -4,11 +4,49 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class JsonFile {
+    public static class Test {
+        private String testName;
+        private String expectedResult;
+        private Object[] params;
+
+        public Test(String testName, String expectedResult, Object[] params) {
+            this.testName = testName;
+            this.expectedResult = expectedResult;
+            this.params = params;
+        }
+
+        public String getTestName() {
+            return testName;
+        }
+
+        public String getExpectedResult() {
+            return expectedResult;
+        }
+
+        public Object[] getParams() {
+            return params;
+        }
+
+        public void setTestName(String testName) {
+            this.testName = testName;
+        }
+
+        public void setParams(Object[] params) {
+            this.params = params;
+        }
+
+        public void setExpectedResult(String expectedResult) {
+            this.expectedResult = expectedResult;
+        }
+    }
+
+
     private String packageID;
     private String jsScript;
     private String functionName;
     private Test[] tests;
 
+<<<<<<< HEAD
     public JsonFile() {}
 
     @JsonCreator
@@ -16,6 +54,11 @@ public class JsonFile {
                     @JsonProperty("jsScript")String jsScript,
                     @JsonProperty("functionName")String functionName,
                     @JsonProperty("tests")Test[] tests) {
+=======
+    //@JsonCreator
+    //public JsonFile(@JsonProperty("packageId") String packageId, @JsonProperty("jsScript") String jsScript, @JsonProperty("functionName") String functionName, @JsonProperty("tests") Test[] tests) {
+    public JsonFile(String packageId, String jsScript, String functionName, JsonFile.Test[] tests) {
+>>>>>>> origin/master
         this.packageID = packageId;
         this.jsScript = jsScript;
         this.functionName = functionName;
@@ -35,7 +78,7 @@ public class JsonFile {
         return functionName;
     }
 
-    public Test[] getTests() {
+    public JsonFile.Test[] getTests() {
         return tests;
     }
 
@@ -51,7 +94,7 @@ public class JsonFile {
         this.jsScript = jsScript;
     }
 
-    public void setTests(Test[] tests) {
+    public void setTests(JsonFile.Test[] tests) {
         this.tests = tests;
     }
 }
