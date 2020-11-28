@@ -13,7 +13,8 @@ public class HttpServer {
     private ActorRef route;
 
     public HttpServer(ActorSystem system) {
-
+        this.system = system;
+        
     }
 
     public Route getRoute() {
