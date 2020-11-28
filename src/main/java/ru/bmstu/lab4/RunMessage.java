@@ -13,6 +13,8 @@ public class RunMessage {
         this.tests = tests;
     }
 
+    public 
+
     public String getPackageId() {
         return packageId;
     }
