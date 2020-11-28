@@ -21,7 +21,7 @@ public class HttpServer {
     private static final String RUN_SEGMENT = "run";
     private static final String RESULT_SEGMENT = "result";
     private static final String PACKAGE_ID_PARAMETR = "packageID";
-    private static final Timeout TIMEOUT = 
+    private static final Timeout TIMEOUT = Timeout.create()
 
     public HttpServer(ActorSystem system) {
         this.system = system;
