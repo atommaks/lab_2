@@ -68,7 +68,7 @@ public class JsonFile {
         return functionName;
     }
 
-    public Test[] getTests() {
+    public JsonFile.Test[] getTests() {
         return tests;
     }
 
@@ -84,7 +84,7 @@ public class JsonFile {
         this.jsScript = jsScript;
     }
 
-    public void setTests(Test[] tests) {
+    public void setTests(JsonFile.Test[] tests) {
         this.tests = tests;
     }
 }
