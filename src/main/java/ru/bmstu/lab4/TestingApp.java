@@ -22,7 +22,7 @@ public class TestingApp {
     private static final String PATH_TO_LOG_FILE = "/home/atom/IdeaProjects/lab_2/MyLog.log";
 
     public static void main(String[] args) throws Exception{
-        FileHandler fh = new FileHandler();
+        FileHandler fh = new FileHandler(PATH_TO_LOG_FILE);
         LOGGER.addHandler(fh);
 
 
