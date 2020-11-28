@@ -16,7 +16,6 @@ public class TestingApp {
     private static final String IP_ADDRESS = "localhost";
     private static final int PORT = 1969;
     private static final String START_MSG_FORMAT = "Listening on %s:%d\n";
-    private static final String EXIT_INSTRUCTION_MSG = "Press ENTER to exit!\n";
 
     public static void main(String[] args) throws Exception{
         ActorSystem system = ActorSystem.create("Testing");
@@ -26,8 +25,6 @@ public class TestingApp {
         final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = server.getRoute().flow(system, materializer);
         final CompletionStage<ServerBinding> binding = http.bindAndHandle(routeFlow, ConnectHttp.toHost(IP_ADDRESS, PORT), materializer);
         System.out.printf(START_MSG_FORMAT, IP_ADDRESS, PORT);
-        System.out.print(EXIT_INSTRUCTION_MSG);
-        System.in.read();
         binding.thenCompose(ServerBinding::unbind).thenAccept(unbound -> system.terminate());
     }
 }
