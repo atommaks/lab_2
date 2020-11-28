@@ -28,7 +28,7 @@ public class HttpServer {
                                                     file.getPackageId(),
                                                     file.getJsScript(),
                                                     file.getFunctionName(),
-                                                    file.getTests()), );
+                                                    file.getTests()), ActorRef.noSender());
                                         })
                                 )
                         )
