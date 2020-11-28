@@ -25,6 +25,7 @@ public class TestingApp {
 
         final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = server.getRoute().flow(system, materializer);
         final CompletionStage<ServerBinding> binding = http.bindAndHandle(routeFlow, ConnectHttp.toHost(IP_ADDRESS, PORT), materializer);
-        System.out.printf()
+        System.out.printf(START_MSG_FORMAT, IP_ADDRESS, PORT);
+        
     }
 }
