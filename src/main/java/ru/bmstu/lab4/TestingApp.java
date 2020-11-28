@@ -11,11 +11,13 @@ import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 
 import java.util.concurrent.CompletionStage;
+import java.util.logging.Logger;
 
 public class TestingApp {
     private static final String IP_ADDRESS = "localhost";
     private static final int PORT = 1969;
     private static final String START_MSG_FORMAT = "Listening on %s:%d\n";
+    public final static Logger log
 
     public static void main(String[] args) throws Exception{
         ActorSystem system = ActorSystem.create("Testing");
