@@ -31,7 +31,7 @@ public class HttpServer {
                                                     file.getJsScript(),
                                                     file.getFunctionName(),
                                                     file.getTests()), ActorRef.noSender());
-                                            return complete(StatusCodes.OK, )
+                                            return complete(StatusCodes.OK, String.format(PACKAGE_TEST_START_FORMAT, file.getPackageId()));
                                         })
                                 )
                         )
