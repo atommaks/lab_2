@@ -12,7 +12,7 @@ public class RouteActor extends AbstractActor {
 
     @Override
     public void preStart() {
-        
+        balanceActor = getContext().actorOf()
     }
 
     @Override
