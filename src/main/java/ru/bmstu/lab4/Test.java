@@ -22,4 +22,8 @@ public class Test {
     public Object[] getParams() {
         return params;
     }
+
+    public void runTest() throws Exception {
+
+    }
 }
