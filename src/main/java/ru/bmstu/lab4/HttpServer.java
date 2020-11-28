@@ -6,6 +6,7 @@ import akka.actor.Props;
 import akka.http.javadsl.marshallers.jackson.Jackson;
 import akka.http.javadsl.model.StatusCodes;
 import akka.http.javadsl.server.Route;
+import akka.pattern.Patterns;
 
 import java.util.concurrent.Future;
 
@@ -41,7 +42,7 @@ public class HttpServer {
                 path (RESULT_SEGMENT, () ->
                         route(
                                 parameter(PACKAGE_ID_PARAMETR, packageID -> {
-                                    Future<Object> future =  
+                                    Future<Object> future = Patterns.ask()
                                 })
                         )
                 )
