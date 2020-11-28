@@ -5,7 +5,7 @@ public class JsonFile {
     private String jsScript;
     private String functionName;
     private Test[] tests;
-    
+
 
     public JsonFile(String packageId, String jsScript, String functionName, Test[] tests) {
         this.packageID = packageId;
