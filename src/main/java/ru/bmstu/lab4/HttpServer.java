@@ -4,6 +4,7 @@ import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
 import akka.http.javadsl.marshallers.jackson.Jackson;
+import akka.http.javadsl.model.StatusCodes;
 import akka.http.javadsl.server.Route;
 
 import static akka.http.javadsl.server.Directives.*;
@@ -29,7 +30,7 @@ public class HttpServer {
                                                     file.getJsScript(),
                                                     file.getFunctionName(),
                                                     file.getTests()), ActorRef.noSender());
-                                            return complete()
+                                            return complete(StatusCodes.OK, )
                                         })
                                 )
                         )
