@@ -31,16 +31,13 @@ public class TestResults {
                 boolean isRight = result.equals(test.getExpectedResult());
                 if (isRight) {
                     TestingApp.LOGGER.info(String.format(SUCCES_TEST_FORMAT,packageID, functionName, test.getTestName()));
-//                    System.out.printf(SUCCES_TEST_FORMAT,packageID, functionName, test.getTestName());
                 } else {
                     TestingApp.LOGGER.info(String.format(FAIL_TEST_FORMAT, packageID, functionName, test.getTestName(), test.getExpectedResult(), result));
-//                    System.out.printf(FAIL_TEST_FORMAT, packageID, functionName, test.getTestName(), test.getExpectedResult(), result);
                 }
                 results.put(test.getTestName(), isRight);
             }
         } catch (Exception e) {
             TestingApp.LOGGER.info(String.format(CODE_COMPILATION_ERROR_FORMAT, packageID, functionName, functionName, e.getMessage()));
-            //System.out.printf(CODE_COMPILATION_ERROR_FORMAT, packageID, functionName, functionName, e.getMessage());
         }
     }
 
