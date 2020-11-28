@@ -52,7 +52,7 @@ public class HttpServer {
                                     try {
                                         result = (StoreMessage) Await.result(future, TIMEOUT.duration());
                                     } catch (Exception e) {
-
+                                        
                                     }
                                 })
                         )
