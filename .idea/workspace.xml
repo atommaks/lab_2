@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="34f5a239-397b-45c8-9207-46aba4666dbd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/JsonFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/JsonFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/Test.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -114,8 +113,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/JsonFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+            <state relative-caret-position="190">
+              <caret line="34" selection-start-line="34" selection-end-line="48" selection-end-column="5" />
               <folding>
                 <element signature="e#441#442#0" expanded="true" />
                 <element signature="e#473#474#0" expanded="true" />
@@ -125,6 +124,14 @@
                 <element signature="e#613#614#0" expanded="true" />
                 <element signature="e#645#646#0" expanded="true" />
                 <element signature="e#673#674#0" expanded="true" />
+                <element signature="e#748#749#0" expanded="true" />
+                <element signature="e#790#791#0" expanded="true" />
+                <element signature="e#846#847#0" expanded="true" />
+                <element signature="e#894#895#0" expanded="true" />
+                <element signature="e#942#943#0" expanded="true" />
+                <element signature="e#982#983#0" expanded="true" />
+                <element signature="e#1024#1025#0" expanded="true" />
+                <element signature="e#1058#1059#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -757,8 +764,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/JsonFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+        <state relative-caret-position="190">
+          <caret line="34" selection-start-line="34" selection-end-line="48" selection-end-column="5" />
           <folding>
             <element signature="e#441#442#0" expanded="true" />
             <element signature="e#473#474#0" expanded="true" />
@@ -768,6 +775,14 @@
             <element signature="e#613#614#0" expanded="true" />
             <element signature="e#645#646#0" expanded="true" />
             <element signature="e#673#674#0" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
+            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#942#943#0" expanded="true" />
+            <element signature="e#982#983#0" expanded="true" />
+            <element signature="e#1024#1025#0" expanded="true" />
+            <element signature="e#1058#1059#0" expanded="true" />
           </folding>
         </state>
       </provider>
