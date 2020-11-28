@@ -3,7 +3,7 @@ package ru.bmstu.lab4;
 import javax.script.ScriptEngine;
 
 public class Test {
-    private static final String ENGINE_NAME = "";
+    private static final String ENGINE_NAME = "nashorn";
     private String testName;
     private String expectedResult;
     private Object[] params;
