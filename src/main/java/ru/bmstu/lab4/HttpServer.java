@@ -54,7 +54,7 @@ public class HttpServer {
                                         StoreMessage result;
                                         try {
                                             result = (StoreMessage) Await.result(future, TIMEOUT.duration());
-                                     } catch (Exception e) {
+                                        } catch (Exception e) {
                                             return complete(StatusCodes.INTERNAL_SERVER_ERROR, e.getMessage());
                                         }
                                         if (result != null && result.getResults() != null) {
