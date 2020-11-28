@@ -28,6 +28,7 @@ public class TestingApp {
         final CompletionStage<ServerBinding> binding = http.bindAndHandle(routeFlow, ConnectHttp.toHost(IP_ADDRESS, PORT), materializer);
         System.out.printf(START_MSG_FORMAT, IP_ADDRESS, PORT);
         System.out.print(EXIT_INSTRUCTION_MSG);
+        System.in.read();
         
 
     }
