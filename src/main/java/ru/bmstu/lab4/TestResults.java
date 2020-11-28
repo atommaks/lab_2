@@ -11,7 +11,7 @@ public class TestResults {
     private static final String SUCCES_TEST_FORMAT = "PackageID: %s, Function Name: %s, Test: %s passed!\n";
     private static final String FAIL_TEST_FORMAT = "PackageID: %s, Function Name: %s, Test: %s failed! Expected result: %s, result: %s\n";
     private static final String CODE_COMPILATION_ERROR_FORMAT = "PackageID: %s, FunctionName: %s, Test: %s, failed to compile code! Message: %s\n";
-    private static final String RESULT_FORMAT = "\t Test: %s";
+    private static final String RESULT_FORMAT = "\t Test: %s - %b\n";
 
     public TestResults() {
         results = new HashMap<>();
@@ -44,7 +44,8 @@ public class TestResults {
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
-        results.forEach((k,v) -> builder.append());
+        results.forEach((k,v) -> builder.append(String.format(RESULT_FORMAT, k, v)));
+        return builder.toString();
     }
 
     public HashMap<String, Boolean> getResults() {
