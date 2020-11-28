@@ -34,7 +34,7 @@ public class HttpServer {
     }
 
     public Route getRoute() {
-        route (
+        return route (
                 path (RUN_SEGMENT, () ->
                         route (
                                 post(() ->
