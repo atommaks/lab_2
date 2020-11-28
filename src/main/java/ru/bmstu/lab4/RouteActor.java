@@ -1,13 +1,11 @@
 package ru.bmstu.lab4;
 
 import akka.actor.AbstractActor;
-import akka.http.javadsl.marshallers.jackson.Jackson;
-
-import static akka.http.javadsl.server.Directives.*;
+import akka.japi.pf.ReceiveBuilder;
 
 public class RouteActor extends AbstractActor {
     @Override
     public Receive createReceive() {
-        
+        return ReceiveBuilder.create()
     }
 }
