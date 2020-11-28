@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34f5a239-397b-45c8-9207-46aba4666dbd" name="Default Changelist" comment="" />
+    <list default="true" id="34f5a239-397b-45c8-9207-46aba4666dbd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/JsonFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/JsonFile.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,7 +26,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/TestingApp.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
@@ -106,11 +108,30 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/JsonFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="152">
+              <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#441#442#0" expanded="true" />
+                <element signature="e#473#474#0" expanded="true" />
+                <element signature="e#508#509#0" expanded="true" />
+                <element signature="e#539#540#0" expanded="true" />
+                <element signature="e#578#579#0" expanded="true" />
+                <element signature="e#613#614#0" expanded="true" />
+                <element signature="e#645#646#0" expanded="true" />
+                <element signature="e#673#674#0" expanded="true" />
+                <element signature="e#723#724#0" expanded="true" />
+                <element signature="e#765#766#0" expanded="true" />
+                <element signature="e#821#822#0" expanded="true" />
+                <element signature="e#869#870#0" expanded="true" />
+                <element signature="e#917#918#0" expanded="true" />
+                <element signature="e#957#958#0" expanded="true" />
+                <element signature="e#999#1000#0" expanded="true" />
+                <element signature="e#1033#1034#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -172,7 +193,6 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/Server.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/Request.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/JsonFile.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/TestResults.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/RunMessage.java" />
@@ -183,6 +203,7 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/RouteActor.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/TestingApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/HttpServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/JsonFile.java" />
       </list>
     </option>
   </component>
@@ -338,7 +359,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="75" y="25" width="1845" height="1055" extended-state="7" />
+    <frame x="75" y="25" width="1845" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15842135" />
@@ -656,13 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/JsonFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/ResultMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -729,6 +743,32 @@
           <caret line="23" column="51" lean-forward="true" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/JsonFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#441#442#0" expanded="true" />
+            <element signature="e#473#474#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="true" />
+            <element signature="e#539#540#0" expanded="true" />
+            <element signature="e#578#579#0" expanded="true" />
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#645#646#0" expanded="true" />
+            <element signature="e#673#674#0" expanded="true" />
+            <element signature="e#723#724#0" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#821#822#0" expanded="true" />
+            <element signature="e#869#870#0" expanded="true" />
+            <element signature="e#917#918#0" expanded="true" />
+            <element signature="e#957#958#0" expanded="true" />
+            <element signature="e#999#1000#0" expanded="true" />
+            <element signature="e#1033#1034#0" expanded="true" />
           </folding>
         </state>
       </provider>
