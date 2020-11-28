@@ -11,7 +11,7 @@ public class RouteActor extends AbstractActor {
     public RouteActor () {}
 
     @Override
-    public 
+    public void preStart()
 
     @Override
     public Receive createReceive() {
