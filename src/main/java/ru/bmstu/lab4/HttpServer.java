@@ -15,7 +15,7 @@ public class HttpServer {
 
     public HttpServer(ActorSystem system) {
         this.system = system;
-        route = this.system.actorOf(Props.create())
+        route = this.system.actorOf(Props.create(RouteActor.class));
     }
 
     public Route getRoute() {
@@ -24,7 +24,7 @@ public class HttpServer {
                         route (
                                 post(() ->
                                         entity(Jackson.unmarshaller(JsonFile.class), file -> {
-
+                                            route.tell();
                                         })
                                 )
                         )
