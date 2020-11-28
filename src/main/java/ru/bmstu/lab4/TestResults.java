@@ -28,7 +28,6 @@ public class TestResults {
                 System.out.printf(FAIL_TEST_FORMAT, packageID, test.getTestName(), test.getExpectedResult(), result);
             }
             results.put(test.getTestName(), isRight);
-
         }
     }
 
