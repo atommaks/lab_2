@@ -62,6 +62,6 @@ public class HttpServer {
                                         return complete(StatusCodes.OK, NO_PACKAGE_FOUND_MSG);
                                     }
                                 })))),
-        complete()
+        complete(StatusCodes.NOT_FOUND, WRONG_REQUEST_MSG)
     }
 }
