@@ -11,7 +11,9 @@ public class Test {
     public Test() {}
 
     @JsonCreator
-    public Test(@JsonProperty("testName") String testName, String expectedResult, Object[] params) {
+    public Test(@JsonProperty("testName") String testName,
+                @JsonProperty("expectedResult")String expectedResult,
+                @JsonProperty("params")Object[] params) {
         this.testName = testName;
         this.expectedResult = expectedResult;
         this.params = params;
