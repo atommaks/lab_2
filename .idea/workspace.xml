@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34f5a239-397b-45c8-9207-46aba4666dbd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/MyLog.log" beforeDir="false" afterPath="$PROJECT_DIR$/MyLog.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLog.log.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/JsonFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/JsonFile.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,7 +20,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/TestingApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
+            <state relative-caret-position="228">
               <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -30,36 +29,21 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/StoreActor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="22" column="18" lean-forward="true" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#244#245#0" expanded="true" />
-                <element signature="e#285#286#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/HttpServer.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/JsonFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-133">
-              <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/RunActor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+            <state relative-caret-position="247">
+              <caret line="16" column="69" lean-forward="true" selection-start-line="16" selection-start-column="69" selection-end-line="16" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#748#749#0" expanded="true" />
+                <element signature="e#790#791#0" expanded="true" />
+                <element signature="e#846#847#0" expanded="true" />
+                <element signature="e#894#895#0" expanded="true" />
+                <element signature="e#942#943#0" expanded="true" />
+                <element signature="e#982#983#0" expanded="true" />
+                <element signature="e#1024#1025#0" expanded="true" />
+                <element signature="e#1058#1059#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,13 +104,13 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/StoreMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/RouteActor.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/RunMessage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/JsonFile.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/TestResults.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/TestingApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/RunActor.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/StoreActor.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/HttpServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/JsonFile.java" />
       </list>
     </option>
   </component>
@@ -285,7 +269,7 @@
     <frame x="75" y="25" width="1845" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15842135" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15842135" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -295,7 +279,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.32937366" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4049676" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4049676" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39956802" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -560,23 +544,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/JsonFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-33">
-          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-          <folding>
-            <element signature="e#748#749#0" expanded="true" />
-            <element signature="e#790#791#0" expanded="true" />
-            <element signature="e#846#847#0" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
-            <element signature="e#942#943#0" expanded="true" />
-            <element signature="e#982#983#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-            <element signature="e#1058#1059#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/ResultMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -643,16 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/TestingApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/RunMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -667,6 +624,13 @@
             <element signature="e#647#648#0" expanded="true" />
             <element signature="e#675#676#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/HttpServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -692,10 +656,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/HttpServer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/TestingApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-133">
-          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        <state relative-caret-position="228">
+          <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/JsonFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="16" column="69" lean-forward="true" selection-start-line="16" selection-start-column="69" selection-end-line="16" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
+            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#942#943#0" expanded="true" />
+            <element signature="e#982#983#0" expanded="true" />
+            <element signature="e#1024#1025#0" expanded="true" />
+            <element signature="e#1058#1059#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
