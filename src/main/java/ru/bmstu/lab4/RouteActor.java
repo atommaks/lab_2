@@ -25,8 +25,8 @@ public class RouteActor extends AbstractActor {
                 .match(RunMessage.class, msg -> balanceActor.tell(msg, self()))
                 .match(StoreMessage.class, msg -> storageActor.tell(msg, self()))
                 .match(ResultMessage.class, msg -> {
-                    
-                    storageActor.tell(msg, self());
+                    Future
+
                 })
                 .build();
     }
