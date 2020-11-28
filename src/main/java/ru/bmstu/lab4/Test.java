@@ -28,6 +28,6 @@ public class Test {
     }
 
     public void runTest() throws Exception {
-        ScriptEngine engine = new ScriptEngineManager()
+        ScriptEngine engine = new ScriptEngineManager().getEngineByName(ENGINE_NAME)
     }
 }
