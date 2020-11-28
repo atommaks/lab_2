@@ -9,6 +9,7 @@ import akka.routing.BalancingPool;
 public class RouteActor extends AbstractActor {
     private final static int POOL_SIZE = 2;
     private ActorRef balanceActor;
+    private ActorRef 
 
     public RouteActor () {}
 
