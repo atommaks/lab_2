@@ -48,7 +48,7 @@ public class HttpServer {
                                     Future<Object> future = Patterns.ask(route, new ResultMessage(packageID), TIMEOUT);
                                     StoreMessage result;
                                     try {
-                                        result = 
+                                        result = (StoreMessage)
                                     } catch (Exception e) {
 
                                     }
