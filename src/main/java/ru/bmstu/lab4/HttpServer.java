@@ -9,6 +9,7 @@ import akka.http.javadsl.server.Route;
 import akka.pattern.Patterns;
 import akka.util.Timeout;
 
+import java.time.Duration;
 import java.util.concurrent.Future;
 
 import static akka.http.javadsl.server.Directives.*;
@@ -21,7 +22,7 @@ public class HttpServer {
     private static final String RUN_SEGMENT = "run";
     private static final String RESULT_SEGMENT = "result";
     private static final String PACKAGE_ID_PARAMETR = "packageID";
-    private static final Timeout TIMEOUT = Timeout.create()
+    private static final Timeout TIMEOUT = Timeout.create(Duration.of())
 
     public HttpServer(ActorSystem system) {
         this.system = system;
