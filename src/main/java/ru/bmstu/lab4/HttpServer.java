@@ -6,7 +6,6 @@ import akka.actor.Props;
 import akka.http.javadsl.marshallers.jackson.Jackson;
 import akka.http.javadsl.model.StatusCodes;
 import akka.http.javadsl.server.Route;
-import akka.http.scaladsl.server.PathMatchers;
 
 import static akka.http.javadsl.server.Directives.*;
 import static akka.http.javadsl.server.Directives.entity;
@@ -15,6 +14,9 @@ public class HttpServer {
     private ActorSystem system;
     private ActorRef route;
     private static final String PACKAGE_TEST_START_FORMAT = "Testing package %s";
+    private static final String RUN_SEGMENT = "run";
+    private static final String RESULT_SEGMENT = "result";
+    private static final String PACKAGE_ID_PARAMETR = "packageId";
 
     public HttpServer(ActorSystem system) {
         this.system = system;
