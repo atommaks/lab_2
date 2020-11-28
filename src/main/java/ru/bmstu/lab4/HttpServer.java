@@ -47,7 +47,9 @@ public class HttpServer {
                                 parameter(PACKAGE_ID_PARAMETR, packageID -> {
                                     Future<Object> future = Patterns.ask(route, new ResultMessage(packageID), TIMEOUT);
                                     StoreMessage result;
-                                    
+                                    try {
+
+                                    }
                                 })
                         )
                 )
