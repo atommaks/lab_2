@@ -60,7 +60,6 @@ public class HttpServer {
                                     } else {
                                         return complete(StatusCodes.OK, NO_PACKAGE_FOUND_MSG);
                                     }
-                                })))
-        );
+                                }))))
     }
 }
