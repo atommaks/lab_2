@@ -10,7 +10,7 @@ public class RunActor extends AbstractActor {
                 .match(RunMessage.class, m -> {
                     TestResults results = new TestResults();
                     results.runTests(m.getTests(), m.getJsScript(), m.getFunctionName(), m.getPackageId());
-                    
+
                 })
                 .build();
     }

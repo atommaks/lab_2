@@ -16,7 +16,11 @@ public class TestResults {
         results = new HashMap<>();
     }
 
-    public void runTests(Test[] tests, String jsCode, String functionName, String packageID) throws Exception {
+    public void runTests(RunMessage msg) throws Exception {
+        String packageID = msg.getPackageId();
+        String functionName = msg.getFunctionName();
+        String jsScript = msg.getJsScript();
+        Test[] tests = msg.getTests();
         try {
             for (Test test : tests) {
                 ScriptEngine engine = new ScriptEngineManager().getEngineByName(ENGINE_NAME);
