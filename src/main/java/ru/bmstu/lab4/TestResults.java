@@ -1,5 +1,6 @@
 package ru.bmstu.lab4;
 
+import javax.script.Invocable;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import java.util.HashMap;
@@ -16,7 +17,7 @@ public class TestResults {
         for (Test test : tests) {
             ScriptEngine engine = new ScriptEngineManager().getEngineByName(ENGINE_NAME);
             engine.eval(jsCode);
-            
+            Invocable 
         }
     }
 
