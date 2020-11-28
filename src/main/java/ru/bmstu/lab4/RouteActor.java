@@ -14,7 +14,7 @@ public class RouteActor extends AbstractActor {
 
     @Override
     public void preStart() {
-        balanceActor = getContext().actorOf(new BalancingPool(POOL_SIZE).props(Props.create()))
+        balanceActor = getContext().actorOf(new BalancingPool(POOL_SIZE).props(Props.create(RunActor)));
     }
 
     @Override
