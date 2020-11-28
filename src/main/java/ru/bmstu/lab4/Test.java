@@ -1,5 +1,8 @@
 package ru.bmstu.lab4;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Test {
     private String testName;
     private String expectedResult;
@@ -7,7 +10,8 @@ public class Test {
 
     public Test() {}
 
-    public Test(String testName, String expectedResult, Object[] params) {
+    @JsonCreator
+    public Test(@JsonProperty("testName") String testName, String expectedResult, Object[] params) {
         this.testName = testName;
         this.expectedResult = expectedResult;
         this.params = params;
