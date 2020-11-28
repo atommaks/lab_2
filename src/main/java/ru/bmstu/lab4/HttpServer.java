@@ -55,7 +55,7 @@ public class HttpServer {
                                         return complete(StatusCodes.INTERNAL_SERVER_ERROR, e.getMessage());
                                     }
                                     if (result != null && result.getResults() != null) {
-                                        return complete()
+                                        return complete(StatusCodes.OK, result.getResults().toString());
                                     }
                                 })
                         )
