@@ -26,6 +26,7 @@ public class HttpServer {
     private static final String PACKAGE_ID_PARAMETR = "packageID";
     private static final Timeout TIMEOUT = Timeout.create(Duration.ofSeconds(3));
     private static final String NO_PACKAGE_FOUND_MSG = "Wrong package ID!\n";
+    private static final String WRONG_REQUEST_MSG = "Wrong request!\n";
 
     public HttpServer(ActorSystem system) {
         this.system = system;
