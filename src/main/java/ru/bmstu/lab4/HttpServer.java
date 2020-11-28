@@ -36,7 +36,7 @@ public class HttpServer {
                                         })))),
                 path ("result", () ->
                         route(
-                                
+                                parameter("")
                         )
                 )
         );
