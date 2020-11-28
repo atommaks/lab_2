@@ -38,7 +38,7 @@ public class HttpServer {
                                         })))),
                 path (RESULT_SEGMENT, () ->
                         route(
-                                parameter(PACKAGE_ID_PARAMETR)
+                                parameter(PACKAGE_ID_PARAMETR, packageID ->)
                         )
                 )
         );
