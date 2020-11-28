@@ -22,7 +22,8 @@ public class TestingApp {
 
     public static void main(String[] args) throws Exception{
         FileHandler fh;
-        
+        LOGGER.addHandler(fh);
+
 
         ActorSystem system = ActorSystem.create("Testing");
         final Http http = Http.get(system);
