@@ -8,6 +8,8 @@ import java.util.HashMap;
 public class StoreActor extends AbstractActor {
     private HashMap<String, TestResults> store;
 
+    
+
     @Override
     public Receive createReceive() {
         return ReceiveBuilder.create()
