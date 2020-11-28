@@ -9,13 +9,14 @@ import akka.routing.BalancingPool;
 public class RouteActor extends AbstractActor {
     private final static int POOL_SIZE = 2;
     private ActorRef balanceActor;
-    private ActorRef 
+    private ActorRef storageActor;
 
     public RouteActor () {}
 
     @Override
     public void preStart() {
         balanceActor = getContext().actorOf(new BalancingPool(POOL_SIZE).props(Props.create(RunActor.class)));
+        storageActor = 
     }
 
     @Override
