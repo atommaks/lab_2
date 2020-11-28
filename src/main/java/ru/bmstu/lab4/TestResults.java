@@ -18,7 +18,7 @@ public class TestResults {
             ScriptEngine engine = new ScriptEngineManager().getEngineByName(ENGINE_NAME);
             engine.eval(jsCode);
             Invocable invocable = (Invocable)engine;
-            
+            String result = invocable.toString()
         }
     }
 
