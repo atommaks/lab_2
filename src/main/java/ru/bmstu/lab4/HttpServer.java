@@ -50,7 +50,7 @@ public class HttpServer {
                                     Future<Object> future = Patterns.ask(route, new ResultMessage(packageID), TIMEOUT);
                                     StoreMessage result;
                                     try {
-                                        result = (StoreMessage) Await.result()
+                                        result = (StoreMessage) Await.result(future, )
                                     } catch (Exception e) {
 
                                     }
