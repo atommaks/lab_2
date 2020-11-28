@@ -13,11 +13,11 @@ public class RouteActor extends AbstractActor {
 
     public void createRoute() {
         route (
-                path ( "execute", () ->
+                path ( "run", () ->
                         route (
                                 post(() ->
                                         entity(Jackson.unmarshaller(JsonFile.class), file -> {
-                                            
+
                                         })
                                 )
                         )
