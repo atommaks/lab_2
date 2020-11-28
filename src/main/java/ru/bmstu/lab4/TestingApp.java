@@ -14,7 +14,7 @@ import java.util.concurrent.CompletionStage;
 
 public class TestingApp {
     private static final String IP_ADDRESS = "localhost";
-    private static final String PORT = "1969";
+    private static final int PORT = 1969;
 
     public static void main(String[] args) {
         ActorSystem system = ActorSystem.create("Testing");
@@ -23,6 +23,6 @@ public class TestingApp {
         HttpServer server = new HttpServer(system);
 
         final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = server.getRoute().flow(system, materializer);
-        final CompletionStage<ServerBinding> binding = http.bindAndHandle(routeFlow, ConnectHttp.toHost())
+        final CompletionStage<ServerBinding> binding = http.bindAndHandle(routeFlow, ConnectHttp.toHost(IP_ADDRESS, PORT))
     }
 }
