@@ -35,7 +35,9 @@ public class HttpServer {
                                             return complete(StatusCodes.OK, String.format(PACKAGE_TEST_START_FORMAT, file.getPackageId()));
                                         })))),
                 path ("result", () ->
-                        
+                        route(
+                                
+                        )
                 )
         );
     }
