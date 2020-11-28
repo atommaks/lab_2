@@ -9,9 +9,9 @@ public class TestResults {
         results = new HashMap<>();
     }
 
-    public void runTests(Test[] tests) {
+    public void runTests(Test[] tests) throws Exception {
         for (Test test : tests) {
-
+            
         }
     }
 
