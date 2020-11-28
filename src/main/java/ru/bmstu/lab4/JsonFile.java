@@ -3,14 +3,15 @@ package ru.bmstu.lab4;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class JsonFile {
+public static class JsonFile {
     private String packageID;
     private String jsScript;
     private String functionName;
     private Test[] tests;
 
-    @JsonCreator
-    public JsonFile(@JsonProperty("packageId") String packageId, @JsonProperty("jsScript") String jsScript, @JsonProperty("functionName") String functionName, @JsonProperty("tests") Test[] tests) {
+    //@JsonCreator
+    //public JsonFile(@JsonProperty("packageId") String packageId, @JsonProperty("jsScript") String jsScript, @JsonProperty("functionName") String functionName, @JsonProperty("tests") Test[] tests) {
+    public JsonFile(String packageId, String jsScript, String functionName, Test[] tests) {
         this.packageID = packageId;
         this.jsScript = jsScript;
         this.functionName = functionName;
