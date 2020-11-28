@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 public class TestResults {
     private HashMap<String, Boolean> results;
+    private static final String ENGINE_NAME = "nashorn";
 
     public TestResults() {
         results = new HashMap<>();
