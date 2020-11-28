@@ -4,9 +4,9 @@ public class RunMessage {
     private String packageId;
     private String jsScript;
     private String functionName;
-    private JsonFile.Test[] tests;
+    private Test[] tests;
 
-    public RunMessage(String packageId, String jsScript, String functionName, JsonFile.Test[] tests) {
+    public RunMessage(String packageId, String jsScript, String functionName, Test[] tests) {
         this.packageId = packageId;
         this.jsScript = jsScript;
         this.functionName = functionName;
@@ -25,7 +25,7 @@ public class RunMessage {
         return functionName;
     }
 
-    public JsonFile.Test[] getTests() {
+    public Test[] getTests() {
         return tests;
     }
 }
