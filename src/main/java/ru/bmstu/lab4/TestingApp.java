@@ -19,9 +19,10 @@ public class TestingApp {
     private static final int PORT = 1969;
     private static final String START_MSG_FORMAT = "Listening on %s:%d\n";
     public final static Logger LOGGER = Logger.getLogger("MyLog");
+    private static final String PATH_TO_LOG_FILE = "/home/atom/";
 
     public static void main(String[] args) throws Exception{
-        FileHandler fh = ;
+        FileHandler fh = new FileHandler();
         LOGGER.addHandler(fh);
 
 
