@@ -7,6 +7,7 @@ import java.util.HashMap;
 
 public class StoreActor extends AbstractActor {
     private HashMap<String, TestResults> storage;
+    private static final String RUN_ACTOR_START_MSG_FORMAT = "PackageID: %s. Message: Starting running tests!\n";
 
     public StoreActor() {
         storage = new HashMap<>();
@@ -15,7 +16,10 @@ public class StoreActor extends AbstractActor {
     @Override
     public Receive createReceive() {
         return ReceiveBuilder.create()
-                .match(StoreMessage.class, m -> storage.put(m.getPackageID(), m.getResults()))
+                .match(StoreMessage.class, m -> {
+                    TestingApp.LOGGER.info();
+                    storage.put(m.getPackageID(), m.getResults());
+                })
                 .match(ResultMessage.class, m -> sender().tell(new StoreMessage(m.getPackageID(), storage.get(m.getPackageID())), self()))
                 .build();
     }
