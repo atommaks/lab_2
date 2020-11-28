@@ -7,6 +7,7 @@ import akka.japi.pf.ReceiveBuilder;
 import akka.pattern.Patterns;
 import akka.routing.BalancingPool;
 import akka.util.Timeout;
+import scala.concurrent.Await;
 import scala.concurrent.Future;
 
 import java.time.Duration;
@@ -32,7 +33,7 @@ public class RouteActor extends AbstractActor {
                 .match(StoreMessage.class, msg -> storageActor.tell(msg, self()))
                 .match(ResultMessage.class, msg -> {
                     Future<Object> future = Patterns.ask(storageActor, msg, TIMEOUT);
-                    sender().tell();
+                    sender().tell(Await.result());
 
                 })
                 .build();
