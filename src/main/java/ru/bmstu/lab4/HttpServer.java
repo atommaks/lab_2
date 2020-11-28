@@ -10,6 +10,8 @@ import akka.pattern.Patterns;
 import akka.util.Timeout;
 
 import java.time.Duration;
+
+import scala.concurrent.Await;
 import scala.concurrent.Future;
 
 import static akka.http.javadsl.server.Directives.*;
@@ -48,7 +50,7 @@ public class HttpServer {
                                     Future<Object> future = Patterns.ask(route, new ResultMessage(packageID), TIMEOUT);
                                     StoreMessage result;
                                     try {
-                                        result = (StoreMessage)
+                                        result = (StoreMessage) Await.result()
                                     } catch (Exception e) {
 
                                     }
