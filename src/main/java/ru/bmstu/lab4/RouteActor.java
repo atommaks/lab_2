@@ -4,7 +4,7 @@ import akka.actor.AbstractActor;
 import akka.japi.pf.ReceiveBuilder;
 
 public class RouteActor extends AbstractActor {
-    private final static 
+    private final static int 
 
     @Override
     public Receive createReceive() {
