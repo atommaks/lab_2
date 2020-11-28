@@ -20,6 +20,7 @@ public class RouteActor extends AbstractActor {
     @Override
     public Receive createReceive() {
         return ReceiveBuilder.create()
-                .match(RunMessage.class, msg -> balanceActor.tell(msg, self()));
+                .match(RunMessage.class, msg -> balanceActor.tell(msg, self()))
+                .build();
     }
 }
