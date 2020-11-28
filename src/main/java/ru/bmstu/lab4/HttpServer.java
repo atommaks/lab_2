@@ -2,6 +2,7 @@ package ru.bmstu.lab4;
 
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
+import akka.actor.Props;
 import akka.http.javadsl.marshallers.jackson.Jackson;
 import akka.http.javadsl.server.Route;
 
@@ -14,7 +15,7 @@ public class HttpServer {
 
     public HttpServer(ActorSystem system) {
         this.system = system;
-        route = this.system.actorOf()
+        route = this.system.actorOf(Props.create())
     }
 
     public Route getRoute() {
