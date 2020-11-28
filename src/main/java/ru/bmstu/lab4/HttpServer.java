@@ -48,20 +48,22 @@ public class HttpServer {
                                         })))),
                 path (RESULT_SEGMENT, () ->
                         route(
-                                parameter(PACKAGE_ID_PARAMETR, packageID -> {
-                                    Future<Object> future = Patterns.ask(route, new ResultMessage(packageID), TIMEOUT);
-                                    StoreMessage result;
-                                    try {
-                                        result = (StoreMessage) Await.result(future, TIMEOUT.duration());
-                                    } catch (Exception e) {
-                                        return complete(StatusCodes.INTERNAL_SERVER_ERROR, e.getMessage());
-                                    }
-                                    if (result != null && result.getResults() != null) {
-                                        return complete(StatusCodes.OK, result.getResults().toString());
-                                    } else {
-                                        return complete(StatusCodes.OK, NO_PACKAGE_FOUND_MSG);
-                                    }
-                                })))),
-        complete(StatusCodes.NOT_FOUND, WRONG_REQUEST_MSG)
+                                get( () ->
+                                    parameter(PACKAGE_ID_PARAMETR, packageID -> {
+                                        Future<Object> future = Patterns.ask(route, new ResultMessage(packageID), TIMEOUT);
+                                        StoreMessage result;
+                                        try {
+                                            result = (StoreMessage) Await.result(future, TIMEOUT.duration());
+                                     } catch (Exception e) {
+                                            return complete(StatusCodes.INTERNAL_SERVER_ERROR, e.getMessage());
+                                        }
+                                        if (result != null && result.getResults() != null) {
+                                            return complete(StatusCodes.OK, result.getResults().toString());
+                                        } else {
+                                         return complete(StatusCodes.OK, NO_PACKAGE_FOUND_MSG);
+                                        }
+                                    })))),
+            complete(StatusCodes.NOT_FOUND, WRONG_REQUEST_MSG)
+        )
     }
 }
