@@ -34,7 +34,6 @@ public class RouteActor extends AbstractActor {
                 .match(ResultMessage.class, msg -> {
                     Future<Object> future = Patterns.ask(storageActor, msg, TIMEOUT);
                     sender().tell(Await.result(future, TIMEOUT.duration()), self());
-
                 })
                 .build();
     }
