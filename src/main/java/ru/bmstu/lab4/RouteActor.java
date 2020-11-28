@@ -6,10 +6,14 @@ import akka.actor.Props;
 import akka.japi.pf.ReceiveBuilder;
 import akka.pattern.Patterns;
 import akka.routing.BalancingPool;
+import akka.util.Timeout;
 import scala.concurrent.Future;
+
+import java.time.Duration;
 
 public class RouteActor extends AbstractActor {
     private final static int POOL_SIZE = 2;
+    private static final Timeout TIMEOUT = Timeout.create(Duration.ofSeconds(3));
     private ActorRef balanceActor;
     private ActorRef storageActor;
 
