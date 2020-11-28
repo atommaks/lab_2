@@ -1,5 +1,8 @@
 package ru.bmstu.lab4;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class JsonFile {
     private String packageID;
     private String jsScript;
@@ -8,7 +11,8 @@ public class JsonFile {
 
     public JsonFile() {}
 
-    public JsonFile(String packageId, String jsScript, String functionName, Test[] tests) {
+    @JsonCreator
+    public JsonFile(@JsonProperty("packageID") String packageId, String jsScript, String functionName, Test[] tests) {
         this.packageID = packageId;
         this.jsScript = jsScript;
         this.functionName = functionName;
