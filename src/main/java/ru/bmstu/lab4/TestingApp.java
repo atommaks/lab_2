@@ -18,7 +18,7 @@ public class TestingApp {
     private static final String START_MSG_FORMAT = "Listening on %s:%d\n";
     private static final String EXIT_INSTRUCTION_MSG = "Press ENTER to exit!\n";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         ActorSystem system = ActorSystem.create("Testing");
         final Http http = Http.get(system);
         final ActorMaterializer materializer = ActorMaterializer.create(system);
@@ -30,6 +30,5 @@ public class TestingApp {
         System.out.print(EXIT_INSTRUCTION_MSG);
         System.in.read();
         binding.thenCompose(ServerBinding::unbind).thenAccept(unbound -> system.terminate());
-
     }
 }
