@@ -14,7 +14,7 @@ public class HttpServer {
         this.http = http;
     }
 
-    public static Route createRoute() {
+    public Route createRoute() {
         return route(get(() ->
                 parameter(URL_ARG, url ->
                         parameter(COUNT_ARG, count -> {
