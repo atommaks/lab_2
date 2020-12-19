@@ -1,6 +1,7 @@
 package ru.bmstu.lab6;
 
 import akka.http.javadsl.Http;
+import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.server.Route;
 
 import static akka.http.javadsl.server.Directives.*;
@@ -19,7 +20,7 @@ public class HttpServer {
                 parameter(URL_ARG, url ->
                         parameter(COUNT_ARG, count -> {
                             if (Integer.parseInt(count) <= 0) {
-                                return completeWithFuture(http.singleRequest())
+                                return completeWithFuture(http.singleRequest(HttpRequest))
                             }
                         }))));
     }
