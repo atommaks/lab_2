@@ -1,6 +1,7 @@
 package ru.bmstu.lab6;
 
 import akka.actor.AbstractActor;
+import akka.japi.pf.ReceiveBuilder;
 
 import java.util.Collections;
 import java.util.List;
@@ -14,6 +15,6 @@ public class RouteActor extends AbstractActor {
 
     @Override
     public Receive createReceive() {
-        return 
+        return ReceiveBuilder
     }
 }
