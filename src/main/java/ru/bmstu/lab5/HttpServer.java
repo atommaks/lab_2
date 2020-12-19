@@ -17,6 +17,7 @@ public class HttpServer {
     private static final String URL_ARG = "testUrl";
     private static final String COUNT_ARG = "count";
     private static final String INFO_MSG_PTR = "%s - %d";
+    private static final int MAP_ASYNC = 1;
 
 
     public static Flow<HttpRequest, HttpResponse, NotUsed> createFlow(Http http, ActorSystem system,
@@ -29,6 +30,6 @@ public class HttpServer {
                     LOGGER.info(String.format(INFO_MSG_PTR, url, count));
                     return new Pair<String, Integer>(url, count);
                 })
-                .mapAsync()
+                .mapAsync(MAP_ASYNC)
     }
 }
