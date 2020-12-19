@@ -21,7 +21,7 @@ public class HttpServer {
                 .map((r) -> {
                     Query query = r.getUri().query();
                     String url = query.get(URL_ARG).get();
-                    int count = Integer.parseInt()
+                    int count = Integer.parseInt(query.get(COUNT_ARG).get());
                 })
                 .mapAsync()
     }
