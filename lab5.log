@@ -2,8 +2,8 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2020-12-20T00:24:35</date>
-  <millis>1608413075501</millis>
+  <date>2020-12-20T00:29:05</date>
+  <millis>1608413345596</millis>
   <sequence>0</sequence>
   <logger>lab5</logger>
   <level>INFO</level>
@@ -13,8 +13,8 @@
   <message>start!</message>
 </record>
 <record>
-  <date>2020-12-20T00:24:37</date>
-  <millis>1608413077542</millis>
+  <date>2020-12-20T00:29:07</date>
+  <millis>1608413347481</millis>
   <sequence>1</sequence>
   <logger>lab5</logger>
   <level>INFO</level>
@@ -24,15 +24,3 @@
   <message>Server online at http://localhost:1996
  Press any button to stop...</message>
 </record>
-<record>
-  <date>2020-12-20T00:25:39</date>
-  <millis>1608413139326</millis>
-  <sequence>2</sequence>
-  <logger>lab5</logger>
-  <level>INFO</level>
-  <class>ru.bmstu.lab5.HttpServer</class>
-  <method>lambda$createFlow$4ad1ef8$1</method>
-  <thread>18</thread>
-  <message>http://rambler.ru - 20</message>
-</record>
-</log>
