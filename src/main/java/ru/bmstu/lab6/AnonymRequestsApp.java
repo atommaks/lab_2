@@ -1,5 +1,10 @@
 package ru.bmstu.lab6;
 
+import akka.actor.ActorRef;
+import akka.actor.ActorSystem;
+import akka.actor.Props;
+import ru.bmstu.lab5.RouteActor;
+
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
@@ -12,6 +17,7 @@ public class AnonymRequestsApp {
         LOGGER.addHandler(fh);
 
         LOGGER.info("start!");
-        
+        ActorSystem system = ActorSystem.create("routes");
+        ActorRef actor = system.actorOf(Props.create(RouteActor.class));
     }
 }
