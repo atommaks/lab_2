@@ -35,12 +35,6 @@
 
         <dependency>
             <groupId>com.typesafe.akka</groupId>
-            <artifactId>akka-http_2.12</artifactId>
-            <version>${akka-http.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-http-testkit_2.12</artifactId>
             <version>${akka-http.version}</version>
         </dependency>
