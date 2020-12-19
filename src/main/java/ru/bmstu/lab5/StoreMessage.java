@@ -1,5 +1,7 @@
 package ru.bmstu.lab5;
 
 public class StoreMessage {
-    private String 
+    private String url;
+    private int time;
+    
 }
