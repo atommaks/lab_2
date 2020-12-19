@@ -35,7 +35,6 @@ public class HttpServer {
 
     public HttpServer() {}
 
-
     public static Flow<HttpRequest, HttpResponse, NotUsed> createFlow(Http http, ActorSystem system,
                                                                       ActorMaterializer materializer, ActorRef actor) {
         return Flow.of(HttpRequest.class)
