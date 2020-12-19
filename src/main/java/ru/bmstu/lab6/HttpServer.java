@@ -33,7 +33,7 @@ public class HttpServer {
 
                             return completeWithFuture(Patterns.ask(actor, new Server(url), TIMEOUT)
                             .thenApply(port -> (String)port)
-                            .thenCompose(port -> http.singleRequest(HttpRequest.create(String.format(URL_ADDRES_PTR, AnonymRequestsApp.HOST, port, url, )))))
+                            .thenCompose(port -> http.singleRequest(HttpRequest.create(String.format(URL_ADDRES_PTR, AnonymRequestsApp.HOST, port, url, Integer.parseInt())))))
                         }))));
     }
 }
