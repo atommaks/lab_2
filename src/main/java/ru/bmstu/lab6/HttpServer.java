@@ -20,8 +20,9 @@ public class HttpServer {
                 parameter(URL_ARG, url ->
                         parameter(COUNT_ARG, count -> {
                             if (Integer.parseInt(count) <= 0) {
-                                return completeWithFuture(http.singleRequest(HttpRequest))
+                                return completeWithFuture(http.singleRequest(HttpRequest.create(url)));
                             }
+                            
                         }))));
     }
 }
