@@ -12,5 +12,6 @@ public class RouteActor extends AbstractActor {
     public Receive createReceive() {
         return ReceiveBuilder
                 .create()
+                .match()
     }
 }
