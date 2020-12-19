@@ -59,7 +59,7 @@ public class HttpServer {
                                     asyncHttpClient().prepareGet(url).execute();
                                     long finish = System.currentTimeMillis();
                                     int time = (int)(finish - start);
-                                    LOGGER.info(String.format(AVG_TIME_PTR, time));
+                                    LOGGER.info(String.format(TIME_RESPONSE_PTR, time));
                                     return CompletableFuture.completedFuture(time);
                                 });
                         return Source.single(r)
