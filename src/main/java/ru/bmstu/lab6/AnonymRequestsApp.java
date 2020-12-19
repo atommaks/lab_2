@@ -1,5 +1,6 @@
 package ru.bmstu.lab6;
 
+import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
 public class AnonymRequestsApp {
@@ -7,6 +8,8 @@ public class AnonymRequestsApp {
     public final static Logger LOGGER = Logger.getLogger("lab6");
 
     public static void main(String[] args) {
+        FileHandler fh = new FileHandler(PATH_TO_LOG_FILE);
+        LOGGER.addHandler(fh);
 
     }
 }
