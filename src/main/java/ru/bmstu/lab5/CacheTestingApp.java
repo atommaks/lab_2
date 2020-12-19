@@ -16,9 +16,9 @@ import java.util.logging.Logger;
 
 public class CacheTestingApp {
     private static final String PATH_TO_LOG_FILE = "/home/atom/IdeaProjects/lab_2/lab5.log";
+    private static final String HOST = "localhost";
+    private static final int PORT = 1996;
     public final static Logger LOGGER = Logger.getLogger("lab5");
-    private static final String IP = "localhost";
-    private static final int HOST = 1996;
 
     public static void main(String[] args) throws Exception {
         FileHandler fh = new FileHandler(PATH_TO_LOG_FILE);
@@ -31,10 +31,10 @@ public class CacheTestingApp {
         final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow;
         final CompletionStage<ServerBinding> binding = http.bindAndHandle(
                 routeFlow,
-                ConnectHttp.toHost(IP, HOST),
+                ConnectHttp.toHost(HOST, PORT),
                 materializer
         );
-        LOGGER.info("Server online at http://" + IP + ":" + HOST + "\n Press any button to stop...");
+        LOGGER.info("Server online at http://" + HOST + ":" + PORT + "\n Press any button to stop...");
         System.in.read();
         binding.thenCompose(ServerBinding::unbind)
                 .thenAccept(unbound -> system.terminate());
