@@ -7,6 +7,7 @@ import akka.http.javadsl.Http;
 import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.model.HttpResponse;
 import akka.http.javadsl.model.Query;
+import akka.japi.Pair;
 import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 
@@ -26,6 +27,7 @@ public class HttpServer {
                     String url = query.get(URL_ARG).get();
                     int count = Integer.parseInt(query.get(COUNT_ARG).get());
                     LOGGER.info(String.format(INFO_MSG_PTR, url, count));
+                    return new Pair<String, Integer>(url, count);
                 })
                 .mapAsync()
     }
