@@ -58,9 +58,9 @@ public class HttpServer {
                                     long start = System.currentTimeMillis();
                                     asyncHttpClient().prepareGet(url).execute();
                                     long finish = System.currentTimeMillis();
-                                    long time = finish - start;
-                                    LOGGER.info(time);
-                                    return CompletableFuture.completedFuture((int) (finish - start));
+                                    int time = (int)(finish - start);
+                                    LOGGER.info(String.format(AVG_TIME_PTR, time));
+                                    return CompletableFuture.completedFuture(time);
                                 });
                         return Source.single(r)
                                 .via(flow)
