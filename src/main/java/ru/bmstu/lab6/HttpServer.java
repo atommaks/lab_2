@@ -10,7 +10,9 @@ public class HttpServer {
     private static final String COUNT_ARG = "count";
     private Http http;
 
-    public HttpServer() {}
+    public HttpServer(Http http) {
+        this.http = http;
+    }
 
     public static Route createRoute() {
         return route(get(() ->
