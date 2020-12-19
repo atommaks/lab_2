@@ -32,7 +32,7 @@ public class HttpServer {
 
                             return completeWithFuture(Patterns.ask(actor, new Server(url), TIMEOUT)
                             .thenApply(port -> (String)port)
-                            .thenCompose())
+                            .thenCompose(port -> ))
                         }))));
     }
 }
