@@ -6,7 +6,9 @@ import akka.actor.Props;
 import akka.http.javadsl.ConnectHttp;
 import akka.http.javadsl.Http;
 import akka.http.javadsl.ServerBinding;
+import akka.http.javadsl.model.HttpRequest;
 import akka.stream.ActorMaterializer;
+import akka.stream.javadsl.Flow;
 
 import java.util.concurrent.CompletionStage;
 import java.util.logging.FileHandler;
@@ -28,7 +30,7 @@ public class AnonymRequestsApp {
         ActorRef actor = system.actorOf(Props.create(RouteActor.class));
         final Http http = Http.get(system);
         final ActorMaterializer materializer = ActorMaterializer.create(system);
-        final 
+        final Flow<HttpRequest, >
         final CompletionStage<ServerBinding> binding = http.bindAndHandle(
                 routeFlow,
                 ConnectHttp.toHost(HOST, PORT),
