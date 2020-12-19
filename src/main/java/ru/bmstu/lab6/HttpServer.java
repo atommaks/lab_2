@@ -12,7 +12,7 @@ public class HttpServer {
 
     public static Route createRoute() {
         return route(get(() ->
-                parameter(URL_ARG, url -> )
-                ));
+                parameter(URL_ARG, url ->
+                        )));
     }
 }
