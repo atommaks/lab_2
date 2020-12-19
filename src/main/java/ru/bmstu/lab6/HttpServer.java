@@ -23,7 +23,7 @@ public class HttpServer {
                                 return completeWithFuture(http.singleRequest(HttpRequest.create(url)));
                             }
 
-                            return 
+                            return completeWithFuture()
                         }))));
     }
 }
