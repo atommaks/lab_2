@@ -13,6 +13,6 @@ public class RouteActor extends AbstractActor {
     public Receive createReceive() {
         return ReceiveBuilder
                 .create()
-                .match(GetMessage.class, msg -> getSender().tell(storage.getOrDefault(msg.getUrl(), -1), ActorRef))
+                .match(GetMessage.class, msg -> getSender().tell(storage.getOrDefault(msg.getUrl(), -1), ActorRef.noSender()))
     }
 }
