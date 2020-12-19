@@ -27,8 +27,9 @@ import static org.asynchttpclient.Dsl.asyncHttpClient;
 public class HttpServer {
     private static final String URL_ARG = "testUrl";
     private static final String COUNT_ARG = "count";
-    private static final String INFO_MSG_PTR = "%s - %d";
-    private static final String TIME_RESPONSE_PTR = "Response's time = %d";
+    private static final String INFO_MSG_PTR = "%s - %d\n";
+    private static final String TIME_RESPONSE_PTR = "Response time = %d\n";
+    private static final String AVG_RESPONSE_TIME_PTR = "----Average resonse time = %d!----\n";
     private static final int MAP_ASYNC = 1;
     private static final Duration TIMEOUT = Duration.ofSeconds(5);
 
@@ -71,6 +72,7 @@ public class HttpServer {
                 })
                 .map(r -> {
                    actor.tell(new StoreMessage(r.first(), r.second()), ActorRef.noSender());
+
                    return HttpResponse.create().withEntity(r.second().toString() + '\n');
                 });
     }
