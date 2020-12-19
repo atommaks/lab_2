@@ -28,7 +28,7 @@ public class HttpServer {
     private static final String URL_ARG = "testUrl";
     private static final String COUNT_ARG = "count";
     private static final String INFO_MSG_PTR = "%s - %d";
-    private static final String AVG_TIME_PTR = "Average Time = %d";
+    private static final String TIME_RESPONSE_PTR = "Response's time = %d";
     private static final int MAP_ASYNC = 1;
     private static final Duration TIMEOUT = Duration.ofSeconds(5);
 
