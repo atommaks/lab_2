@@ -205,7 +205,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestingApp">
+  <component name="RunManager" selected="Application.CacheTestingApp">
     <configuration name="CacheTestingApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.bmstu.lab5.CacheTestingApp" />
       <module name="lab_2" />
@@ -234,8 +234,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestingApp" />
         <item itemvalue="Application.CacheTestingApp" />
+        <item itemvalue="Application.TestingApp" />
       </list>
     </recent_temporary>
   </component>
