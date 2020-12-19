@@ -11,6 +11,9 @@ import akka.japi.Pair;
 import akka.pattern.Patterns;
 import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
+import akka.stream.javadsl.Keep;
+import akka.stream.javadsl.Sink;
+import akka.stream.javadsl.Source;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -54,7 +57,12 @@ public class HttpServer {
                                     long finish = System.currentTimeMillis();
                                     return CompletableFuture.completedFuture((int) (finish - start));
                                 });
-                    })
+                        return Source.single(r)
+                                .via(flow)
+                                .toMat(Sink.fold(0, Integer::sum), Keep.right())
+                                .run(materializer)
+                                .thenApply(sum -> new Pair<>(r.first(), (sum / r.second())));
+                    });
                 })
     }
 }
