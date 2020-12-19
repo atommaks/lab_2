@@ -5,7 +5,8 @@ import akka.http.javadsl.server.Route;
 import static akka.http.javadsl.server.Directives.route;
 
 public class HttpServer {
-    private static final String URL_ARG = "";
+    private static final String URL_ARG = "url";
+    private static final String COUNT_ARG = "count";
 
     public HttpServer() {}
 
