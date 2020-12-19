@@ -72,7 +72,7 @@ public class HttpServer {
                 })
                 .map(r -> {
                    actor.tell(new StoreMessage(r.first(), r.second()), ActorRef.noSender());
-
+                   LOGGER.info(String.format(AVG_RESPONSE_TIME_PTR, r.second()));
                    return HttpResponse.create().withEntity(r.second().toString() + '\n');
                 });
     }
