@@ -33,5 +33,9 @@ public class AnonymRequestsApp {
                 ConnectHttp.toHost(HOST, PORT),
                 materializer
         );
+        LOGGER.info("Server online at http://" + HOST + ":" + PORT + "\n Press any button to stop...");
+        System.in.read();
+        binding.thenCompose(ServerBinding::unbind)
+                .thenAccept(unbound -> system.terminate());
     }
 }
