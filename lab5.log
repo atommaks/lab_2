@@ -24,3 +24,267 @@
   <message>Server online at http://localhost:1996
  Press any button to stop...</message>
 </record>
+<record>
+  <date>2020-12-20T00:41:07</date>
+  <millis>1608414067907</millis>
+  <sequence>2</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$createFlow$4ad1ef8$1</method>
+  <thread>18</thread>
+  <message>http://yandex.ru - 20
+</message>
+</record>
+<record>
+  <date>2020-12-20T00:41:08</date>
+  <millis>1608414068260</millis>
+  <sequence>3</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>20</thread>
+  <message>Response time = 327
+</message>
+</record>
+<record>
+  <date>2020-12-20T00:41:08</date>
+  <millis>1608414068264</millis>
+  <sequence>4</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>20</thread>
+  <message>Response time = 3
+</message>
+</record>
+<record>
+  <date>2020-12-20T00:41:08</date>
+  <millis>1608414068269</millis>
+  <sequence>5</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>20</thread>
+  <message>Response time = 3
+</message>
+</record>
+<record>
+  <date>2020-12-20T00:41:08</date>
+  <millis>1608414068277</millis>
+  <sequence>6</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>20</thread>
+  <message>Response time = 5
+</message>
+</record>
+<record>
+  <date>2020-12-20T00:41:08</date>
+  <millis>1608414068284</millis>
+  <sequence>7</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>20</thread>
+  <message>Response time = 6
+</message>
+</record>
+<record>
+  <date>2020-12-20T00:41:08</date>
+  <millis>1608414068298</millis>
+  <sequence>8</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>20</thread>
+  <message>Response time = 13
+</message>
+</record>
+<record>
+  <date>2020-12-20T00:41:08</date>
+  <millis>1608414068307</millis>
+  <sequence>9</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>20</thread>
+  <message>Response time = 8
+</message>
+</record>
+<record>
+  <date>2020-12-20T00:41:08</date>
+  <millis>1608414068317</millis>
+  <sequence>10</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>20</thread>
+  <message>Response time = 7
+</message>
+</record>
+<record>
+  <date>2020-12-20T00:41:08</date>
+  <millis>1608414068323</millis>
+  <sequence>11</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>20</thread>
+  <message>Response time = 5
+</message>
+</record>
+<record>
+  <date>2020-12-20T00:41:08</date>
+  <millis>1608414068327</millis>
+  <sequence>12</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>20</thread>
+  <message>Response time = 3
+</message>
+</record>
+<record>
+  <date>2020-12-20T00:41:08</date>
+  <millis>1608414068333</millis>
+  <sequence>13</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>20</thread>
+  <message>Response time = 5
+</message>
+</record>
+<record>
+  <date>2020-12-20T00:41:08</date>
+  <millis>1608414068338</millis>
+  <sequence>14</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>20</thread>
+  <message>Response time = 3
+</message>
+</record>
+<record>
+  <date>2020-12-20T00:41:08</date>
+  <millis>1608414068343</millis>
+  <sequence>15</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>20</thread>
+  <message>Response time = 4
+</message>
+</record>
+<record>
+  <date>2020-12-20T00:41:08</date>
+  <millis>1608414068347</millis>
+  <sequence>16</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>20</thread>
+  <message>Response time = 2
+</message>
+</record>
+<record>
+  <date>2020-12-20T00:41:08</date>
+  <millis>1608414068350</millis>
+  <sequence>17</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>20</thread>
+  <message>Response time = 2
+</message>
+</record>
+<record>
+  <date>2020-12-20T00:41:08</date>
+  <millis>1608414068355</millis>
+  <sequence>18</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>20</thread>
+  <message>Response time = 4
+</message>
+</record>
+<record>
+  <date>2020-12-20T00:41:08</date>
+  <millis>1608414068396</millis>
+  <sequence>19</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>20</thread>
+  <message>Response time = 40
+</message>
+</record>
+<record>
+  <date>2020-12-20T00:41:08</date>
+  <millis>1608414068398</millis>
+  <sequence>20</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>20</thread>
+  <message>Response time = 1
+</message>
+</record>
+<record>
+  <date>2020-12-20T00:41:08</date>
+  <millis>1608414068406</millis>
+  <sequence>21</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>20</thread>
+  <message>Response time = 4
+</message>
+</record>
+<record>
+  <date>2020-12-20T00:41:08</date>
+  <millis>1608414068411</millis>
+  <sequence>22</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>20</thread>
+  <message>Response time = 2
+</message>
+</record>
+<record>
+  <date>2020-12-20T00:41:08</date>
+  <millis>1608414068415</millis>
+  <sequence>23</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$createFlow$faf88cf$1</method>
+  <thread>18</thread>
+  <message>----Average resonse time = 22!----
+</message>
+</record>
