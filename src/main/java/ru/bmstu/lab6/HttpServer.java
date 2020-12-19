@@ -8,7 +8,7 @@ import static akka.http.javadsl.server.Directives.*;
 public class HttpServer {
     private static final String URL_ARG = "url";
     private static final String COUNT_ARG = "count";
-    private Http http
+    private Http http;
 
     public HttpServer() {}
 
