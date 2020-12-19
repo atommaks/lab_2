@@ -11,5 +11,7 @@ public class AnonymRequestsApp {
         FileHandler fh = new FileHandler(PATH_TO_LOG_FILE);
         LOGGER.addHandler(fh);
 
+        LOGGER.info("start!");
+        
     }
 }
