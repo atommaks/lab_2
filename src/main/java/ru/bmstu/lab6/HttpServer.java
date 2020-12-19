@@ -13,6 +13,7 @@ import static akka.http.javadsl.server.Directives.*;
 public class HttpServer {
     private static final String URL_ARG = "url";
     private static final String COUNT_ARG = "count";
+    private static final String URL_ADDRES_PTR = "";
     private static final Duration TIMEOUT = Duration.ofSeconds(5);
     private Http http;
     private ActorRef actor;
