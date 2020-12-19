@@ -27,7 +27,7 @@ public class HttpServer {
                                 return completeWithFuture(http.singleRequest(HttpRequest.create(url)));
                             }
 
-                            return completeWithFuture(Patterns.ask(actor))
+                            return completeWithFuture(Patterns.ask(actor, new Server()))
                         }))));
     }
 }
