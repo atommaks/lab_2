@@ -20,6 +20,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
 
 import static ru.bmstu.lab5.CacheTestingApp.LOGGER;
+import static org.asynchttpclient.Dsl.asyncHttpClient;
 
 public class HttpServer {
     private static final String URL_ARG = "testUrl";
@@ -50,7 +51,7 @@ public class HttpServer {
                                 .mapConcat(p -> new ArrayList<>(Collections.nCopies(p.second(), p.first())))
                                 .mapAsync(r.second(), url -> {
                                     long start = System.currentTimeMillis();
-
+                                    asyncHttpClient()
                                     long finish = System.currentTimeMillis();
                                     return CompletableFuture.completedFuture((int) (finish - start));
                                 });
