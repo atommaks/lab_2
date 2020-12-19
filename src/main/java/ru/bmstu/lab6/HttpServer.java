@@ -3,6 +3,7 @@ package ru.bmstu.lab6;
 import akka.http.javadsl.Http;
 import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.server.Route;
+import akka.pattern.Patterns;
 
 import static akka.http.javadsl.server.Directives.*;
 
@@ -23,7 +24,7 @@ public class HttpServer {
                                 return completeWithFuture(http.singleRequest(HttpRequest.create(url)));
                             }
 
-                            return completeWithFuture()
+                            return completeWithFuture(Patterns.ask())
                         }))));
     }
 }
