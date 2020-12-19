@@ -1,5 +1,6 @@
 package ru.bmstu.lab6;
 
+import akka.http.javadsl.Http;
 import akka.http.javadsl.server.Route;
 
 import static akka.http.javadsl.server.Directives.*;
@@ -7,8 +8,7 @@ import static akka.http.javadsl.server.Directives.*;
 public class HttpServer {
     private static final String URL_ARG = "url";
     private static final String COUNT_ARG = "count";
-
-    private 
+    private Http http
 
     public HttpServer() {}
 
