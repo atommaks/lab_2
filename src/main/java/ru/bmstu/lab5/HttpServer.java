@@ -26,7 +26,7 @@ public class HttpServer {
     private static final String COUNT_ARG = "count";
     private static final String INFO_MSG_PTR = "%s - %d";
     private static final int MAP_ASYNC = 1;
-    private static final Timeout TIMEOUT = Timeout.create(Duration.ofSeconds(3));
+    private static final Duration TIMEOUT = Duration.ofSeconds(5);
 
 
     public static Flow<HttpRequest, HttpResponse, NotUsed> createFlow(Http http, ActorSystem system,
