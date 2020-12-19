@@ -11,14 +11,16 @@ import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 
 public class HttpServer {
-    private static final String URL_ARG = "testU"
+    private static final String URL_ARG = "testUrl";
+
 
     public static Flow<HttpRequest, HttpResponse, NotUsed> createFlow(Http http, ActorSystem system,
                                                                       ActorMaterializer materializer, ActorRef actor) {
         return Flow.of(HttpRequest.class)
                 .map((r) -> {
                     Query query = r.getUri().query();
-                    String url = query.get().get();
+                    String url = query.get(URL_ARG).get();
+                    int count = Integer.parseInt()
                 })
                 .mapAsync()
     }
