@@ -49,7 +49,7 @@ public class HttpServer {
                 .mapAsync(MAP_ASYNC, r -> {
                     CompletionStage<Object> stage = Patterns.ask(actor, new GetMessage(r.first()), TIMEOUT);
                     return stage.thenCompose(res -> {
-                        if ((int)res >= 0) {
+                        if ((int)res != -1) {
                             return CompletableFuture.completedFuture(new Pair<>(r.first(), ((int)res)));
                         }
 
