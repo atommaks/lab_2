@@ -205,39 +205,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.CacheTestingApp">
-    <configuration name="CacheTestingApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.bmstu.lab5.CacheTestingApp" />
       <module name="lab_2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.bmstu.lab5.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestingApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.bmstu.lab4.TestingApp" />
-      <module name="lab_2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.bmstu.lab4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.CacheTestingApp" />
-        <item itemvalue="Application.TestingApp" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
