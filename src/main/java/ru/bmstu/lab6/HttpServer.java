@@ -14,7 +14,9 @@ public class HttpServer {
         return route(get(() ->
                 parameter(URL_ARG, url ->
                         parameter(COUNT_ARG, count -> {
-                            if (Integer.parseInt(count))
+                            if (Integer.parseInt(count) <= 0) {
+                                
+                            }
                         }))));
     }
 }
