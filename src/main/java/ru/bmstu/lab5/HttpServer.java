@@ -12,6 +12,7 @@ import akka.stream.javadsl.Flow;
 
 public class HttpServer {
     private static final String URL_ARG = "testUrl";
+    private static final String COUNT_ARG = "count";
 
 
     public static Flow<HttpRequest, HttpResponse, NotUsed> createFlow(Http http, ActorSystem system,
