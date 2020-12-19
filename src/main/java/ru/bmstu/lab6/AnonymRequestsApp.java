@@ -4,7 +4,7 @@ import java.util.logging.Logger;
 
 public class AnonymRequestsApp {
     private static final String PATH_TO_LOG_FILE = "/home/atom/IdeaProjects/lab_2/lab5.log";
-    public final static Logger LOGGER = Logger.getLogger("lab5");
+    public final static Logger LOGGER = Logger.getLogger("lab6");
 
     public static void main(String[] args) {
 
