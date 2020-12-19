@@ -3,6 +3,7 @@ package ru.bmstu.lab6;
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
+import akka.http.javadsl.Http;
 import ru.bmstu.lab5.RouteActor;
 
 import java.util.logging.FileHandler;
@@ -19,5 +20,6 @@ public class AnonymRequestsApp {
         LOGGER.info("start!");
         ActorSystem system = ActorSystem.create("routes");
         ActorRef actor = system.actorOf(Props.create(RouteActor.class));
+        final Http http = Http.get(system);
     }
 }
