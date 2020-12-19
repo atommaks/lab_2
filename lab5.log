@@ -35,3 +35,14 @@
   <thread>19</thread>
   <message>http://rambler.ru - 20</message>
 </record>
+<record>
+  <date>2020-12-20T00:30:37</date>
+  <millis>1608413437331</millis>
+  <sequence>3</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$createFlow$4ad1ef8$1</method>
+  <thread>14</thread>
+  <message>http://yandex.ru - 20</message>
+</record>
