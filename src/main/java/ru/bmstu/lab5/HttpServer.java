@@ -31,6 +31,8 @@ public class HttpServer {
     private static final int MAP_ASYNC = 1;
     private static final Duration TIMEOUT = Duration.ofSeconds(5);
 
+    public HttpServer() {}
+
 
     public static Flow<HttpRequest, HttpResponse, NotUsed> createFlow(Http http, ActorSystem system,
                                                                       ActorMaterializer materializer, ActorRef actor) {
