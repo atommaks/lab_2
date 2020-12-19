@@ -6,11 +6,14 @@ import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.server.Route;
 import akka.pattern.Patterns;
 
+import java.time.Duration;
+
 import static akka.http.javadsl.server.Directives.*;
 
 public class HttpServer {
     private static final String URL_ARG = "url";
     private static final String COUNT_ARG = "count";
+    private static final Duration TIMEOUT = Duration.ofSeconds(5);
     private Http http;
     private ActorRef actor;
 
@@ -27,7 +30,7 @@ public class HttpServer {
                                 return completeWithFuture(http.singleRequest(HttpRequest.create(url)));
                             }
 
-                            return completeWithFuture(Patterns.ask(actor, new Server(url)))
+                            return completeWithFuture(Patterns.ask(actor, new Server(url), ))
                         }))));
     }
 }
