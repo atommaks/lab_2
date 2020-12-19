@@ -15,6 +15,7 @@ import java.util.logging.Logger;
 public class AnonymRequestsApp {
     private static final String PATH_TO_LOG_FILE = "/home/atom/IdeaProjects/lab_2/lab6.log";
     private static final String HOST = "localhost";
+    private static final int PORT;
     public final static Logger LOGGER = Logger.getLogger("lab6");
 
     public static void main(String[] args) throws Exception{
