@@ -15,7 +15,7 @@ import static ru.bmstu.lab5.CacheTestingApp.LOGGER;
 public class HttpServer {
     private static final String URL_ARG = "testUrl";
     private static final String COUNT_ARG = "count";
-    private static final String INFO_MSG_PTR = "%s %s";
+    private static final String INFO_MSG_PTR = "%s %d";
 
 
     public static Flow<HttpRequest, HttpResponse, NotUsed> createFlow(Http http, ActorSystem system,
@@ -25,7 +25,7 @@ public class HttpServer {
                     Query query = r.getUri().query();
                     String url = query.get(URL_ARG).get();
                     int count = Integer.parseInt(query.get(COUNT_ARG).get());
-                    LOGGER.info();
+                    LOGGER.info(String.format(INFO_MSG_PTR, url, count));
                 })
                 .mapAsync()
     }
