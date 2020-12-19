@@ -9,6 +9,8 @@ import java.util.HashMap;
 public class RouteActor extends AbstractActor {
     private final HashMap<String, Integer> storage = new HashMap<>();
 
+    public RouteActor () {}
+
     @Override
     public Receive createReceive() {
         return ReceiveBuilder
