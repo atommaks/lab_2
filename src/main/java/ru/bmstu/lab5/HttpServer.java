@@ -64,5 +64,9 @@ public class HttpServer {
                                 .thenApply(sum -> new Pair<>(r.first(), (sum / r.second())));
                     });
                 })
+                .map(r -> {
+                   actor.tell(new StoreMessage(r.first(), r.second()), ActorRef.noSender());
+                   return HttpResponse.create().withEntity(r.second().toString() + '\n');
+                });
     }
 }
