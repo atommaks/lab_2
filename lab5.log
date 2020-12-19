@@ -24,3 +24,234 @@
   <message>Server online at http://localhost:1996
  Press any button to stop...</message>
 </record>
+<record>
+  <date>2020-12-20T00:35:24</date>
+  <millis>1608413724380</millis>
+  <sequence>2</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$createFlow$4ad1ef8$1</method>
+  <thread>18</thread>
+  <message>http://yandex.ru - 20</message>
+</record>
+<record>
+  <date>2020-12-20T00:35:24</date>
+  <millis>1608413724676</millis>
+  <sequence>3</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>16</thread>
+  <message>Average Time = 273</message>
+</record>
+<record>
+  <date>2020-12-20T00:35:24</date>
+  <millis>1608413724680</millis>
+  <sequence>4</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>16</thread>
+  <message>Average Time = 2</message>
+</record>
+<record>
+  <date>2020-12-20T00:35:24</date>
+  <millis>1608413724684</millis>
+  <sequence>5</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>16</thread>
+  <message>Average Time = 2</message>
+</record>
+<record>
+  <date>2020-12-20T00:35:24</date>
+  <millis>1608413724689</millis>
+  <sequence>6</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>16</thread>
+  <message>Average Time = 2</message>
+</record>
+<record>
+  <date>2020-12-20T00:35:24</date>
+  <millis>1608413724697</millis>
+  <sequence>7</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>16</thread>
+  <message>Average Time = 6</message>
+</record>
+<record>
+  <date>2020-12-20T00:35:24</date>
+  <millis>1608413724705</millis>
+  <sequence>8</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>16</thread>
+  <message>Average Time = 5</message>
+</record>
+<record>
+  <date>2020-12-20T00:35:24</date>
+  <millis>1608413724713</millis>
+  <sequence>9</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>16</thread>
+  <message>Average Time = 7</message>
+</record>
+<record>
+  <date>2020-12-20T00:35:24</date>
+  <millis>1608413724717</millis>
+  <sequence>10</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>16</thread>
+  <message>Average Time = 3</message>
+</record>
+<record>
+  <date>2020-12-20T00:35:24</date>
+  <millis>1608413724725</millis>
+  <sequence>11</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>16</thread>
+  <message>Average Time = 6</message>
+</record>
+<record>
+  <date>2020-12-20T00:35:24</date>
+  <millis>1608413724730</millis>
+  <sequence>12</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>16</thread>
+  <message>Average Time = 4</message>
+</record>
+<record>
+  <date>2020-12-20T00:35:24</date>
+  <millis>1608413724744</millis>
+  <sequence>13</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>16</thread>
+  <message>Average Time = 7</message>
+</record>
+<record>
+  <date>2020-12-20T00:35:24</date>
+  <millis>1608413724749</millis>
+  <sequence>14</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>16</thread>
+  <message>Average Time = 4</message>
+</record>
+<record>
+  <date>2020-12-20T00:35:24</date>
+  <millis>1608413724752</millis>
+  <sequence>15</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>16</thread>
+  <message>Average Time = 2</message>
+</record>
+<record>
+  <date>2020-12-20T00:35:24</date>
+  <millis>1608413724756</millis>
+  <sequence>16</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>16</thread>
+  <message>Average Time = 3</message>
+</record>
+<record>
+  <date>2020-12-20T00:35:24</date>
+  <millis>1608413724760</millis>
+  <sequence>17</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>16</thread>
+  <message>Average Time = 3</message>
+</record>
+<record>
+  <date>2020-12-20T00:35:24</date>
+  <millis>1608413724764</millis>
+  <sequence>18</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>16</thread>
+  <message>Average Time = 3</message>
+</record>
+<record>
+  <date>2020-12-20T00:35:24</date>
+  <millis>1608413724788</millis>
+  <sequence>19</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>16</thread>
+  <message>Average Time = 23</message>
+</record>
+<record>
+  <date>2020-12-20T00:35:24</date>
+  <millis>1608413724791</millis>
+  <sequence>20</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>16</thread>
+  <message>Average Time = 2</message>
+</record>
+<record>
+  <date>2020-12-20T00:35:24</date>
+  <millis>1608413724797</millis>
+  <sequence>21</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>16</thread>
+  <message>Average Time = 5</message>
+</record>
+<record>
+  <date>2020-12-20T00:35:24</date>
+  <millis>1608413724801</millis>
+  <sequence>22</sequence>
+  <logger>lab5</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab5.HttpServer</class>
+  <method>lambda$null$d30a6d2d$2</method>
+  <thread>16</thread>
+  <message>Average Time = 2</message>
+</record>
