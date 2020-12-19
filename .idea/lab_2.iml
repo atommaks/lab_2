@@ -17,7 +17,6 @@
     <orderEntry type="library" name="Maven: com.typesafe.akka:akka-http-core_2.12:10.1.10" level="project" />
     <orderEntry type="library" name="Maven: com.typesafe.akka:akka-parsing_2.12:10.1.10" level="project" />
     <orderEntry type="library" name="Maven: com.typesafe.akka:akka-http-xml_2.12:10.1.10" level="project" />
-    <orderEntry type="library" name="Maven: com.typesafe.akka:akka-http_2.12:10.1.10" level="project" />
     <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-xml_2.12:1.2.0" level="project" />
     <orderEntry type="library" name="Maven: org.asynchttpclient:async-http-client:2.10.4" level="project" />
     <orderEntry type="library" name="Maven: org.asynchttpclient:async-http-client-netty-utils:2.10.4" level="project" />
@@ -192,6 +191,7 @@
     <orderEntry type="library" name="Maven: org.apache.hadoop:hadoop-mapreduce-client-jobclient:2.10.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.hadoop:hadoop-annotations:2.10.1" level="project" />
     <orderEntry type="library" name="Maven: com.typesafe.akka:akka-stream-testkit_2.12:2.5.26" level="project" />
+    <orderEntry type="library" name="Maven: com.typesafe.akka:akka-http_2.12:10.1.10" level="project" />
     <orderEntry type="library" name="Maven: org.apache.zookeeper:zookeeper:3.5.5" level="project" />
     <orderEntry type="library" name="Maven: org.apache.zookeeper:zookeeper-jute:3.5.5" level="project" />
     <orderEntry type="library" name="Maven: org.apache.yetus:audience-annotations:0.5.0" level="project" />
