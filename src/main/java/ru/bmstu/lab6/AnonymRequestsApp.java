@@ -19,6 +19,7 @@ public class AnonymRequestsApp {
     public final static Logger LOGGER = Logger.getLogger("lab6");
 
     public static void main(String[] args) throws Exception{
+        PORT = Integer.parseInt(args[0]);
         FileHandler fh = new FileHandler(PATH_TO_LOG_FILE);
         LOGGER.addHandler(fh);
 
