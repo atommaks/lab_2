@@ -20,7 +20,7 @@ public class HttpServer {
 
     public HttpServer(Http http, ActorRef actor) {
         this.http = http;
-        this.actor = actor
+        this.actor = actor;
     }
 
     public Route createRoute() {
