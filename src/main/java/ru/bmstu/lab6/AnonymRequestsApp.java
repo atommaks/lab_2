@@ -4,7 +4,6 @@ import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
 import akka.http.javadsl.Http;
-import ru.bmstu.lab5.RouteActor;
 
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
