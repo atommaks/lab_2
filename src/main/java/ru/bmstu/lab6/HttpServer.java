@@ -30,7 +30,8 @@ public class HttpServer {
                                 return completeWithFuture(http.singleRequest(HttpRequest.create(url)));
                             }
 
-                            return completeWithFuture(Patterns.ask(actor, new Server(url), TIMEOUT))
+                            return completeWithFuture(Patterns.ask(actor, new Server(url), TIMEOUT)
+                            .thenApply())
                         }))));
     }
 }
