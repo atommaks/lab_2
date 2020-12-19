@@ -4,6 +4,7 @@ import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
 import akka.http.javadsl.Http;
+import akka.stream.ActorMaterializer;
 
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
@@ -20,5 +21,6 @@ public class AnonymRequestsApp {
         ActorSystem system = ActorSystem.create("routes");
         ActorRef actor = system.actorOf(Props.create(RouteActor.class));
         final Http http = Http.get(system);
+        final ActorMaterializer materializer = ActorMaterializer.create(system);
     }
 }
