@@ -2,9 +2,9 @@ package ru.bmstu.lab5;
 
 public class StoreMessage {
     private String url;
-    private Integer time;
+    private int time;
 
-    public StoreMessage(String url, Integer time) {
+    public StoreMessage(String url, int time) {
         this.url = url;
         this.time = time;
     }
