@@ -3,6 +3,7 @@ package ru.bmstu.lab5;
 import akka.NotUsed;
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
+import akka.actor.Props;
 import akka.http.javadsl.ConnectHttp;
 import akka.http.javadsl.Http;
 import akka.http.javadsl.ServerBinding;
@@ -27,7 +28,7 @@ public class CacheTestingApp {
 
         LOGGER.info("start!");
         ActorSystem system = ActorSystem.create("routes");
-        ActorRef actor = system.actorOf()
+        ActorRef actor = system.actorOf(Props.create())
         final Http http = Http.get(system);
         final ActorMaterializer materializer = ActorMaterializer.create(system);
         final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = HttpServer.createFlow(http, system, materializer, actor);
