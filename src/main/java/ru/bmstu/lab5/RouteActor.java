@@ -14,5 +14,6 @@ public class RouteActor extends AbstractActor {
         return ReceiveBuilder
                 .create()
                 .match(GetMessage.class, msg -> getSender().tell(storage.getOrDefault(msg.getUrl(), -1), ActorRef.noSender()))
+                .match()
     }
 }
