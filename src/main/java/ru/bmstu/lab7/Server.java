@@ -64,6 +64,6 @@ public class Server {
             }
         }
 
-        
+        context.destroySocket();
     }
 }
