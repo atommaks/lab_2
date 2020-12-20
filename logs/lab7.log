@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-12-20T19:18:19</date>
+  <millis>1608481099015</millis>
+  <sequence>0</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab7.Server</class>
+  <method>clientRunning</method>
+  <thread>1</thread>
+  <message>PUT Succeded</message>
+</record>
