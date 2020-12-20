@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0558078c-817c-455a-bcc5-b6b864d47bf5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab7/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab7/Client.java" afterDir="false" />
-    </list>
+    <list default="true" id="0558078c-817c-455a-bcc5-b6b864d47bf5" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab7/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="33" column="33" lean-forward="true" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+            <state relative-caret-position="285">
+              <caret line="20" column="37" lean-forward="true" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -516,8 +514,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab7/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="33" column="33" lean-forward="true" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+        <state relative-caret-position="285">
+          <caret line="20" column="37" lean-forward="true" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
