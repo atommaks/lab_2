@@ -47,8 +47,9 @@ public class Storage {
                 ZMsg msg = ZMsg.recvMsg(socket);
                 String message = msg.getLast().toString().toLowerCase(Locale.ROOT);
                 if (message.equals(GET_CMD)) {
-                    executeGetCmd(msg, message, caches, );
+                    executeGetCmd(msg, message, caches, start);
                 }
+                
             }
         }
     }
