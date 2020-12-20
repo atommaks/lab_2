@@ -84,9 +84,11 @@ public class Server {
             }
         } else if (message.startsWith(PUT_CMD)) {
             executePutCmd(msg, message);
+            LOGGER.info(PUT_SUCCESS_MSG);
             msg.getLast().reset(PUT_SUCCESS_MSG);
             msg.send(clientSocket);
         } else {
+            LOGGER.info(NOT_EXISTING_CMD);
             msg.getLast().reset(NOT_EXISTING_CMD);
             msg.send(clientSocket);
         }
