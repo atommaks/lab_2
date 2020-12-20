@@ -42,5 +42,7 @@ public class Server {
         poller = context.createPoller(POLLER_SIZE);
         poller.register(clientSocket, ZMQ.Poller.POLLIN);
         poller.register(serverSocket, ZMQ.Poller.POLLIN);
+
+        caches = new ArrayList<>();
     }
 }
