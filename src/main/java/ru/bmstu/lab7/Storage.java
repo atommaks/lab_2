@@ -12,6 +12,7 @@ import static ru.bmstu.lab7.Server.SERVER_ADDRESS;
 public class Storage {
     private static final int TYPE = 1;
     private static final int POLLER_SIZE = 1;
+    private static final TIMEOUT = 
     private static final int ZERO_POLL_INDEX = 0;
 
 
@@ -27,6 +28,6 @@ public class Storage {
         long finish = start + caches.size() - 1;
         long time = System.currentTimeMillis();
 
-        while (poller)
+        while (poller.poll())
     }
 }
