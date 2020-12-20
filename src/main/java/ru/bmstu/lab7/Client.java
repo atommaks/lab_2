@@ -14,9 +14,9 @@ public class Client {
     private static final String EXIT_CMD = "quit";
     private static final String OUTPUT_MSG_PTR = "[Output]: %s\n";
     private static final String NO_OUTPUT_MSG = "No output!\n";
+    private static final Scanner in = new Scanner(System.in);
     private static final int TIMEOUT = 5000;
     private static final int TYPE = 1;
-    private static final Scanner in = new Scanner(System.in);
     private static ZContext context;
     private static ZMQ.Socket client;
 
