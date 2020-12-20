@@ -38,7 +38,7 @@ public class HttpServer {
                             return completeWithFuture(Patterns.ask(actor, new Server(url), TIMEOUT)
                             .thenApply(port -> (String)port)
                             .thenCompose(port -> {
-
+                                LOGGER.info(String.format(SEND_REQUEST_PTR, HOST, port, url, Integer.parseInt(count) - 1));
                                 return http.singleRequest(HttpRequest.create(String.format(URL_ADDRES_PTR, HOST, port, url, Integer.parseInt(count) - 1)));
                             }));
                         }))));
