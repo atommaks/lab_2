@@ -55,7 +55,13 @@ public class Server {
                 time = System.currentTimeMillis();
             }
 
-            if (poller.pollin())
+            if (poller.pollin(CLIENT_SOCKET)) {
+
+            }
+
+            if (poller.pollin(SERVER_SOCKET)) {
+                
+            }
         }
     }
 }
