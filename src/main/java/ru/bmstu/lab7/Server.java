@@ -83,7 +83,7 @@ public class Server {
                 msg.send(clientSocket);
             }
         } else if (message.startsWith(PUT_CMD)) {
-            
+
         }
     }
 
@@ -92,6 +92,10 @@ public class Server {
     }
 
     private static void executeGetCmd(ZMsg msg, String message) {
+
+    }
+
+    private static void executePutCmd() {
 
     }
 }
