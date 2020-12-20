@@ -111,8 +111,14 @@
             <version>3.5.5</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.zeromq</groupId>
+            <artifactId>jeromq</artifactId>
+            <version>${jeromq.version}</version>
+        </dependency>
+
     </dependencies>
-    
+
     <build>
         <plugins>
             <plugin>
