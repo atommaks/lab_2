@@ -17,7 +17,7 @@ public class Client {
     private static final Scanner in = new Scanner(System.in);
     private static ZContext context;
     private static ZMQ.Socket client;
-    public final static Logger LOGGER = Logger.getLogger("lab6");
+    public final static Logger LOGGER = Logger.getLogger("lab7");
 
     public static void main(String[] args) {
         context = new ZContext(TYPE);
