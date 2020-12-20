@@ -46,6 +46,8 @@ public class Server {
         caches = new ArrayList<>();
 
         long time = System.currentTimeMillis();
-        while (poller.poll(TIMEOUT))
+        while (poller.poll(TIMEOUT) != -1) {
+            
+        }
     }
 }
