@@ -65,7 +65,8 @@ public class Storage {
             }
         }
 
-        
+        context.destroySocket(socket);
+        context.destroy();
     }
 
     private static void exxecutePutCmd(String msg, ArrayList<String> caches, long start) {
