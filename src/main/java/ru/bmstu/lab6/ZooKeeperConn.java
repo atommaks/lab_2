@@ -23,7 +23,7 @@ public class ZooKeeperConn {
                     byte[] port = keeper.getData("/servers/" + s, false, null);
                     servers.add(new String(port));
                 }
-                actor.tell(new ServersList(servers));
+                actor.tell(new ServersList(servers), ActorRef.noSender());
 
             } catch (KeeperException | InterruptedException e) {
                 e.printStackTrace();
