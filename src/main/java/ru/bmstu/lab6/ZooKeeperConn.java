@@ -8,7 +8,7 @@ import java.time.Duration;
 import java.util.Collections;
 import java.util.List;
 
-import static ru.bmstu.lab6.AnonymRequestsApp.PORT
+import static ru.bmstu.lab6.AnonymRequestsApp.PORT;
 
 public class ZooKeeperConn {
     private static final String HOST = "localhost:2181";
