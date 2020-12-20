@@ -7,6 +7,7 @@ import org.zeromq.ZMsg;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Locale;
 import java.util.UUID;
 
 import static ru.bmstu.lab7.Server.SERVER_ADDRESS;
@@ -41,7 +42,8 @@ public class Storage {
             }
             if (poller.pollin(ZERO_POLL_INDEX)) {
                 ZMsg msg = ZMsg.recvMsg(socket);
-                String message = msg.getLast().toString().toLowerCase()
+                String message = msg.getLast().toString().toLowerCase(Locale.ROOT);
+                
             }
         }
     }
