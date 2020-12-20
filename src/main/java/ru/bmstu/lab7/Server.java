@@ -35,6 +35,7 @@ public class Server {
         clientSocket = context.createSocket(SocketType.ROUTER);
         clientSocket.bind(CLIENT_ADDRESS);
 
-        
+        serverSocket = context.createSocket(SocketType.ROUTER);
+        serverSocket.bind(SERVER_ADDRESS);
     }
 }
