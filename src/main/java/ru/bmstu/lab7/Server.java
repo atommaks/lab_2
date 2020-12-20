@@ -18,6 +18,7 @@ public class Server {
     public final static Logger LOGGER = Logger.getLogger("lab6");
     public final static String SERVER_ADDRESS = "tcp://localhost:1970";
     public final static int TIMEOUT = 5000;
+    public final static int TYPE = 1;
     public final static String GET_CMD = "get";
     public final static String PUT_CMD = "put";
     public final static String NOTICE_CMD = "notice";
