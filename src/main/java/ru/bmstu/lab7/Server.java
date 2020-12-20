@@ -13,6 +13,7 @@ import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
 import static ru.bmstu.lab7.Client.CLIENT_ADDRESS;
+import static ru.bmstu.lab7.Storage.ERROR_MSG_PTR;
 
 public class Server {
     private static final String PATH_TO_LOG_FILE = "/home/atom/IdeaProjects/lab_2/logs/lab7.log";
@@ -78,7 +79,8 @@ public class Server {
             try {
                 executeGetCmd(msg, message);
             } catch (Exception e) {
-                msg.getLast().reset();
+                msg.getLast().reset(String.format(ERROR_MSG_PTR, e.getMessage()));
+                
             }
         }
     }
