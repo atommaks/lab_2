@@ -13,6 +13,7 @@ import static ru.bmstu.lab7.Server.TIMEOUT;
 public class Storage {
     private static final int TYPE = 1;
     private static final int POLLER_SIZE = 1;
+    final private static long NOTICE_TIME = 1000;
     private static final int ZERO_POLL_INDEX = 0;
 
 
@@ -30,7 +31,7 @@ public class Storage {
 
         while (poller.poll(TIMEOUT) != -1) {
             long res = System.currentTimeMillis() - time;
-            
+
         }
     }
 }
