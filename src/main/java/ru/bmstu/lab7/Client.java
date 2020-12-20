@@ -27,7 +27,9 @@ public class Client {
             }
             client.send(cmd);
             String output = client.recvStr();
-            
+            if (output != null) {
+                
+            }
         }
 
         context.destroySocket(client);
