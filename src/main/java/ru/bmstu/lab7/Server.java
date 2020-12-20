@@ -38,5 +38,7 @@ public class Server {
 
         serverSocket = context.createSocket(SocketType.ROUTER);
         serverSocket.bind(SERVER_ADDRESS);
+
+        
     }
 }
