@@ -50,6 +50,6 @@ public class Storage {
     }
 
     private static void executeGetCmd(ZMsg msg, String message, ArrayList<String> caches, long start) {
-        long index = 
+        long index = Integer.parseInt()
     }
 }
