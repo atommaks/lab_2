@@ -13,7 +13,7 @@ public class Client {
     private static final String CLIENT_ADDRESS = "tcp://localhost:1969";
     private static final String EXIT_CMD = "quit";
     private static final String OUTPUT_MSG_PTR = "[Output]: %s\n";
-    private static final 
+    private static final String NO_OUTPUT_MSG = "No output!\n";
     private static final int TIMEOUT = 5000;
     private static final int TYPE = 1;
     private static final Scanner in = new Scanner(System.in);
@@ -34,7 +34,8 @@ public class Client {
             if (output != null) {
                 LOGGER.info(java.lang.String.format(OUTPUT_MSG_PTR, output));
             } else {
-                LOGGER.warning();
+                LOGGER.warning(NO_OUTPUT_MSG);
+                
             }
         }
 
