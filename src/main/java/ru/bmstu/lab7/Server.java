@@ -56,16 +56,24 @@ public class Server {
             }
 
             if (poller.pollin(CLIENT_SOCKET)) {
-
+                clientRunning();
             }
 
             if (poller.pollin(SERVER_SOCKET)) {
-
+                serverRunning();
             }
         }
 
         context.destroySocket(clientSocket);
         context.destroySocket(serverSocket);
         context.destroy();
+    }
+
+    private static void clientRunning() {
+
+    }
+
+    private static void serverRunning() {
+
     }
 }
