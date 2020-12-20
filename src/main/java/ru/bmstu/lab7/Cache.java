@@ -9,7 +9,7 @@ public class Cache {
     private long time;
     private ZFrame frame;
 
-    public Cache() {
+    public Cache(String id, long start, long finish, ) {
 
     }
 }
