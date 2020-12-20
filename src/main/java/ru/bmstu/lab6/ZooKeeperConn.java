@@ -24,7 +24,6 @@ public class ZooKeeperConn {
                     servers.add(new String(port));
                 }
                 actor.tell(new ServersList(servers), ActorRef.noSender());
-
             } catch (KeeperException | InterruptedException e) {
                 e.printStackTrace();
             }
