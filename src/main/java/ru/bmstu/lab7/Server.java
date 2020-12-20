@@ -1,10 +1,7 @@
 package ru.bmstu.lab7;
 
 import org.apache.log4j.BasicConfigurator;
-import org.zeromq.SocketType;
-import org.zeromq.ZContext;
-import org.zeromq.ZMQ;
-import org.zeromq.ZMsg;
+import org.zeromq.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -13,12 +10,13 @@ import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
 import static ru.bmstu.lab7.Client.CLIENT_ADDRESS;
-import static ru.bmstu.lab7.Storage.ERROR_MSG_PTR;
+import static ru.bmstu.lab7.Storage.*;
 
 public class Server {
     private static final String PATH_TO_LOG_FILE = "/home/atom/IdeaProjects/lab_2/logs/lab7.log";
     private static final String PUT_SUCCESS_MSG = "PUT Succeded";
     private static final String NOT_EXISTING_CMD = "Such command doesn't exist";
+    private static final String NOT_EXISTIG_ITEM = "Not existing!";
     private static final int POLLER_SIZE = 2;
     private static final int CLIENT_SOCKET = 0;
     private static final int SERVER_SOCKET = 1;
@@ -99,7 +97,21 @@ public class Server {
     }
 
     private static void executeGetCmd(ZMsg msg, String message) {
-
+        long key = Integer.parseInt(message.split(DELIMITER)[KEY_INDEX]);
+        boolean doesExist = false;
+        for (Cache cache : caches) {
+            boolean isFresh = System.currentTimeMillis() - cache.getTime() <= TIMEOUT;
+            if (cache.getStart() <= key && cache.getFinish() >= key && isFresh) {
+                cache.getFrame().send(serverSocket, ZFrame.REUSE | ZFrame.MORE);
+                msg.send(serverSocket, false);
+                doesExist = true;
+                break;
+            }
+        }
+        if (!doesExist) {
+            msg.getLast().reset(NOT_EXISTIG_ITEM);
+            msg.send(clientSocket);
+        }
     }
 
     private static void executePutCmd(ZMsg msg, String message) {
