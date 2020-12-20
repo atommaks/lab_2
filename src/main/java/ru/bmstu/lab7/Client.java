@@ -1,6 +1,7 @@
 package ru.bmstu.lab7;
 
 
+import org.zeromq.SocketType;
 import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
 
@@ -18,6 +19,7 @@ public class Client {
     }
 
     private static void createAndConnectSocket() {
-        ZMQ.Socket socket = context.createSocket()
+        ZMQ.Socket socket = context.createSocket(SocketType.REQ);
+        
     }
 }
