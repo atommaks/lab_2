@@ -43,7 +43,7 @@ public class AnonymRequestsApp {
             public void process(WatchedEvent watchedEvent) {
             }
         };
-        ZooKeeper zoo = new ZooKeeper(ZOOKEEPER_HOST, 2500, empty;
+        ZooKeeper zoo = new ZooKeeper(ZOOKEEPER_HOST, 2500, empty);
         final Http http = Http.get(system);
         ZooKeeperConn conn = new ZooKeeperConn(zoo, actor);
         conn.createConnection(HOST, String.valueOf(PORT));
