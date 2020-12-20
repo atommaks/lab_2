@@ -17,7 +17,7 @@ public class Client {
 
     }
 
-    private static void createAndConnectSocket(ZMQ.Socket) {
-        ZMQ.Socket socket = 
+    private static void createAndConnectSocket() {
+        ZMQ.Socket socket = context.createSocket()
     }
 }
