@@ -44,6 +44,7 @@ public class Storage {
                 socket.send(String.format(NOTICE_MSG_PTR, id, start, finish));
                 time = System.currentTimeMillis();
             }
+            
             if (poller.pollin(ZERO_POLL_INDEX)) {
                 ZMsg msg = ZMsg.recvMsg(socket);
                 String message = msg.getLast().toString().toLowerCase(Locale.ROOT);
@@ -60,8 +61,6 @@ public class Storage {
                 if (message.equals(PUT_CMD)) {
                     exxecutePutCmd(message, caches, start);
                 }
-
-
             }
         }
 
