@@ -2,6 +2,7 @@ package ru.bmstu.lab7;
 
 import org.apache.log4j.BasicConfigurator;
 
+import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
 public class Server {
@@ -10,5 +11,7 @@ public class Server {
 
     public static void main(String[] args) {
         BasicConfigurator.configure();
+        FileHandler fh = new FileHandler(PATH_TO_LOG_FILE);
+        LOGGER.addHandler(fh);
     }
 }
