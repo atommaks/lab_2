@@ -68,3 +68,14 @@
   <thread>24</thread>
   <message>Sending request to http://localhost:19690000000012?url=http://rambler.ru&amp;count=19</message>
 </record>
+<record>
+  <date>2020-12-20T15:41:29</date>
+  <millis>1608468089769</millis>
+  <sequence>6</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>25</thread>
+  <message>Sending request to http://localhost:19690000000012?url=http://google.ru&amp;count=19</message>
+</record>
