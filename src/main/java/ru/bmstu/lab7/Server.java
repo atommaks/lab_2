@@ -1,6 +1,7 @@
 package ru.bmstu.lab7;
 
 import org.apache.log4j.BasicConfigurator;
+import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
 
 import java.util.ArrayList;
@@ -26,6 +27,6 @@ public class Server {
         FileHandler fh = new FileHandler(PATH_TO_LOG_FILE);
         LOGGER.addHandler(fh);
 
-        
+        ZContext
     }
 }
