@@ -16,7 +16,7 @@ public class Storage {
     private static final int POLLER_SIZE = 1;
     private final static long NOTICE_TIME = 1000;
     private final static String NOTICE_MSG_PTR = "notice id:%s; %d -> %d";
-    private final static String id = UUID.randomUUID()
+    private final static String id = UUID.randomUUID().toString();
     private static final int ZERO_POLL_INDEX = 0;
 
 
@@ -35,7 +35,7 @@ public class Storage {
         while (poller.poll(TIMEOUT) != -1) {
             long res = System.currentTimeMillis() - time;
             if (res >= NOTICE_TIME) {
-                socket.send(String.format(NOTICE_MSG_PTR, ))
+                socket.send(String.format(NOTICE_MSG_PTR, id, ))
             }
         }
     }
