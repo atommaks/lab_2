@@ -14,7 +14,7 @@ public class Cache {
         this.start = start;
         this.finish = finish;
         this.frame = frame;
-        this.time = System
+        this.time = System.currentTimeMillis();
 
     }
 }
