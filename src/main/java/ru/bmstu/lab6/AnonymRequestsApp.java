@@ -38,7 +38,12 @@ public class AnonymRequestsApp {
         ActorRef actor = system.actorOf(Props.create(RouteActor.class));
         final ActorMaterializer materializer = ActorMaterializer.create(system);
 
-        ZooKeeper zoo = new ZooKeeper(ZOOKEEPER_HOST, 2500, null);
+        Watcher empty = new Watcher() {
+            @Override
+            public void process(WatchedEvent watchedEvent) {
+            }
+        };
+        ZooKeeper zoo = new ZooKeeper(ZOOKEEPER_HOST, 2500, empty;
         final Http http = Http.get(system);
         ZooKeeperConn conn = new ZooKeeperConn(zoo, actor);
         conn.createConnection(HOST, String.valueOf(PORT));
