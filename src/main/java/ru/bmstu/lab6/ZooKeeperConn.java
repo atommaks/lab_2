@@ -10,7 +10,7 @@ public class ZooKeeperConn {
     private ZooKeeper keeper;
 
     public static Watcher watcher = watchedEvent -> {
-
+        if (watchedEvent.getType() == Watcher.Event)
     };
 
     public ZooKeeperConn() throws IOException, KeeperException, InterruptedException {
