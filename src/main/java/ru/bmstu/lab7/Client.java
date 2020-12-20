@@ -18,6 +18,6 @@ public class Client {
     }
 
     private static void createAndConnectSocket(ZMQ.Socket) {
-        
+        ZMQ.Socket socket = 
     }
 }
