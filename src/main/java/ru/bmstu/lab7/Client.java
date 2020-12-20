@@ -17,5 +17,5 @@ public class Client {
 
     }
 
-    private static void createAndConnect
+    private static void createAndConnectSocket
 }
