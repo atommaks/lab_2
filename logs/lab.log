@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-12-20T15:33:52</date>
+  <millis>1608467632881</millis>
+  <sequence>0</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.AnonymRequestsApp</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>start!</message>
+</record>
+<record>
+  <date>2020-12-20T15:33:53</date>
+  <millis>1608467633835</millis>
+  <sequence>1</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.ZooKeeperConn</class>
+  <method>process</method>
+  <thread>18</thread>
+  <message>WatchedEvent state:SyncConnected type:NodeChildrenChanged path:/servers</message>
+</record>
+<record>
+  <date>2020-12-20T15:33:54</date>
+  <millis>1608467634552</millis>
+  <sequence>2</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.AnonymRequestsApp</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Server online at http://localhost:1996
+ Press any button to stop...</message>
+</record>
