@@ -18,7 +18,8 @@ public class ZooKeeperConn {
             List<String> servers = Collections.emptyList();
             try {
                 for (String s : keeper.getChildren("/servers", null)) {
-
+                    byte[] port = keeper.getData("/servers/" + s, false, null);
+                    servers.add(new String(port));
                 }
             } catch (KeeperException | InterruptedException e) {
                 e.printStackTrace();
