@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 public class Client {
     private static final String CLIENT_ADDRESS = "tcp://localhost:1969";
+    private static final String EXIT_CMD = "quit";
     private static final int TIMEOUT = 5000;
     private static final int TYPE = 1;
     private static final Scanner in = new Scanner(System.in);
@@ -21,7 +22,7 @@ public class Client {
 
         while (true) {
             String cmd = in.nextLine();
-            
+
         }
 
         context.destroySocket(client);
