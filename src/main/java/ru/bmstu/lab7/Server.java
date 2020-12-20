@@ -6,6 +6,7 @@ import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
@@ -48,7 +49,7 @@ public class Server {
         long time = System.currentTimeMillis();
         while (poller.poll(TIMEOUT) != -1) {
             if (System.currentTimeMillis() - time >= TIMEOUT) {
-                
+                Collections.shuffle();
             }
         }
     }
