@@ -49,5 +49,7 @@ public class Storage {
         }
     }
 
-    private static void executeGetCmd(ZMsg msg, String message, ArrayList<>)
+    private static void executeGetCmd(ZMsg msg, String message, ArrayList<String> caches) {
+        
+    }
 }
