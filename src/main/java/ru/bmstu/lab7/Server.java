@@ -25,5 +25,7 @@ public class Server {
         BasicConfigurator.configure();
         FileHandler fh = new FileHandler(PATH_TO_LOG_FILE);
         LOGGER.addHandler(fh);
+
+        
     }
 }
