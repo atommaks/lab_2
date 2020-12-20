@@ -1,5 +1,6 @@
 package ru.bmstu.lab7;
 
+import org.zeromq.SocketType;
 import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
 
@@ -8,6 +9,7 @@ public class Storage {
 
     public static void main(String[] args) {
         ZContext context = new ZContext(TYPE);
-        ZMQ.Socket socket = context.createSocket()
+        ZMQ.Socket socket = context.createSocket(SocketType.DEALER);
+        
     }
 }
