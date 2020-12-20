@@ -50,8 +50,10 @@ public class Server {
         while (poller.poll(TIMEOUT) != -1) {
             if (System.currentTimeMillis() - time >= TIMEOUT) {
                 Collections.shuffle(caches);
-                
+                time = System.currentTimeMillis();
             }
+
+            
         }
     }
 }
