@@ -24,6 +24,6 @@ public class Storage {
         ArrayList<String> caches = new ArrayList<>(Arrays.asList(args).subList(1, args.length));
         long start = Integer.parseInt(args[0]);
         long finish = start + caches.size() - 1;
-        long time = 
+        long time = System.co
     }
 }
