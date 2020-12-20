@@ -34,3 +34,14 @@
   <thread>1</thread>
   <message>PUT Succeded</message>
 </record>
+<record>
+  <date>2020-12-20T19:19:28</date>
+  <millis>1608481168331</millis>
+  <sequence>3</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab7.Server</class>
+  <method>clientRunning</method>
+  <thread>1</thread>
+  <message>PUT Succeded</message>
+</record>
