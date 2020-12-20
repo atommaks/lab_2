@@ -8,11 +8,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import static ru.bmstu.lab7.Server.SERVER_ADDRESS;
+import static ru.bmstu.lab7.Server.TIMEOUT;
 
 public class Storage {
     private static final int TYPE = 1;
     private static final int POLLER_SIZE = 1;
-    private static final int TIMEOUT =
     private static final int ZERO_POLL_INDEX = 0;
 
 
