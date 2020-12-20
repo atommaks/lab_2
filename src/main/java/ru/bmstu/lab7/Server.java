@@ -104,7 +104,20 @@ public class Server {
     }
 
     private static void executeNoticeCmd(String msg, ZFrame frame) {
-
+        String[] split = msg.split(DELIMITER);
+        String id = split[1];
+        long start = Integer.parseInt(split[2]);
+        long finish = Integer.parseInt(split[3]);
+        boolean doesExist = false;
+        for (int i = 0; i < caches.size() + 1; i++) {
+            if (i == caches.size()) {
+                caches.add(new Cache(id, start, finish, frame));
+            } else if (caches.get(i).getId().equals(id)) {
+                caches.get(i).setStart(start);
+                caches.get(i).setFinish(finish);
+                caches.get(i).setTime(System.currentTimeMillis());
+            }
+        }
     }
 
     private static void executeGetCmd(ZMsg msg, String message) {
