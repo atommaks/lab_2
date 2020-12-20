@@ -27,6 +27,6 @@ public class Server {
         FileHandler fh = new FileHandler(PATH_TO_LOG_FILE);
         LOGGER.addHandler(fh);
 
-        ZContext
+        ZContext context = new ZContext()
     }
 }
