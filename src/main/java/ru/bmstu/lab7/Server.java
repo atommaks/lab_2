@@ -8,7 +8,8 @@ import java.util.logging.Logger;
 
 public class Server {
     private static final String PATH_TO_LOG_FILE = "/home/atom/IdeaProjects/lab_2/logs/lab7.log";
-    private static ZMQ.Socket
+    private static ZMQ.Socket clientSocket;
+    private static ZMQ.Socket Socket;
 
 
     public final static Logger LOGGER = Logger.getLogger("lab6");
