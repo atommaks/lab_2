@@ -36,7 +36,7 @@ public class Client {
             } else {
                 LOGGER.warning(NO_OUTPUT_MSG);
                 context.destroySocket(client);
-                
+                createAndConnectSocket();
             }
         }
 
