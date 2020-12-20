@@ -32,6 +32,7 @@ public class HttpServer {
                 parameter(URL_ARG, url ->
                         parameter(COUNT_ARG, count -> {
                             if (Integer.parseInt(count) <= 0) {
+                                LOGGER.info(String.format(FINISH_REQUEST_PTR, url));
                                 return completeWithFuture(http.singleRequest(HttpRequest.create(url)));
                             }
 
