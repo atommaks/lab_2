@@ -10,9 +10,7 @@ import java.util.Arrays;
 import java.util.Locale;
 import java.util.UUID;
 
-import static ru.bmstu.lab7.Server.SERVER_ADDRESS;
-import static ru.bmstu.lab7.Server.TIMEOUT;
-import static ru.bmstu.lab7.Server.GET_CMD;
+import static ru.bmstu.lab7.Server.*;
 
 public class Storage {
     private static final int TYPE = 1;
@@ -46,10 +44,16 @@ public class Storage {
             if (poller.pollin(ZERO_POLL_INDEX)) {
                 ZMsg msg = ZMsg.recvMsg(socket);
                 String message = msg.getLast().toString().toLowerCase(Locale.ROOT);
+
                 if (message.equals(GET_CMD)) {
                     executeGetCmd(msg, message, caches, start);
                     msg.send(socket);
                 }
+
+                if (message.equals(PUT_CMD)) {
+                    
+                }
+
 
             }
         }
