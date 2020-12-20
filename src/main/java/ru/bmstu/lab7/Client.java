@@ -20,6 +20,7 @@ public class Client {
 
     private static void createAndConnectSocket() {
         ZMQ.Socket socket = context.createSocket(SocketType.REQ);
-        socket.setReceiveTimeOut()
+        socket.setReceiveTimeOut(TIMEOUT);
+        
     }
 }
