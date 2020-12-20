@@ -41,7 +41,7 @@ public class Storage {
             }
             if (poller.pollin(ZERO_POLL_INDEX)) {
                 ZMsg msg = ZMsg.recvMsg(socket);
-                S
+                String message = 
             }
         }
     }
