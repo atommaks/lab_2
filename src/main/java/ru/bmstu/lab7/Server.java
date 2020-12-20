@@ -44,5 +44,7 @@ public class Server {
         poller.register(serverSocket, ZMQ.Poller.POLLIN);
 
         caches = new ArrayList<>();
+
+        
     }
 }
