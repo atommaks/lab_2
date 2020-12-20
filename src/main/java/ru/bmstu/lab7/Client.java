@@ -11,6 +11,7 @@ public class Client {
     private static ZMQ.Socket client;
 
     public static void main(String[] args) {
+        context = new ZContext();
         
     }
 }
