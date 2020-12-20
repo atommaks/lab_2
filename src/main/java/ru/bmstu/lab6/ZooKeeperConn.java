@@ -11,7 +11,7 @@ import java.util.List;
 public class ZooKeeperConn {
     private static final String HOST = "localhost:2181";
     private static ZooKeeper keeper;
-    ActorRef actor
+    private ActorRef actor;
 
     public static Watcher watcher = watchedEvent -> {
         if (watchedEvent.getType() == Watcher.Event.EventType.NodeCreated ||
