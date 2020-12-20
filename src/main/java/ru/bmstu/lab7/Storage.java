@@ -15,6 +15,8 @@ import static ru.bmstu.lab7.Server.*;
 public class Storage {
     private static final int TYPE = 1;
     private static final int POLLER_SIZE = 1;
+    private static final int KEY_INDEX = 1;
+    private static final int VALUE_INDEX = 2;
     private final static long NOTICE_TIME = 1000;
     private final static String NOTICE_MSG_PTR = "notice id:%s; %d -> %d";
     private final static String CACHE_MSG_PTR = "CACHE %s";
@@ -61,13 +63,13 @@ public class Storage {
 
     private static void exxecutePutCmd(String msg, ArrayList<String> caches, long start) {
         String[] split = msg.split(DELIMITER);
-        long key = Integer.parseInt(split[1]);
-        String value = split[2];
+        long key = Integer.parseInt(split[KEY_INDEX]);
+        String value = split[VALUE_INDEX];
         caches.set((int)(key - start), value);
     }
 
     private static void executeGetCmd(ZMsg msg, String message, ArrayList<String> caches, long start) {
-        long index = Integer.parseInt(message.split(DELIMITER)[1]);
+        long index = Integer.parseInt(message.split(DELIMITER)[KEY_INDEX]);
         msg.getLast().reset(String.format(CACHE_MSG_PTR, caches.get((int)(index - start))));
     }
 }
