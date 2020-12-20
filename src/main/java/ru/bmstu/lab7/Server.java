@@ -93,7 +93,16 @@ public class Server {
     }
 
     private static void serverRunning() {
+        ZMsg msg = ZMsg.recvMsg(serverSocket);
+        ZFrame frame = msg.unwrap();
+        String message = msg.getLast().toString().toLowerCase(Locale.ROOT);
+        if (message.startsWith(NOTICE_CMD)) {
 
+        }
+    }
+
+    private static void executeNoticeCmd(String msg, ZFrame frame) {
+        
     }
 
     private static void executeGetCmd(ZMsg msg, String message) {
