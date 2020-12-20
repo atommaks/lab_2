@@ -12,7 +12,7 @@ import static ru.bmstu.lab7.Server.TIMEOUT;
 import static ru.bmstu.lab7.Server.TYPE;
 
 public class Client {
-    private static final String CLIENT_ADDRESS = "tcp://localhost:1969";
+    public static final String CLIENT_ADDRESS = "tcp://localhost:1969";
     private static final String EXIT_CMD = "quit";
     private static final String OUTPUT_MSG_PTR = "[Output]: %s\n";
     private static final String NO_OUTPUT_MSG = "No output!\n";
