@@ -22,7 +22,10 @@ public class Client {
 
         while (true) {
             String cmd = in.nextLine();
-
+            if (cmd.equals(EXIT_CMD)) {
+                break;
+            }
+            
         }
 
         context.destroySocket(client);
