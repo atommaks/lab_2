@@ -22,7 +22,7 @@ import java.util.logging.Logger;
 
 public class AnonymRequestsApp {
     private static final String PATH_TO_LOG_FILE = "/home/atom/IdeaProjects/lab_2/logs/lab6.log";
-    private static final String ZOOKEEPER_HOST = "127.0.0.1:2181";
+    private static final String ZOOKEEPER_HOST = "localhost:2181";
     public static final String HOST = "localhost";
     public static int PORT;
     public final static Logger LOGGER = Logger.getLogger("lab6");
