@@ -4,6 +4,8 @@ import org.zeromq.SocketType;
 import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
 
+import java.util.ArrayList;
+
 import static ru.bmstu.lab7.Server.SERVER_ADDRESS;
 
 public class Storage {
@@ -18,6 +20,6 @@ public class Storage {
         ZMQ.Poller poller = context.createPoller(POLLER_SIZE);
         poller.register(socket, ZMQ.Poller.POLLIN);
 
-        
+        ArrayList
     }
 }
