@@ -18,8 +18,9 @@ public class Storage {
     private static final int KEY_INDEX = 1;
     private static final int VALUE_INDEX = 2;
     private final static long NOTICE_TIME = 1000;
-    private final static String NOTICE_MSG_PTR = "notice id:%s; %d -> %d";
-    private final static String CACHE_MSG_PTR = "CACHE %s";
+    private final static String NOTICE_MSG_PTR = "notice id:%s; %d -> %d\n";
+    private final static String CACHE_MSG_PTR = "CACHE %s\n";
+    private final static String ERROR_MSG_PTR = "Error: %s\n";
     private final static String id = UUID.randomUUID().toString();
     private final static String DELIMITER = " ";
     private static final int ZERO_POLL_INDEX = 0;
@@ -52,7 +53,7 @@ public class Storage {
                         executeGetCmd(msg, message, caches, start);
                         msg.send(socket);
                     } catch (NumberFormatException | IndexOutOfBoundsException e) {
-                        
+
                     }
                 }
 
