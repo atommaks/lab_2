@@ -18,7 +18,7 @@ import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
 public class CacheTestingApp {
-    private static final String PATH_TO_LOG_FILE = "/home/atom/IdeaProjects/lab_2/lab5.log";
+    private static final String PATH_TO_LOG_FILE = "/home/atom/IdeaProjects/lab_2/logs/lab5.log";
     private static final String HOST = "localhost";
     private static final int PORT = 1996;
     public final static Logger LOGGER = Logger.getLogger("lab5");
