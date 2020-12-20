@@ -51,7 +51,9 @@ public class Storage {
                     try {
                         executeGetCmd(msg, message, caches, start);
                         msg.send(socket);
-                    } catch (NumberFormatException)
+                    } catch (NumberFormatException | IndexOutOfBoundsException e) {
+                        
+                    }
                 }
 
                 if (message.equals(PUT_CMD)) {
