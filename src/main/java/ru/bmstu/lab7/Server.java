@@ -83,7 +83,7 @@ public class Server {
                 msg.send(clientSocket);
             }
         } else if (message.startsWith(PUT_CMD)) {
-
+            executePutCmd(msg, message);
         }
     }
 
