@@ -17,5 +17,7 @@ public class Client {
 
     }
 
-    private static void createAndConnectSocket
+    private static void createAndConnectSocket(ZMQ.Socket) {
+        
+    }
 }
