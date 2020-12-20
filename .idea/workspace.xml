@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0558078c-817c-455a-bcc5-b6b864d47bf5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/AnonymRequestsApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/AnonymRequestsApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/ZooKeeperConn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/ZooKeeperConn.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,7 +26,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/AnonymRequestsApp.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
@@ -34,6 +34,15 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/ZooKeeperConn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -121,6 +130,7 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/RouteActor.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/HttpServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/AnonymRequestsApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/ZooKeeperConn.java" />
       </list>
     </option>
   </component>
@@ -174,15 +184,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="bmstu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lab_2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab_2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bmstu" type="462c0819:PsiDirectoryNode" />
-              <item name="lab5" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lab_2" type="b2602c69:ProjectViewProjectNode" />
@@ -448,6 +449,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/ZooKeeperConn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
         </state>
       </provider>
     </entry>
