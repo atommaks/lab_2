@@ -53,7 +53,7 @@ public class Storage {
                         executeGetCmd(msg, message, caches, start);
                         msg.send(socket);
                     } catch (NumberFormatException | IndexOutOfBoundsException e) {
-
+                        
                     }
                 }
 
