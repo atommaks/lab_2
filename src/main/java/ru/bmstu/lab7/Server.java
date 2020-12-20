@@ -40,6 +40,6 @@ public class Server {
         serverSocket.bind(SERVER_ADDRESS);
 
         poller = context.createPoller(POLLER_SIZE);
-        poller.register()
+        poller.register(clientSocket, )
     }
 }
