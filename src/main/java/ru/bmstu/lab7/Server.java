@@ -17,6 +17,8 @@ import static ru.bmstu.lab7.Storage.ERROR_MSG_PTR;
 
 public class Server {
     private static final String PATH_TO_LOG_FILE = "/home/atom/IdeaProjects/lab_2/logs/lab7.log";
+    private static final String PUT_SUCCESS_MSG = "PUT Succeded";
+    private static final String NOT_EXISTING_CMD = "Such command doesn't exist";
     private static final int POLLER_SIZE = 2;
     private static final int CLIENT_SOCKET = 0;
     private static final int SERVER_SOCKET = 1;
@@ -84,6 +86,10 @@ public class Server {
             }
         } else if (message.startsWith(PUT_CMD)) {
             executePutCmd(msg, message);
+            msg.getLast().reset(PUT_SUCCESS_MSG);
+            msg.send(clientSocket);
+        } else {
+
         }
     }
 
