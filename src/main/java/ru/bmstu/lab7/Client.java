@@ -1,6 +1,5 @@
 package ru.bmstu.lab7;
 
-import org.zeromq.Zcontext;
 
 public class Client {
     private static final String CLIENT_ADDRESS = "tcp://localhost:1969";
