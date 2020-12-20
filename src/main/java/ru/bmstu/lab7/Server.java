@@ -80,7 +80,7 @@ public class Server {
                 executeGetCmd(msg, message);
             } catch (Exception e) {
                 msg.getLast().reset(String.format(ERROR_MSG_PTR, e.getMessage()));
-                
+                msg.send(clientSocket);
             }
         }
     }
