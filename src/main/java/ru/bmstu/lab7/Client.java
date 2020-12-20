@@ -1,6 +1,7 @@
 package ru.bmstu.lab7;
 
 
+import org.apache.log4j.BasicConfigurator;
 import org.zeromq.SocketType;
 import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
@@ -20,6 +21,7 @@ public class Client {
     public final static Logger LOGGER = Logger.getLogger("lab7");
 
     public static void main(String[] args) {
+        BasicConfigurator.configure();
         context = new ZContext(TYPE);
         createAndConnectSocket();
 
