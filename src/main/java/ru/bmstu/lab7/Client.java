@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 import static ru.bmstu.lab7.Server.LOGGER;
 import static ru.bmstu.lab7.Server.TIMEOUT;
+import static ru.bmstu.lab7.Server.TYPE;
 
 public class Client {
     private static final String CLIENT_ADDRESS = "tcp://localhost:1969";
@@ -16,7 +17,6 @@ public class Client {
     private static final String OUTPUT_MSG_PTR = "[Output]: %s\n";
     private static final String NO_OUTPUT_MSG = "No output!\n";
     private static final Scanner in = new Scanner(System.in);
-    private static final int TYPE = 1;
     private static ZContext context;
     private static ZMQ.Socket client;
 
