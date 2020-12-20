@@ -1,6 +1,7 @@
 package ru.bmstu.lab7;
 
 
+import com.sun.org.apache.xpath.internal.operations.String;
 import org.zeromq.SocketType;
 import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
@@ -31,7 +32,7 @@ public class Client {
             client.send(cmd);
             String output = client.recvStr();
             if (output != null) {
-                LOGGER.info(output);
+                LOGGER.info(java.lang.String.format(OUTPUT_MSG_PTR, output));
             }
         }
 
