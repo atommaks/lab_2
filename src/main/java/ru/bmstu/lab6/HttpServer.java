@@ -9,6 +9,7 @@ import akka.pattern.Patterns;
 import java.time.Duration;
 
 import static akka.http.javadsl.server.Directives.*;
+import static ru.bmstu.lab6.AnonymRequestsApp.LOGGER;
 
 public class HttpServer {
     private static final String URL_ARG = "url";
