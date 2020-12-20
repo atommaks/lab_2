@@ -49,7 +49,8 @@ public class Server {
         long time = System.currentTimeMillis();
         while (poller.poll(TIMEOUT) != -1) {
             if (System.currentTimeMillis() - time >= TIMEOUT) {
-                Collections.shuffle();
+                Collections.shuffle(caches);
+                
             }
         }
     }
