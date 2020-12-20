@@ -9,6 +9,7 @@ import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.model.HttpResponse;
 import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
+import org.apache.log4j.BasicConfigurator;
 
 import java.util.concurrent.CompletionStage;
 import java.util.logging.FileHandler;
@@ -22,6 +23,7 @@ public class TestingApp {
     private static final String PATH_TO_LOG_FILE = "/home/atom/IdeaProjects/lab_2/MyLog.log";
 
     public static void main(String[] args) throws Exception{
+        BasicConfigurator.configure();
         FileHandler fh = new FileHandler(PATH_TO_LOG_FILE);
         LOGGER.addHandler(fh);
 

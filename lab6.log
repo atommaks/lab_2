@@ -2,8 +2,8 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2020-12-20T04:04:23</date>
-  <millis>1608426263761</millis>
+  <date>2020-12-20T15:05:21</date>
+  <millis>1608465921718</millis>
   <sequence>0</sequence>
   <logger>lab6</logger>
   <level>INFO</level>
@@ -12,3 +12,500 @@
   <thread>1</thread>
   <message>start!</message>
 </record>
+<record>
+  <date>2020-12-20T15:05:22</date>
+  <millis>1608465922856</millis>
+  <sequence>1</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.ZooServer</class>
+  <method>process</method>
+  <thread>18</thread>
+  <message>WatchedEvent state:SyncConnected type:NodeChildrenChanged path:/servers</message>
+</record>
+<record>
+  <date>2020-12-20T15:05:23</date>
+  <millis>1608465923704</millis>
+  <sequence>2</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.AnonymRequestsApp</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Server online at http://localhost:1996
+ Press any button to stop...</message>
+</record>
+<record>
+  <date>2020-12-20T15:05:29</date>
+  <millis>1608465929852</millis>
+  <sequence>3</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>20</thread>
+  <message>Sending request to http://localhost:1996?url=http://yandex.ru&amp;count=19</message>
+</record>
+<record>
+  <date>2020-12-20T15:05:30</date>
+  <millis>1608465930072</millis>
+  <sequence>4</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>16</thread>
+  <message>Sending request to http://localhost:1996?url=http://yandex.ru&amp;count=18</message>
+</record>
+<record>
+  <date>2020-12-20T15:05:30</date>
+  <millis>1608465930083</millis>
+  <sequence>5</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>22</thread>
+  <message>Sending request to http://localhost:1996?url=http://yandex.ru&amp;count=17</message>
+</record>
+<record>
+  <date>2020-12-20T15:05:30</date>
+  <millis>1608465930095</millis>
+  <sequence>6</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>22</thread>
+  <message>Sending request to http://localhost:1996?url=http://yandex.ru&amp;count=16</message>
+</record>
+<record>
+  <date>2020-12-20T15:05:30</date>
+  <millis>1608465930105</millis>
+  <sequence>7</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>22</thread>
+  <message>Sending request to http://localhost:1996?url=http://yandex.ru&amp;count=15</message>
+</record>
+<record>
+  <date>2020-12-20T15:05:50</date>
+  <millis>1608465950142</millis>
+  <sequence>8</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>30</thread>
+  <message>Sending request to http://localhost:1996?url=http://yandex.ru&amp;count=14</message>
+</record>
+<record>
+  <date>2020-12-20T15:05:50</date>
+  <millis>1608465950149</millis>
+  <sequence>9</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>30</thread>
+  <message>Sending request to http://localhost:1996?url=http://yandex.ru&amp;count=13</message>
+</record>
+<record>
+  <date>2020-12-20T15:05:50</date>
+  <millis>1608465950156</millis>
+  <sequence>10</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>30</thread>
+  <message>Sending request to http://localhost:1996?url=http://yandex.ru&amp;count=12</message>
+</record>
+<record>
+  <date>2020-12-20T15:05:50</date>
+  <millis>1608465950162</millis>
+  <sequence>11</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>30</thread>
+  <message>Sending request to http://localhost:1996?url=http://yandex.ru&amp;count=11</message>
+</record>
+<record>
+  <date>2020-12-20T15:06:10</date>
+  <millis>1608465970175</millis>
+  <sequence>12</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>38</thread>
+  <message>Sending request to http://localhost:1996?url=http://yandex.ru&amp;count=10</message>
+</record>
+<record>
+  <date>2020-12-20T15:06:10</date>
+  <millis>1608465970183</millis>
+  <sequence>13</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>38</thread>
+  <message>Sending request to http://localhost:1996?url=http://yandex.ru&amp;count=9</message>
+</record>
+<record>
+  <date>2020-12-20T15:06:10</date>
+  <millis>1608465970191</millis>
+  <sequence>14</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>38</thread>
+  <message>Sending request to http://localhost:1996?url=http://yandex.ru&amp;count=8</message>
+</record>
+<record>
+  <date>2020-12-20T15:06:10</date>
+  <millis>1608465970197</millis>
+  <sequence>15</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>38</thread>
+  <message>Sending request to http://localhost:1996?url=http://yandex.ru&amp;count=7</message>
+</record>
+<record>
+  <date>2020-12-20T15:06:30</date>
+  <millis>1608465990222</millis>
+  <sequence>16</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>39</thread>
+  <message>Sending request to http://localhost:1996?url=http://yandex.ru&amp;count=6</message>
+</record>
+<record>
+  <date>2020-12-20T15:06:30</date>
+  <millis>1608465990234</millis>
+  <sequence>17</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>39</thread>
+  <message>Sending request to http://localhost:1996?url=http://yandex.ru&amp;count=5</message>
+</record>
+<record>
+  <date>2020-12-20T15:06:30</date>
+  <millis>1608465990241</millis>
+  <sequence>18</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>39</thread>
+  <message>Sending request to http://localhost:1996?url=http://yandex.ru&amp;count=4</message>
+</record>
+<record>
+  <date>2020-12-20T15:06:30</date>
+  <millis>1608465990247</millis>
+  <sequence>19</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>39</thread>
+  <message>Sending request to http://localhost:1996?url=http://yandex.ru&amp;count=3</message>
+</record>
+<record>
+  <date>2020-12-20T15:06:50</date>
+  <millis>1608466010266</millis>
+  <sequence>20</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>41</thread>
+  <message>Sending request to http://localhost:1996?url=http://yandex.ru&amp;count=2</message>
+</record>
+<record>
+  <date>2020-12-20T15:06:50</date>
+  <millis>1608466010278</millis>
+  <sequence>21</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>41</thread>
+  <message>Sending request to http://localhost:1996?url=http://yandex.ru&amp;count=1</message>
+</record>
+<record>
+  <date>2020-12-20T15:06:50</date>
+  <millis>1608466010285</millis>
+  <sequence>22</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>41</thread>
+  <message>Sending request to http://localhost:1996?url=http://yandex.ru&amp;count=0</message>
+</record>
+<record>
+  <date>2020-12-20T15:06:50</date>
+  <millis>1608466010291</millis>
+  <sequence>23</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$2</method>
+  <thread>29</thread>
+  <message>Finished with http://yandex.ru</message>
+</record>
+<record>
+  <date>2020-12-20T15:07:29</date>
+  <millis>1608466049258</millis>
+  <sequence>24</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>47</thread>
+  <message>Sending request to http://localhost:1996?url=http://google.com&amp;count=9</message>
+</record>
+<record>
+  <date>2020-12-20T15:07:29</date>
+  <millis>1608466049278</millis>
+  <sequence>25</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>47</thread>
+  <message>Sending request to http://localhost:1996?url=http://google.com&amp;count=8</message>
+</record>
+<record>
+  <date>2020-12-20T15:07:29</date>
+  <millis>1608466049284</millis>
+  <sequence>26</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>47</thread>
+  <message>Sending request to http://localhost:1996?url=http://google.com&amp;count=7</message>
+</record>
+<record>
+  <date>2020-12-20T15:07:29</date>
+  <millis>1608466049294</millis>
+  <sequence>27</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>47</thread>
+  <message>Sending request to http://localhost:1996?url=http://google.com&amp;count=6</message>
+</record>
+<record>
+  <date>2020-12-20T15:07:29</date>
+  <millis>1608466049302</millis>
+  <sequence>28</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>47</thread>
+  <message>Sending request to http://localhost:1996?url=http://google.com&amp;count=5</message>
+</record>
+<record>
+  <date>2020-12-20T15:07:32</date>
+  <millis>1608466052840</millis>
+  <sequence>29</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>47</thread>
+  <message>Sending request to http://localhost:1996?url=http://rambler.ru&amp;count=9</message>
+</record>
+<record>
+  <date>2020-12-20T15:07:49</date>
+  <millis>1608466069320</millis>
+  <sequence>30</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>49</thread>
+  <message>Sending request to http://localhost:1996?url=http://google.com&amp;count=4</message>
+</record>
+<record>
+  <date>2020-12-20T15:07:49</date>
+  <millis>1608466069322</millis>
+  <sequence>31</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>49</thread>
+  <message>Sending request to http://localhost:1996?url=http://rambler.ru&amp;count=8</message>
+</record>
+<record>
+  <date>2020-12-20T15:07:49</date>
+  <millis>1608466069328</millis>
+  <sequence>32</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>49</thread>
+  <message>Sending request to http://localhost:1996?url=http://google.com&amp;count=3</message>
+</record>
+<record>
+  <date>2020-12-20T15:07:49</date>
+  <millis>1608466069331</millis>
+  <sequence>33</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>49</thread>
+  <message>Sending request to http://localhost:1996?url=http://rambler.ru&amp;count=7</message>
+</record>
+<record>
+  <date>2020-12-20T15:08:09</date>
+  <millis>1608466089353</millis>
+  <sequence>34</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>51</thread>
+  <message>Sending request to http://localhost:1996?url=http://google.com&amp;count=2</message>
+</record>
+<record>
+  <date>2020-12-20T15:08:09</date>
+  <millis>1608466089353</millis>
+  <sequence>35</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>52</thread>
+  <message>Sending request to http://localhost:1996?url=http://rambler.ru&amp;count=6</message>
+</record>
+<record>
+  <date>2020-12-20T15:08:09</date>
+  <millis>1608466089360</millis>
+  <sequence>36</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>52</thread>
+  <message>Sending request to http://localhost:1996?url=http://google.com&amp;count=1</message>
+</record>
+<record>
+  <date>2020-12-20T15:08:09</date>
+  <millis>1608466089362</millis>
+  <sequence>37</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>52</thread>
+  <message>Sending request to http://localhost:1996?url=http://rambler.ru&amp;count=5</message>
+</record>
+<record>
+  <date>2020-12-20T15:08:29</date>
+  <millis>1608466109399</millis>
+  <sequence>38</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>51</thread>
+  <message>Sending request to http://localhost:1996?url=http://google.com&amp;count=0</message>
+</record>
+<record>
+  <date>2020-12-20T15:08:29</date>
+  <millis>1608466109401</millis>
+  <sequence>39</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>51</thread>
+  <message>Sending request to http://localhost:1996?url=http://rambler.ru&amp;count=4</message>
+</record>
+<record>
+  <date>2020-12-20T15:08:29</date>
+  <millis>1608466109410</millis>
+  <sequence>40</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$2</method>
+  <thread>46</thread>
+  <message>Finished with http://google.com</message>
+</record>
+<record>
+  <date>2020-12-20T15:08:29</date>
+  <millis>1608466109413</millis>
+  <sequence>41</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>53</thread>
+  <message>Sending request to http://localhost:1996?url=http://rambler.ru&amp;count=3</message>
+</record>
+<record>
+  <date>2020-12-20T15:08:29</date>
+  <millis>1608466109635</millis>
+  <sequence>42</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>53</thread>
+  <message>Sending request to http://localhost:1996?url=http://rambler.ru&amp;count=2</message>
+</record>
+<record>
+  <date>2020-12-20T15:08:29</date>
+  <millis>1608466109642</millis>
+  <sequence>43</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>53</thread>
+  <message>Sending request to http://localhost:1996?url=http://rambler.ru&amp;count=1</message>
+</record>
+<record>
+  <date>2020-12-20T15:08:49</date>
+  <millis>1608466129442</millis>
+  <sequence>44</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>51</thread>
+  <message>Sending request to http://localhost:1996?url=http://rambler.ru&amp;count=0</message>
+</record>
+<record>
+  <date>2020-12-20T15:08:49</date>
+  <millis>1608466129456</millis>
+  <sequence>45</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$2</method>
+  <thread>31</thread>
+  <message>Finished with http://rambler.ru</message>
+</record>
+</log>

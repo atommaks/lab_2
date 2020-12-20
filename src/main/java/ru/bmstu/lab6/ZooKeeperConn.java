@@ -3,40 +3,44 @@ package ru.bmstu.lab6;
 import akka.actor.ActorRef;
 import org.apache.zookeeper.*;
 
-import java.io.IOException;
-import java.time.Duration;
-import java.util.Collections;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
-import static ru.bmstu.lab6.AnonymRequestsApp.PORT;
+import static ru.bmstu.lab6.AnonymRequestsApp.LOGGER;
 
-public class ZooKeeperConn {
-    private static final String HOST = "localhost:2181";
-    private static ZooKeeper keeper;
-    private static ActorRef actor;
+public class ZooKeeperConn implements Watcher {
+    final private static String SERVERS = "/servers";
+    private ZooKeeper zoo;
+    private ActorRef storage;
 
-    public static Watcher watcher = watchedEvent -> {
-        if (watchedEvent.getType() == Watcher.Event.EventType.NodeCreated ||
-                watchedEvent.getType() == Watcher.Event.EventType.NodeDeleted ||
-                watchedEvent.getType() == Watcher.Event.EventType.NodeDataChanged) {
-            List<String> servers = Collections.emptyList();
-            try {
-                for (String s : keeper.getChildren("/servers", null)) {
-                    byte[] port = keeper.getData("/servers/" + s, false, null);
-                    servers.add(new String(port));
-                }
-                actor.tell(new ServersList(servers), ActorRef.noSender());
-            } catch (KeeperException | InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-    };
-
-    public ZooKeeperConn(ActorRef actor) throws IOException, KeeperException, InterruptedException {
-        this.actor = actor;
-        keeper = new ZooKeeper(HOST, (int)Duration.ofSeconds(5).getSeconds() * 1000, watcher);
-        keeper.create("/servers/" + PORT, (PORT + "").getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL);
-        WatchedEvent event = new WatchedEvent(Watcher.Event.EventType.NodeCreated, Watcher.Event.KeeperState.SyncConnected, "");
-        watcher.process(event);
+    public ZooKeeperConn(ZooKeeper zoo, ActorRef storage) throws KeeperException, InterruptedException {
+        this.zoo = zoo;
+        this.storage = storage;
+        sendServers();
     }
+
+    private void sendServers() throws KeeperException, InterruptedException {
+        List<String> servers = zoo.getChildren(SERVERS, this);
+        storage.tell(new ServersList(servers), ActorRef.noSender());
+    }
+
+    @Override
+    public void process(WatchedEvent watchedEvent) {
+        LOGGER.info(watchedEvent.toString());
+        try {
+            sendServers();
+        } catch (KeeperException | InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void createConnection(String localhost, String port) throws KeeperException, InterruptedException {
+        zoo.create(SERVERS + "/" + localhost + ":" + port,
+                port.getBytes(StandardCharsets.UTF_8),
+                ZooDefs.Ids.OPEN_ACL_UNSAFE,
+                CreateMode.EPHEMERAL
+        );
+        storage.tell(new Server(localhost + ":" + port), ActorRef.noSender());
+    }
+
 }
