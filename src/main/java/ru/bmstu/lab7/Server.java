@@ -40,6 +40,7 @@ public class Server {
         serverSocket.bind(SERVER_ADDRESS);
 
         poller = context.createPoller(POLLER_SIZE);
-        poller.register(clientSocket, )
+        poller.register(clientSocket, ZMQ.Poller.POLLIN);
+        poller.register(serverSocket, ZMQ.Poller.POLLIN);
     }
 }
