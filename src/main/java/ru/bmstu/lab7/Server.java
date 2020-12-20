@@ -29,6 +29,6 @@ public class Server {
         LOGGER.addHandler(fh);
 
         ZContext context = new ZContext(TYPE);
-        clientSocket = 
+        clientSocket = context.createSocket()
     }
 }
