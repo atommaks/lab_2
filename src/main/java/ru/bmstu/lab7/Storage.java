@@ -3,6 +3,7 @@ package ru.bmstu.lab7;
 import org.zeromq.SocketType;
 import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
+import org.zeromq.ZMsg;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -39,7 +40,7 @@ public class Storage {
                 time = System.currentTimeMillis();
             }
             if (poller.pollin(ZERO_POLL_INDEX)) {
-                
+                ZMsg msg = 
             }
         }
     }
