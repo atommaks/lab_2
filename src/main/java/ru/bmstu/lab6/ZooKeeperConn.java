@@ -11,7 +11,7 @@ import java.util.List;
 public class ZooKeeperConn {
     private static final String HOST = "localhost:2181";
     private static ZooKeeper keeper;
-    private ActorRef actor;
+    private static ActorRef actor;
 
     public static Watcher watcher = watchedEvent -> {
         if (watchedEvent.getType() == Watcher.Event.EventType.NodeCreated ||
@@ -23,6 +23,7 @@ public class ZooKeeperConn {
                     byte[] port = keeper.getData("/servers/" + s, false, null);
                     servers.add(new String(port));
                 }
+                actor.tell();
 
             } catch (KeeperException | InterruptedException e) {
                 e.printStackTrace();
