@@ -6,4 +6,4 @@
 JS приложений(готово)](https://github.com/atommaks/lab_2/tree/master/src/main/java/ru/bmstu/lab4) --- [Логи](https://github.com/atommaks/lab_2/blob/master/logs/lab4.log)
 5. [Приложение akka streams, предназначенное для нагрузочного тестирования(готово)](https://github.com/atommaks/lab_2/tree/master/src/main/java/ru/bmstu/lab5) --- [Логи](https://github.com/atommaks/lab_2/blob/master/logs/lab5.log)
 6. [Приложение для псевдо «анонимайзера»(готово)](https://github.com/atommaks/lab_2/tree/master/src/main/java/ru/bmstu/lab6)  ---  [Логи](https://github.com/atommaks/lab_2/blob/master/logs/lab6.log)
-7. [Еще не готова]()
+7. [Приложение zeromq реализующее распределенный кэш(готово)](https://github.com/atommaks/lab_2/tree/master/src/main/java/ru/bmstu/lab7)  ---  [Логи](https://github.com/atommaks/lab_2/blob/master/logs/lab7.log)
