@@ -98,6 +98,8 @@ public class Server {
         String message = msg.getLast().toString().toLowerCase(Locale.ROOT);
         if (message.startsWith(NOTICE_CMD)) {
             executeNoticeCmd(message, frame);
+        } else {
+            msg.send(clientSocket);
         }
     }
 
