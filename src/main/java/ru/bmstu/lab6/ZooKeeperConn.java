@@ -30,7 +30,8 @@ public class ZooKeeperConn {
         }
     };
 
-    public ZooKeeperConn() throws IOException, KeeperException, InterruptedException {
+    public ZooKeeperConn(ActorRef actor) throws IOException, KeeperException, InterruptedException {
+        this.actor = actor;
         keeper = new ZooKeeper(HOST, (int)Duration.ofSeconds(5).getSeconds() * 1000, watcher);
         keeper.create("/servers/" + AnonymRequestsApp.PORT, (AnonymRequestsApp.PORT + "").getBytes(),
                 ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
