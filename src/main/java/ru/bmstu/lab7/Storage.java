@@ -40,7 +40,7 @@ public class Storage {
                 time = System.currentTimeMillis();
             }
             if (poller.pollin(ZERO_POLL_INDEX)) {
-                ZMsg msg = ZMsg.recvMsg()
+                ZMsg msg = ZMsg.recvMsg(socket);
             }
         }
     }
