@@ -46,7 +46,9 @@ public class Storage {
             if (poller.pollin(ZERO_POLL_INDEX)) {
                 ZMsg msg = ZMsg.recvMsg(socket);
                 String message = msg.getLast().toString().toLowerCase(Locale.ROOT);
-                if (message.equals(GET_CMD))
+                if (message.equals(GET_CMD)) {
+                    
+                }
             }
         }
     }
