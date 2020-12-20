@@ -28,6 +28,6 @@ public class Storage {
         long finish = start + caches.size() - 1;
         long time = System.currentTimeMillis();
 
-        while (poller.poll())
+        while (poller.poll(TIMEOUT))
     }
 }
