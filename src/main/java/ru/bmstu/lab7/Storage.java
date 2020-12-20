@@ -12,6 +12,7 @@ import java.util.UUID;
 
 import static ru.bmstu.lab7.Server.SERVER_ADDRESS;
 import static ru.bmstu.lab7.Server.TIMEOUT;
+import static ru.bmstu.lab7.Server.GET_CMD;
 
 public class Storage {
     private static final int TYPE = 1;
@@ -43,7 +44,7 @@ public class Storage {
             if (poller.pollin(ZERO_POLL_INDEX)) {
                 ZMsg msg = ZMsg.recvMsg(socket);
                 String message = msg.getLast().toString().toLowerCase(Locale.ROOT);
-                if ()
+                if (message.equals(GET_CMD))
             }
         }
     }
