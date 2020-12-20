@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0558078c-817c-455a-bcc5-b6b864d47bf5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/TestingApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/TestingApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab5/CacheTestingApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab5/CacheTestingApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/AnonymRequestsApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/AnonymRequestsApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,7 +26,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/AnonymRequestsApp.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="82">
@@ -36,6 +34,15 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="175" lean-forward="true" selection-start-line="6" selection-start-column="175" selection-end-line="6" selection-end-column="175" />
             </state>
           </provider>
         </entry>
@@ -88,10 +95,10 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/ZooServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/HttpServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/ZooKeeperConn.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/TestingApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab5/CacheTestingApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/AnonymRequestsApp.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -102,7 +109,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="997" />
     <option name="y" value="25" />
     <option name="width" value="923" />
@@ -463,13 +470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/TestingApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -514,6 +514,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="175" lean-forward="true" selection-start-line="6" selection-start-column="175" selection-end-line="6" selection-end-column="175" />
         </state>
       </provider>
     </entry>
