@@ -17,5 +17,25 @@ public class Cache {
         this.time = System.currentTimeMillis();
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public long getStart() {
+        return start;
+    }
+
+    public long getFinish() {
+        return finish;
+    }
+
+    public long getTime() {
+        return time;
+    }
+
+    public ZFrame getFrame() {
+        return frame;
+    }
+
     
 }
