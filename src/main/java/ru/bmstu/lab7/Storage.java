@@ -8,6 +8,6 @@ public class Storage {
 
     public static void main(String[] args) {
         ZContext context = new ZContext(TYPE);
-        ZMQ.Socket socket = 
+        ZMQ.Socket socket = context.createSocket()
     }
 }
