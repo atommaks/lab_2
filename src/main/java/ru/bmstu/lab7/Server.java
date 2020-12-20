@@ -10,6 +10,8 @@ public class Server {
     private static final String PATH_TO_LOG_FILE = "/home/atom/IdeaProjects/lab_2/logs/lab7.log";
     private static ZMQ.Socket clientSocket;
     private static ZMQ.Socket serverSocket;
+    private static ZMQ.Poller poller;
+    
 
 
     public final static Logger LOGGER = Logger.getLogger("lab6");
