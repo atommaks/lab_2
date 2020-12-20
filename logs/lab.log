@@ -35,3 +35,14 @@
   <message>Server online at http://localhost:1996
  Press any button to stop...</message>
 </record>
+<record>
+  <date>2020-12-20T15:34:17</date>
+  <millis>1608467657732</millis>
+  <sequence>3</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>13</thread>
+  <message>Sending request to http://localhost:19960000000009?url=http://rambler.ru&amp;count=19</message>
+</record>
