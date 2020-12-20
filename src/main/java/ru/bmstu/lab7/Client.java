@@ -18,7 +18,9 @@ public class Client {
     public static void main(String[] args) {
         context = new ZContext(TYPE);
         createAndConnectSocket();
-        
+        while (true) {
+            
+        }
 
     }
 
