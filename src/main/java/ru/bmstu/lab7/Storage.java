@@ -36,7 +36,9 @@ public class Storage {
             long res = System.currentTimeMillis() - time;
             if (res >= NOTICE_TIME) {
                 socket.send(String.format(NOTICE_MSG_PTR, id, start, finish));
+                time = System.currentTimeMillis();
             }
+            
         }
     }
 }
