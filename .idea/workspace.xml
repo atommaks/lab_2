@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0558078c-817c-455a-bcc5-b6b864d47bf5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/AnonymRequestsApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/AnonymRequestsApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/ZooKeeperConn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/ZooKeeperConn.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,10 +26,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/AnonymRequestsApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
+            <state relative-caret-position="38">
               <caret line="23" column="75" lean-forward="true" selection-start-line="23" selection-start-column="75" selection-end-line="23" selection-end-column="75" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -38,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/ZooKeeperConn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="26" />
+            <state relative-caret-position="646">
+              <caret line="39" column="39" lean-forward="true" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,11 +85,11 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/Server.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/ZooServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/HttpServer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/ZooKeeperConn.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab4/TestingApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab5/CacheTestingApp.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/AnonymRequestsApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/ZooKeeperConn.java" />
       </list>
     </option>
   </component>
@@ -100,7 +100,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="997" />
     <option name="y" value="25" />
     <option name="width" value="923" />
@@ -462,16 +462,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/ZooKeeperConn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab5/CacheTestingApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="386">
@@ -498,8 +488,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/AnonymRequestsApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
+        <state relative-caret-position="38">
           <caret line="23" column="75" lean-forward="true" selection-start-line="23" selection-start-column="75" selection-end-line="23" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/ZooKeeperConn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="39" column="39" lean-forward="true" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

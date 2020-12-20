@@ -38,7 +38,7 @@ public class ZooKeeperConn implements Watcher {
         zoo.create(SERVERS + "/" + localhost + ":" + port,
                 port.getBytes(StandardCharsets.UTF_8),
                 ZooDefs.Ids.OPEN_ACL_UNSAFE,
-                CreateMode.EPHEMERAL
+                CreateMode.EPHEMERAL_SEQUENTIAL
         );
         storage.tell(new Server(localhost + ":" + port), ActorRef.noSender());
     }
