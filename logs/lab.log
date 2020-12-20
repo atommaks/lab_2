@@ -112,3 +112,4 @@
   <thread>26</thread>
   <message>Sending request to http://localhost:19690000000012?url=http://google.ru&amp;count=19</message>
 </record>
+</log>
