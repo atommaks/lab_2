@@ -53,6 +53,6 @@ public class Storage {
 
     private static void executeGetCmd(ZMsg msg, String message, ArrayList<String> caches, long start) {
         long index = Integer.parseInt(message.split(DELIMITER)[1]);
-        msg.getLast().reset();
+        msg.getLast().reset(String.format(CACHE_MSG_PTR, ));
     }
 }
