@@ -32,6 +32,8 @@ public class Client {
             String output = client.recvStr();
             if (output != null) {
                 LOGGER.info(java.lang.String.format(OUTPUT_MSG_PTR, output));
+            } else {
+                
             }
         }
 
