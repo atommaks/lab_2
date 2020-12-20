@@ -115,6 +115,14 @@ public class Server {
     }
 
     private static void executePutCmd(ZMsg msg, String message) {
-
+        String[] split = message.split(DELIMITER);
+        long key = Integer.parseInt(split[KEY_INDEX]);
+        String value = split[VALUE_INDEX];
+        for (Cache cache : caches) {
+            if (cache.getStart() <= key && cache.getFinish() >= key) {
+                cache.getFrame().send(serverSocket, ZFrame.REUSE | ZFrame.MORE);
+                msg.send(serverSocket, false);
+            }
+        }
     }
 }
