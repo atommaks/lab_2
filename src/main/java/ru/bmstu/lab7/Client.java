@@ -19,8 +19,10 @@ public class Client {
         context = new ZContext(TYPE);
         createAndConnectSocket();
         while (true) {
-            
+
         }
+        context.destroySocket(client);
+        
 
     }
 
