@@ -25,6 +25,7 @@ public class Client {
             if (cmd.equals(EXIT_CMD)) {
                 break;
             }
+            client.send(cmd);
             
         }
 
