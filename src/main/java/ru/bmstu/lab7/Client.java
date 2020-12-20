@@ -35,7 +35,8 @@ public class Client {
                 LOGGER.info(java.lang.String.format(OUTPUT_MSG_PTR, output));
             } else {
                 LOGGER.warning(NO_OUTPUT_MSG);
-                context.destroySocket();
+                context.destroySocket(client);
+                
             }
         }
 
