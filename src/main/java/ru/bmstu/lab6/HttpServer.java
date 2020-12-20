@@ -10,6 +10,7 @@ import java.time.Duration;
 
 import static akka.http.javadsl.server.Directives.*;
 import static ru.bmstu.lab6.AnonymRequestsApp.LOGGER;
+import static ru.bmstu.lab6.AnonymRequestsApp.HOST;
 
 public class HttpServer {
     private static final String URL_ARG = "url";
@@ -38,7 +39,7 @@ public class HttpServer {
                             .thenApply(port -> (String)port)
                             .thenCompose(port -> {
 
-                                return http.singleRequest(HttpRequest.create(String.format(URL_ADDRES_PTR, AnonymRequestsApp.HOST, port, url, Integer.parseInt(count) - 1)))
+                                return http.singleRequest(HttpRequest.create(String.format(URL_ADDRES_PTR, HOST, port, url, Integer.parseInt(count) - 1)));
                             }));
                         }))));
     }
