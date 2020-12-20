@@ -3,6 +3,7 @@ package ru.bmstu.lab7;
 import org.apache.log4j.BasicConfigurator;
 import org.zeromq.ZMQ;
 
+import java.util.ArrayList;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
@@ -11,8 +12,7 @@ public class Server {
     private static ZMQ.Socket clientSocket;
     private static ZMQ.Socket serverSocket;
     private static ZMQ.Poller poller;
-    private static 
-
+    private static ArrayList<Cache> caches;
 
     public final static Logger LOGGER = Logger.getLogger("lab6");
     public final static String SERVER_ADDRESS = "tcp://localhost:1970";
