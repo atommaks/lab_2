@@ -7,6 +7,7 @@ import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
 
 import java.util.Scanner;
+import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
 public class Client {
@@ -22,6 +23,8 @@ public class Client {
 
     public static void main(String[] args) {
         BasicConfigurator.configure();
+        FileHandler fh = new FileHandler(PATH_TO_LOG_FILE);
+        LOGGER.addHandler(fh);
         context = new ZContext(TYPE);
         createAndConnectSocket();
 
