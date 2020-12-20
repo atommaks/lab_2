@@ -13,7 +13,8 @@ import static ru.bmstu.lab7.Server.TIMEOUT;
 public class Storage {
     private static final int TYPE = 1;
     private static final int POLLER_SIZE = 1;
-    final private static long NOTICE_TIME = 1000;
+    private final static long NOTICE_TIME = 1000;
+    private final static String NOTICE_MSG_PTR = "";
     private static final int ZERO_POLL_INDEX = 0;
 
 
