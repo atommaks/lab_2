@@ -45,6 +45,7 @@ public class Server {
 
         caches = new ArrayList<>();
 
+        long time = System.currentTimeMillis();
         
     }
 }
