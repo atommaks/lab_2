@@ -31,7 +31,9 @@ public class Storage {
 
         while (poller.poll(TIMEOUT) != -1) {
             long res = System.currentTimeMillis() - time;
-            if (res >= NOTICE_TIME)
+            if (res >= NOTICE_TIME) {
+                socket.send()
+            }
         }
     }
 }
