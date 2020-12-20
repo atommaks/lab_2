@@ -21,6 +21,6 @@ public class Storage {
         ZMQ.Poller poller = context.createPoller(POLLER_SIZE);
         poller.register(socket, ZMQ.Poller.POLLIN);
 
-        ArrayList<String> caches = new ArrayList<>(Arrays.asList(args))
+        ArrayList<String> caches = new ArrayList<>(Arrays.asList(args).subList())
     }
 }
