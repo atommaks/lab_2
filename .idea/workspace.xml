@@ -238,7 +238,7 @@
     <configuration name="AnonymRequestsApp" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.bmstu.lab6.AnonymRequestsApp" />
       <module name="lab_2" />
-      <option name="PROGRAM_PARAMETERS" value="1234" />
+      <option name="PROGRAM_PARAMETERS" value="2181" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
