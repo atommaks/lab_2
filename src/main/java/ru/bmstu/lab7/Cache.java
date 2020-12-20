@@ -37,5 +37,15 @@ public class Cache {
         return frame;
     }
 
-    
+    public void setStart(long start) {
+        this.start = start;
+    }
+
+    public void setFinish(long finish) {
+        this.finish = finish;
+    }
+
+    public void setTime(long time) {
+        this.time = time;
+    }
 }
