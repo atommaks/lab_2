@@ -25,6 +25,7 @@ public class Storage {
         long start = Integer.parseInt(args[0]);
         long finish = start + caches.size() - 1;
         long time = System.currentTimeMillis();
-        
+
+        while ()
     }
 }
