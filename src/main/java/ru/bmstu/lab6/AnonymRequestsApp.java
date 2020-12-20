@@ -32,7 +32,7 @@ public class AnonymRequestsApp {
         ActorRef actor = system.actorOf(Props.create(RouteActor.class));
         final Http http = Http.get(system);
         final ActorMaterializer materializer = ActorMaterializer.create(system);
-        ZooKeeperConn conn = new ZooKeeperConn();
+        ZooKeeperConn conn = new ZooKeeperConn(actor);
         HttpServer server = new HttpServer(http, actor);
         final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = server.createRoute().flow(system, materializer);
         final CompletionStage<ServerBinding> binding = http.bindAndHandle(
