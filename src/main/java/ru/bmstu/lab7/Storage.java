@@ -6,6 +6,7 @@ import org.zeromq.ZMQ;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.UUID;
 
 import static ru.bmstu.lab7.Server.SERVER_ADDRESS;
 import static ru.bmstu.lab7.Server.TIMEOUT;
@@ -15,7 +16,7 @@ public class Storage {
     private static final int POLLER_SIZE = 1;
     private final static long NOTICE_TIME = 1000;
     private final static String NOTICE_MSG_PTR = "notice id:%s; %d -> %d";
-    private final static String id = 
+    private final static String id = UUID.randomUUID()
     private static final int ZERO_POLL_INDEX = 0;
 
 
