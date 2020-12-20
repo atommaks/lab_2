@@ -48,8 +48,10 @@ public class Storage {
                 String message = msg.getLast().toString().toLowerCase(Locale.ROOT);
 
                 if (message.equals(GET_CMD)) {
-                    executeGetCmd(msg, message, caches, start);
-                    msg.send(socket);
+                    try {
+                        executeGetCmd(msg, message, caches, start);
+                        msg.send(socket);
+                    } catch ()
                 }
 
                 if (message.equals(PUT_CMD)) {
