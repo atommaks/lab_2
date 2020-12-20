@@ -20,7 +20,7 @@ public class TestingApp {
     private static final int PORT = 1969;
     private static final String START_MSG_FORMAT = "Listening on %s:%d\n";
     public final static Logger LOGGER = Logger.getLogger("MyLog");
-    private static final String PATH_TO_LOG_FILE = "/home/atom/IdeaProjects/lab_2/MyLog.log";
+    private static final String PATH_TO_LOG_FILE = "/home/atom/IdeaProjects/lab_2/logs/lab4.log";
 
     public static void main(String[] args) throws Exception{
         BasicConfigurator.configure();
