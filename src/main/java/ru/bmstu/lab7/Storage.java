@@ -17,6 +17,7 @@ public class Storage {
         socket.connect(SERVER_ADDRESS);
         ZMQ.Poller poller = context.createPoller(POLLER_SIZE);
         poller.register(socket, ZMQ.Poller.POLLIN);
+
         
     }
 }
