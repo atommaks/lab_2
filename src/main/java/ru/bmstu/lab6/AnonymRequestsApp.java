@@ -33,7 +33,7 @@ public class AnonymRequestsApp {
         final Http http = Http.get(system);
         final ActorMaterializer materializer = ActorMaterializer.create(system);
         HttpServer server = new HttpServer(http, actor);
-        final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = server.createRoute().flow()
+        final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = server.createRoute().flow(system, materializer);
         final CompletionStage<ServerBinding> binding = http.bindAndHandle(
                 routeFlow,
                 ConnectHttp.toHost(HOST, PORT),
