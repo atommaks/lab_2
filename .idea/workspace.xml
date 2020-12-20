@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0558078c-817c-455a-bcc5-b6b864d47bf5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/HttpServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/ZooKeeperConn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/ZooKeeperConn.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,19 +39,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/ZooKeeperConn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="703">
+              <caret line="37" column="66" selection-start-line="37" selection-start-column="66" selection-end-line="37" selection-end-column="66" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/HttpServer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="670">
@@ -131,9 +129,9 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/ServersList.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/Server.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/RouteActor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/ZooKeeperConn.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/AnonymRequestsApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/HttpServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/ZooKeeperConn.java" />
       </list>
     </option>
   </component>
@@ -444,10 +442,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/ZooKeeperConn.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/HttpServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        <state relative-caret-position="670">
+          <caret line="41" column="155" selection-start-line="41" selection-start-column="155" selection-end-line="41" selection-end-column="155" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -464,13 +462,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/HttpServer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/bmstu/lab6/ZooKeeperConn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="670">
-          <caret line="41" column="155" selection-start-line="41" selection-start-column="155" selection-end-line="41" selection-end-column="155" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="703">
+          <caret line="37" column="66" selection-start-line="37" selection-start-column="66" selection-end-line="37" selection-end-column="66" />
         </state>
       </provider>
     </entry>

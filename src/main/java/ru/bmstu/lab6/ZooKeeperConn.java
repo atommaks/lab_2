@@ -8,6 +8,8 @@ import java.time.Duration;
 import java.util.Collections;
 import java.util.List;
 
+import static ru.bmstu.lab6.AnonymRequestsApp.PORT
+
 public class ZooKeeperConn {
     private static final String HOST = "localhost:2181";
     private static ZooKeeper keeper;
@@ -33,8 +35,7 @@ public class ZooKeeperConn {
     public ZooKeeperConn(ActorRef actor) throws IOException, KeeperException, InterruptedException {
         this.actor = actor;
         keeper = new ZooKeeper(HOST, (int)Duration.ofSeconds(5).getSeconds() * 1000, watcher);
-        keeper.create("/servers/" + AnonymRequestsApp.PORT, (AnonymRequestsApp.PORT + "").getBytes(),
-                ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
+        keeper.create("/servers/" + PORT, (PORT + "").getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
         WatchedEvent event = new WatchedEvent(Watcher.Event.EventType.NodeCreated, Watcher.Event.KeeperState.SyncConnected, "");
         watcher.process(event);
     }
