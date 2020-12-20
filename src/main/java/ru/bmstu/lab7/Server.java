@@ -15,6 +15,8 @@ import static ru.bmstu.lab7.Client.CLIENT_ADDRESS;
 public class Server {
     private static final String PATH_TO_LOG_FILE = "/home/atom/IdeaProjects/lab_2/logs/lab7.log";
     private static final int POLLER_SIZE = 2;
+    private static final int CLIENT_SOCKET = 0;
+    private static final int SERVER_SOCKET = 1;
     private static ZMQ.Socket clientSocket;
     private static ZMQ.Socket serverSocket;
     private static ZMQ.Poller poller;
@@ -53,7 +55,7 @@ public class Server {
                 time = System.currentTimeMillis();
             }
 
-            if (poller.pollin(CLIENT_ADDRESS))
+            if (poller.pollin())
         }
     }
 }
