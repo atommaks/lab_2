@@ -9,10 +9,11 @@ import java.util.ArrayList;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
-import static ru.bmstu.lab7.Client.CLIENT_ADDRESS
+import static ru.bmstu.lab7.Client.CLIENT_ADDRESS;
 
 public class Server {
     private static final String PATH_TO_LOG_FILE = "/home/atom/IdeaProjects/lab_2/logs/lab7.log";
+    private static final int POLLER_SIZE = 2;
     private static ZMQ.Socket clientSocket;
     private static ZMQ.Socket serverSocket;
     private static ZMQ.Poller poller;
