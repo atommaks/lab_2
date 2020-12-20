@@ -49,5 +49,5 @@ public class Storage {
         }
     }
 
-    private static void executeGetCmd(ZMsg msg, )
+    private static void executeGetCmd(ZMsg msg, String message, )
 }
