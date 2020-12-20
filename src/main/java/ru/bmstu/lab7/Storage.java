@@ -41,7 +41,7 @@ public class Storage {
             }
             if (poller.pollin(ZERO_POLL_INDEX)) {
                 ZMsg msg = ZMsg.recvMsg(socket);
-                String message = 
+                String message = msg.getLast()
             }
         }
     }
