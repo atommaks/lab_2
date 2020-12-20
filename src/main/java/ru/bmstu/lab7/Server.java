@@ -11,7 +11,7 @@ public class Server {
     private static ZMQ.Socket clientSocket;
     private static ZMQ.Socket serverSocket;
     private static ZMQ.Poller poller;
-    
+    private static 
 
 
     public final static Logger LOGGER = Logger.getLogger("lab6");
