@@ -2,8 +2,8 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2020-12-20T03:45:22</date>
-  <millis>1608425122992</millis>
+  <date>2020-12-20T03:45:41</date>
+  <millis>1608425141746</millis>
   <sequence>0</sequence>
   <logger>lab6</logger>
   <level>INFO</level>
