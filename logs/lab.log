@@ -2,8 +2,8 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2020-12-20T15:37:02</date>
-  <millis>1608467822035</millis>
+  <date>2020-12-20T15:37:43</date>
+  <millis>1608467863549</millis>
   <sequence>0</sequence>
   <logger>lab6</logger>
   <level>INFO</level>
@@ -13,19 +13,19 @@
   <message>start!</message>
 </record>
 <record>
-  <date>2020-12-20T15:37:02</date>
-  <millis>1608467822957</millis>
+  <date>2020-12-20T15:37:44</date>
+  <millis>1608467864570</millis>
   <sequence>1</sequence>
   <logger>lab6</logger>
   <level>INFO</level>
   <class>ru.bmstu.lab6.ZooKeeperConn</class>
   <method>process</method>
-  <thread>18</thread>
+  <thread>19</thread>
   <message>WatchedEvent state:SyncConnected type:NodeChildrenChanged path:/servers</message>
 </record>
 <record>
-  <date>2020-12-20T15:37:03</date>
-  <millis>1608467823679</millis>
+  <date>2020-12-20T15:37:45</date>
+  <millis>1608467865290</millis>
   <sequence>2</sequence>
   <logger>lab6</logger>
   <level>INFO</level>
@@ -36,69 +36,13 @@
  Press any button to stop...</message>
 </record>
 <record>
-  <date>2020-12-20T15:37:05</date>
-  <millis>1608467825465</millis>
+  <date>2020-12-20T15:37:45</date>
+  <millis>1608467865982</millis>
   <sequence>3</sequence>
   <logger>lab6</logger>
   <level>INFO</level>
-  <class>ru.bmstu.lab6.HttpServer</class>
-  <method>lambda$null$1</method>
-  <thread>21</thread>
-  <message>Sending request to http://localhost:19960000000010?url=http://rambler.ru&amp;count=19</message>
+  <class>ru.bmstu.lab6.ZooKeeperConn</class>
+  <method>process</method>
+  <thread>19</thread>
+  <message>WatchedEvent state:SyncConnected type:NodeChildrenChanged path:/servers</message>
 </record>
-<record>
-  <date>2020-12-20T15:37:06</date>
-  <millis>1608467826546</millis>
-  <sequence>4</sequence>
-  <logger>lab6</logger>
-  <level>INFO</level>
-  <class>ru.bmstu.lab6.HttpServer</class>
-  <method>lambda$null$1</method>
-  <thread>22</thread>
-  <message>Sending request to http://localhost:19960000000010?url=http://rambler.ru&amp;count=19</message>
-</record>
-<record>
-  <date>2020-12-20T15:37:07</date>
-  <millis>1608467827222</millis>
-  <sequence>5</sequence>
-  <logger>lab6</logger>
-  <level>INFO</level>
-  <class>ru.bmstu.lab6.HttpServer</class>
-  <method>lambda$null$1</method>
-  <thread>22</thread>
-  <message>Sending request to http://localhost:19960000000010?url=http://rambler.ru&amp;count=19</message>
-</record>
-<record>
-  <date>2020-12-20T15:37:07</date>
-  <millis>1608467827750</millis>
-  <sequence>6</sequence>
-  <logger>lab6</logger>
-  <level>INFO</level>
-  <class>ru.bmstu.lab6.HttpServer</class>
-  <method>lambda$null$1</method>
-  <thread>22</thread>
-  <message>Sending request to http://localhost:19960000000010?url=http://rambler.ru&amp;count=19</message>
-</record>
-<record>
-  <date>2020-12-20T15:37:08</date>
-  <millis>1608467828118</millis>
-  <sequence>7</sequence>
-  <logger>lab6</logger>
-  <level>INFO</level>
-  <class>ru.bmstu.lab6.HttpServer</class>
-  <method>lambda$null$1</method>
-  <thread>22</thread>
-  <message>Sending request to http://localhost:19960000000010?url=http://rambler.ru&amp;count=19</message>
-</record>
-<record>
-  <date>2020-12-20T15:37:10</date>
-  <millis>1608467830804</millis>
-  <sequence>8</sequence>
-  <logger>lab6</logger>
-  <level>INFO</level>
-  <class>ru.bmstu.lab6.HttpServer</class>
-  <method>lambda$null$1</method>
-  <thread>22</thread>
-  <message>Sending request to http://localhost:19960000000010?url=http://rambler.ru&amp;count=19</message>
-</record>
-</log>
