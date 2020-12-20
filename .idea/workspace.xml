@@ -245,7 +245,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Storage">
+  <component name="RunManager" selected="Application.Unnamed">
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.bmstu.lab7.Server" />
       <module name="lab_2" />
