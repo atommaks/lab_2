@@ -95,7 +95,7 @@ public class Server {
 
     }
 
-    private static void executePutCmd() {
+    private static void executePutCmd(ZMsg msg, String message) {
 
     }
 }
