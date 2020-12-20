@@ -1,9 +1,15 @@
 package ru.bmstu.lab7;
 
+import org.zeromq.ZFrame;
+
 public class Cache {
     private String id;
     private long start;
     private long finish;
     private long time;
-    private 
+    private ZFrame frame;
+
+    public Cache() {
+
+    }
 }
