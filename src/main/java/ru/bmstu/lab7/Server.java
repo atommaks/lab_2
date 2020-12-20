@@ -53,7 +53,7 @@ public class Server {
                 time = System.currentTimeMillis();
             }
 
-            if (poller.pollerr())
+            if (poller.pollin())
         }
     }
 }
