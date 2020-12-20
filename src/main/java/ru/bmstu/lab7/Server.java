@@ -64,6 +64,8 @@ public class Server {
             }
         }
 
-        context.destroySocket();
+        context.destroySocket(clientSocket);
+        context.destroySocket(serverSocket);
+        context.destroy();
     }
 }
