@@ -60,7 +60,8 @@ public class Storage {
     }
 
     private static void exxecutePutCmd(String msg, ArrayList<String> caches, long start) {
-        String[] split = 
+        String[] split = msg.split(DELIMITER);
+        
     }
 
     private static void executeGetCmd(ZMsg msg, String message, ArrayList<String> caches, long start) {
