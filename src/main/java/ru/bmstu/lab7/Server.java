@@ -4,9 +4,11 @@ import org.apache.log4j.BasicConfigurator;
 import org.zeromq.SocketType;
 import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
+import org.zeromq.ZMsg;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Locale;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
@@ -70,10 +72,22 @@ public class Server {
     }
 
     private static void clientRunning() {
-
+        ZMsg msg = ZMsg.recvMsg(clientSocket);
+        String message = msg.getLast().toString().toLowerCase(Locale.ROOT);
+        if (message.startsWith(GET_CMD)) {
+            try {
+                executeGetCmd(msg, message);
+            } catch (Exception e) {
+                msg.getLast().reset();
+            }
+        }
     }
 
     private static void serverRunning() {
+
+    }
+
+    private static void executeGetCmd(ZMsg msg, String message) {
 
     }
 }
