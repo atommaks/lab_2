@@ -82,6 +82,8 @@ public class Server {
                 msg.getLast().reset(String.format(ERROR_MSG_PTR, e.getMessage()));
                 msg.send(clientSocket);
             }
+        } else if (message.startsWith(PUT_CMD)) {
+            
         }
     }
 
