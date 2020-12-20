@@ -63,7 +63,7 @@ public class Storage {
         String[] split = msg.split(DELIMITER);
         long key = Integer.parseInt(split[1]);
         String value = split[2];
-        
+        caches.set()
     }
 
     private static void executeGetCmd(ZMsg msg, String message, ArrayList<String> caches, long start) {
