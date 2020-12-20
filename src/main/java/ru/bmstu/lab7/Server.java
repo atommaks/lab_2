@@ -31,6 +31,6 @@ public class Server {
 
         ZContext context = new ZContext(TYPE);
         clientSocket = context.createSocket(SocketType.ROUTER);
-        clientSocket.bind()
+        clientSocket.bind(SERVER_ADDRESS);
     }
 }
