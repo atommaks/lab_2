@@ -13,7 +13,9 @@ public class Client {
 
     public static void main(String[] args) {
         context = new ZContext(TYPE);
-        
+
 
     }
+
+    private static void createAndConnect
 }
