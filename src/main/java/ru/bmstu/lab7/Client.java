@@ -22,8 +22,7 @@ public class Client {
 
         }
         context.destroySocket(client);
-        
-
+        context.destroy();
     }
 
     private static void createAndConnectSocket() {
