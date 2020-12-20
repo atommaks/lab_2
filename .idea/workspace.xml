@@ -245,9 +245,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Server">
+  <component name="RunManager" selected="Application.Storage">
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.bmstu.lab7.Server" />
+      <module name="lab_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.bmstu.lab7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Storage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.bmstu.lab7.Storage" />
       <module name="lab_2" />
       <extension name="coverage">
         <pattern>
@@ -269,9 +282,11 @@
     <list>
       <item itemvalue="Application.Unnamed" />
       <item itemvalue="Application.Server" />
+      <item itemvalue="Application.Storage" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Storage" />
         <item itemvalue="Application.Server" />
       </list>
     </recent_temporary>
