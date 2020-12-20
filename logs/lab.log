@@ -46,3 +46,14 @@
   <thread>19</thread>
   <message>WatchedEvent state:SyncConnected type:NodeChildrenChanged path:/servers</message>
 </record>
+<record>
+  <date>2020-12-20T15:37:57</date>
+  <millis>1608467877688</millis>
+  <sequence>4</sequence>
+  <logger>lab6</logger>
+  <level>INFO</level>
+  <class>ru.bmstu.lab6.HttpServer</class>
+  <method>lambda$null$1</method>
+  <thread>21</thread>
+  <message>Sending request to http://localhost:19960000000011?url=http://rambler.ru&amp;count=19</message>
+</record>
