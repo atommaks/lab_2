@@ -1,13 +1,14 @@
 package ru.bmstu.lab7;
 
 import org.apache.log4j.BasicConfigurator;
+import org.zeromq.ZMQ;
 
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
 public class Server {
     private static final String PATH_TO_LOG_FILE = "/home/atom/IdeaProjects/lab_2/logs/lab7.log";
-    private static final 
+    private static ZMQ.Socket
 
 
     public final static Logger LOGGER = Logger.getLogger("lab6");
