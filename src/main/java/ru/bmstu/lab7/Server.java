@@ -12,7 +12,7 @@ public class Server {
     public static final int TIMEOUT = 5000;
     public final static String GET_CMD = "get";
     public final static String PUT_CMD = "put";
-    public final static String 
+    public final static String NOTICE_CMD = "notice";
 
     public static void main(String[] args) throws Exception{
         BasicConfigurator.configure();
