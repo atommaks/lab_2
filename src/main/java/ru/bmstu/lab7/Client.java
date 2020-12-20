@@ -8,7 +8,7 @@ import org.zeromq.ZMQ;
 
 import java.util.Scanner;
 
-import static ru.bmstu.lab7.Server.LOGGER;
+//import static ru.bmstu.lab7.Server.LOGGER;
 
 public class Client {
     private static final String CLIENT_ADDRESS = "tcp://localhost:1969";
@@ -32,7 +32,7 @@ public class Client {
             client.send(cmd);
             String output = client.recvStr();
             if (output != null) {
-                LOGGER.info(java.lang.String.format(OUTPUT_MSG_PTR, output));
+                //LOGGER.info(java.lang.String.format(OUTPUT_MSG_PTR, output));
             }
         }
 
