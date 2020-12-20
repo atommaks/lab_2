@@ -21,7 +21,7 @@ public class ZooKeeperConn {
                     byte[] port = keeper.getData("/servers/" + s, false, null);
                     servers.add(new String(port));
                 }
-                
+
             } catch (KeeperException | InterruptedException e) {
                 e.printStackTrace();
             }
