@@ -89,7 +89,8 @@ public class Server {
             msg.getLast().reset(PUT_SUCCESS_MSG);
             msg.send(clientSocket);
         } else {
-
+            msg.getLast().reset(NOT_EXISTING_CMD);
+            msg.send(clientSocket);
         }
     }
 
