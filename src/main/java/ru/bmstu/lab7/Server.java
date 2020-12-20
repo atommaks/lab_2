@@ -97,12 +97,12 @@ public class Server {
         ZFrame frame = msg.unwrap();
         String message = msg.getLast().toString().toLowerCase(Locale.ROOT);
         if (message.startsWith(NOTICE_CMD)) {
-
+            executeNoticeCmd(message, frame);
         }
     }
 
     private static void executeNoticeCmd(String msg, ZFrame frame) {
-        
+
     }
 
     private static void executeGetCmd(ZMsg msg, String message) {
